@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj",
+        "projectName": "EspartoWorld.Web.Infrastructure",
+        "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
+        "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

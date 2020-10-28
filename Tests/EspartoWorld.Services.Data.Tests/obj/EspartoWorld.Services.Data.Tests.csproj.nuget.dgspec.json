@@ -1,0 +1,531 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Tests\\EspartoWorld.Services.Data.Tests\\EspartoWorld.Services.Data.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj",
+        "projectName": "EspartoWorld.Data.Common",
+        "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj",
+        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
+        "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj",
+        "projectName": "EspartoWorld.Data.Models",
+        "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj",
+        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
+        "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data\\EspartoWorld.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data\\EspartoWorld.Data.csproj",
+        "projectName": "EspartoWorld.Data",
+        "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data\\EspartoWorld.Data.csproj",
+        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
+        "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj"
+              },
+              "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj"
+              },
+              "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.Extensions.Configuration.UserSecrets": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj",
+        "projectName": "EspartoWorld.Common",
+        "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj",
+        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
+        "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj",
+        "projectName": "EspartoWorld.Services.Data",
+        "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj",
+        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
+        "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj"
+              },
+              "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj"
+              },
+              "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj",
+        "projectName": "EspartoWorld.Services.Mapping",
+        "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj",
+        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
+        "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Tests\\EspartoWorld.Services.Data.Tests\\EspartoWorld.Services.Data.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Tests\\EspartoWorld.Services.Data.Tests\\EspartoWorld.Services.Data.Tests.csproj",
+        "projectName": "EspartoWorld.Services.Data.Tests",
+        "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Tests\\EspartoWorld.Services.Data.Tests\\EspartoWorld.Services.Data.Tests.csproj",
+        "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
+        "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Tests\\EspartoWorld.Services.Data.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data\\EspartoWorld.Data.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data\\EspartoWorld.Data.csproj"
+              },
+              "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.7.1, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.14.7, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

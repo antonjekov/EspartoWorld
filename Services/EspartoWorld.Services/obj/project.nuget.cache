@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "KXPvt3Gu+cnma4zPE2oc8cHI7no117yYhZ3sOijZp0bCxTWfjt4aclyRFzy9tYU92TYRNnbGagQrkY36A+guZw==",
+  "success": true,
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services\\EspartoWorld.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
+  ],
+  "logs": []
+}

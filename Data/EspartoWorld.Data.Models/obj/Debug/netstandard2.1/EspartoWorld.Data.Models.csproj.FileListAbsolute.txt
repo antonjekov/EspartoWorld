@@ -1,0 +1,12 @@
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\bin\Debug\netstandard2.1\EspartoWorld.Data.Models.deps.json
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\bin\Debug\netstandard2.1\EspartoWorld.Data.Models.dll
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\bin\Debug\netstandard2.1\EspartoWorld.Data.Models.pdb
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\bin\Debug\netstandard2.1\EspartoWorld.Data.Common.dll
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\bin\Debug\netstandard2.1\EspartoWorld.Data.Common.pdb
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\obj\Debug\netstandard2.1\EspartoWorld.Data.Models.csprojAssemblyReference.cache
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\obj\Debug\netstandard2.1\EspartoWorld.Data.Models.AssemblyInfoInputs.cache
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\obj\Debug\netstandard2.1\EspartoWorld.Data.Models.AssemblyInfo.cs
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\obj\Debug\netstandard2.1\EspartoWorld.Data.Models.csproj.CoreCompileInputs.cache
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\obj\Debug\netstandard2.1\EspartoWorld.Data.Models.csproj.CopyComplete
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\obj\Debug\netstandard2.1\EspartoWorld.Data.Models.dll
+C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Data\EspartoWorld.Data.Models\obj\Debug\netstandard2.1\EspartoWorld.Data.Models.pdb

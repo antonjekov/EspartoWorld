@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "O/YMbb87G5QQAx17zKr5QOe+teV7dhLVQpCI8QZW16gzHcAg2+KoNvOrDQwfSVwMKmkYxScv0VvTW2s1ZwgWFA==",
+  "success": true,
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
