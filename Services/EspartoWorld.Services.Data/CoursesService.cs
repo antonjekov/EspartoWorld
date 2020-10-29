@@ -2,6 +2,7 @@
 {
     using System.Collections.Generic;
     using System.Linq;
+    using System.Threading.Tasks;
 
     using EspartoWorld.Data.Common.Repositories;
     using EspartoWorld.Data.Models;
@@ -16,12 +17,12 @@
             this.courseRepository = courseRepository;
         }
 
-        public void Add<T>(T input)
+        public async Task<int> AddAsync<T>(T input)
         {
-            var mapper = AutoMapperConfig.MapperInstance;
-            var course = mapper.Map<Course>(input);
-            this.courseRepository.AddAsync(course);
-            this.courseRepository.SaveChangesAsync();
+            var course = AutoMapperConfig.MapperInstance.Map<Course>(input);
+            await this.courseRepository.AddAsync(course);
+            await this.courseRepository.SaveChangesAsync();
+            return course.Id;
         }
 
         public IEnumerable<T> GetAll<T>()
@@ -36,7 +37,7 @@
 
         public T GetNextCourse<T>()
         {
-            throw new System.NotImplementedException();
+            return this.courseRepository.All().OrderByDescending(x => x.StartDate).To<T>().FirstOrDefault();
         }
     }
 }

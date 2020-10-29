@@ -3,8 +3,9 @@
     using EspartoWorld.Data.Common.Repositories;
     using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Data;
-    using EspartoWorld.Web.ViewModels.Course;
+    using EspartoWorld.Web.ViewModels.Courses;
     using Microsoft.AspNetCore.Mvc;
+    using System.Threading.Tasks;
 
     public class CoursesController : BaseController
     {
@@ -23,10 +24,10 @@
         }
 
         [HttpPost]
-        public IActionResult Add(CourseInputModel input)
+        public async Task<IActionResult> AddAsync(CourseInputModel input)
         {
-            this.coursesService.Add(input);
-            return this.Redirect("/Courses/All");
+            var id = await this.coursesService.AddAsync(input);
+            return this.Redirect($"/Courses/Details/{id}");
         }
 
         public IActionResult All()
@@ -35,9 +36,9 @@
             return this.View(courses);
         }
 
-        public IActionResult Details(int courseId)
+        public IActionResult Details(int id)
         {
-            var course = this.coursesService.GetById<CourseViewModel>(courseId);
+            var course = this.coursesService.GetById<CourseViewModel>(id);
             return this.View(course);
         }
     }

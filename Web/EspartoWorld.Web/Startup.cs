@@ -12,7 +12,6 @@
     using EspartoWorld.Services.Mapping;
     using EspartoWorld.Services.Messaging;
     using EspartoWorld.Web.ViewModels;
-    using EspartoWorld.Web.ViewModels.Course;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;

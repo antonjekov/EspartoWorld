@@ -12,8 +12,8 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("EspartoWorld.Data", "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data", "EspartoWorld.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("EspartoWorld.Web", "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web", "EspartoWorld.Web.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("EspartoWorld.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data", "EspartoWorld.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("EspartoWorld.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web", "EspartoWorld.Web.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("EspartoWorld.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

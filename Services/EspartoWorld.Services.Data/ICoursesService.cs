@@ -1,12 +1,11 @@
 ﻿namespace EspartoWorld.Services.Data
 {
     using System.Collections.Generic;
-
-    using EspartoWorld.Data.Models;
+    using System.Threading.Tasks;
 
     public interface ICoursesService
     {
-        void Add<T>(T input);
+        Task<int> AddAsync<T>(T input);
 
         IEnumerable<T> GetAll<T>();
 
