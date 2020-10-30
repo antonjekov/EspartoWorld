@@ -6,7 +6,6 @@
     using EspartoWorld.Services.Data;
     using EspartoWorld.Services.YouTube;
     using EspartoWorld.Web.ViewModels.Videos;
-    using Google.Apis.YouTube.v3.Data;
     using Microsoft.AspNetCore.Mvc;
 
     public class VideosController : BaseController
@@ -23,14 +22,12 @@
         public async Task<IActionResult> Add()
         {
             var newVideos = await this.youTubeDataService.GetLastVideosAsync("esparto", 10);
-            var newVideosViewModel = newVideos.Select(x => new VideoViewModel()
+            var ourVideosVideoId = this.videosService.GetAll<VideoViewModel>().Select(x => x.VideoId).ToList();
+            var videos = newVideos.Where(x => !ourVideosVideoId.Contains(x.Id.VideoId)).Select(x => new VideoViewModel()
             {
                 VideoId = x.Id.VideoId,
                 Title = x.Snippet.Title,
             }).ToList();
-            var ourVideosIdVideo = this.videosService.GetAll<VideoViewModel>();
-            var videos = newVideosViewModel.Except(ourVideosIdVideo);
-
             return this.View(videos);
         }
 
