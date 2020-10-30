@@ -11,6 +11,7 @@
     using EspartoWorld.Services.Data;
     using EspartoWorld.Services.Mapping;
     using EspartoWorld.Services.Messaging;
+    using EspartoWorld.Services.YouTube;
     using EspartoWorld.Web.ViewModels;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -64,6 +65,8 @@
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<ICoursesService, CoursesService>();
+            services.AddTransient<IVideosService, VideosService>();
+            services.AddTransient<IYouTubeDataService, YouTubeDataService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

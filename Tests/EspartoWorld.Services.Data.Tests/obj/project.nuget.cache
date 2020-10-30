@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Sz619WV1hxmDj54To4j9sxzjp65be3ue3jGeqHZLA8b0/Osy0LyHQ9Z6eXXMyrE0zDjjOzF59z/NGYdyEkdbSg==",
+  "dgSpecHash": "m1fZsYTbQKGKp65jfQtZ6l5zGDZ0FEE5S4rgO3QQZ+Bi2G4zLmTkEabKUZrloEk/QbmgLaqbRjNYEF2o1x5SaA==",
   "success": true,
-  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Tests\\EspartoWorld.Services.Data.Tests\\EspartoWorld.Services.Data.Tests.csproj",
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Tests\\EspartoWorld.Services.Data.Tests\\EspartoWorld.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anton\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

@@ -66,11 +66,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj",
+      "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj",
       "projectName": "EspartoWorld.Common",
-      "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj",
+      "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj",
       "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-      "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\obj\\",
+      "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\EspartoWorld.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

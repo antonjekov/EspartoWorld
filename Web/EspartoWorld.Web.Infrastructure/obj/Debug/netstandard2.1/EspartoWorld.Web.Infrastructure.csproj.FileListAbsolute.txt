@@ -7,3 +7,12 @@ C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Web\EspartoWorld.Web.Inf
 C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\obj\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.csproj.CoreCompileInputs.cache
 C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\obj\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.dll
 C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\obj\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\bin\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.deps.json
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\bin\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\bin\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\obj\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.csprojAssemblyReference.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\obj\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.AssemblyInfoInputs.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\obj\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.AssemblyInfo.cs
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\obj\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.csproj.CoreCompileInputs.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\obj\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.Infrastructure\obj\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.pdb

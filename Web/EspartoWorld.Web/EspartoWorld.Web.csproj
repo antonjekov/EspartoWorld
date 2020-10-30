@@ -33,6 +33,7 @@
     <ProjectReference Include="..\..\EspartoWorld.Common\EspartoWorld.Common.csproj" />
     <ProjectReference Include="..\..\Data\EspartoWorld.Data.Models\EspartoWorld.Data.Models.csproj" />
     <ProjectReference Include="..\..\Data\EspartoWorld.Data\EspartoWorld.Data.csproj" />
+    <ProjectReference Include="..\..\Services\EspartoWord.Services.YouTube\EspartoWord.Services.YouTube.csproj" />
     <ProjectReference Include="..\..\Services\EspartoWorld.Services.Data\EspartoWorld.Services.Data.csproj" />
     <ProjectReference Include="..\..\Services\EspartoWorld.Services.Mapping\EspartoWorld.Services.Mapping.csproj" />
     <ProjectReference Include="..\..\Services\EspartoWorld.Services.Messaging\EspartoWorld.Services.Messaging.csproj" />

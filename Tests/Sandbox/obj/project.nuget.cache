@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3hE/9LCU8QMD8Iir5brrEACJZiUVWFE6arkUMlRM6G8ciyDHRMqKz/TC+RWe0jYPGaGLDQsWBt8NUJGS/JwCqA==",
+  "dgSpecHash": "HSf8l4Q2loblPG7foWywNnkM2vcK0rvlHOuOUROsGbCAYTiY4cE2I+CMOfr13q5dmufdeDf8eL5AORTUNvM+Ig==",
   "success": true,
-  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Tests\\Sandbox\\Sandbox.csproj",
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Tests\\Sandbox\\Sandbox.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anton\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\commandlineparser\\2.8.0\\commandlineparser.2.8.0.nupkg.sha512",

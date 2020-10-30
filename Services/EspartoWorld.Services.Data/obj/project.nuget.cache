@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Sm5vf50BQV0V1LsHO2Hb6l3U/CILNMeB9Lwe2hdRpuOwBN29u9f4/c7J6ZdKaIjW3KRLgz/nIBe7Zj1bcQ6JdA==",
+  "dgSpecHash": "PAYWkDxZjJbbj5KIidD1uvzQmuGs8TDWY0fReVxToB3PWOIjQ2KbUwKu//awBj/sr/Jj2SWXND4PqVEymjDQEg==",
   "success": true,
-  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj",
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anton\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",

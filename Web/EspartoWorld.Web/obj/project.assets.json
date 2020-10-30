@@ -21,6 +21,58 @@
           "build/BuildBundlerMinifier.targets": {}
         }
       },
+      "Google.Apis/1.49.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis.Core": "1.49.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.dll": {}
+        }
+      },
+      "Google.Apis.Auth/1.49.0": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.49.0",
+          "Google.Apis.Core": "1.49.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
+          "lib/netstandard2.0/Google.Apis.Auth.dll": {}
+        }
+      },
+      "Google.Apis.Core/1.49.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.Core.dll": {}
+        }
+      },
+      "Google.Apis.YouTube.v3/1.49.0.2120": {
+        "type": "package",
+        "dependencies": {
+          "Google.Apis": "1.49.0",
+          "Google.Apis.Auth": "1.49.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Google.Apis.YouTube.v3.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Google.Apis.YouTube.v3.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
         "type": "package",
         "compile": {
@@ -1118,7 +1170,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/12.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -2883,6 +2935,20 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "EspartoWord.Services.YouTube/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "EspartoWorld.Services.Mapping": "1.0.0",
+          "Google.Apis.YouTube.v3": "1.49.0.2120"
+        },
+        "compile": {
+          "bin/placeholder/EspartoWord.Services.YouTube.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EspartoWord.Services.YouTube.dll": {}
+        }
+      },
       "EspartoWorld.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -3058,6 +3124,103 @@
         "tools/netstandard1.3/BundlerMinifier.dll",
         "tools/netstandard1.3/NUglify.dll",
         "tools/netstandard1.3/Newtonsoft.Json.dll"
+      ]
+    },
+    "Google.Apis/1.49.0": {
+      "sha512": "fmXQQTxZFOBlnvokvdQMzq0Lt+g2QzpZ4H6U8lMMFHgAR8ZqxQnPN5yHDpoHf7a++hJHb5W3pALxauGsq+afKQ==",
+      "type": "package",
+      "path": "google.apis/1.49.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.1.49.0.nupkg.sha512",
+        "google.apis.nuspec",
+        "lib/net45/Google.Apis.PlatformServices.dll",
+        "lib/net45/Google.Apis.dll",
+        "lib/net45/Google.Apis.pdb",
+        "lib/net45/Google.Apis.xml",
+        "lib/netstandard1.3/Google.Apis.dll",
+        "lib/netstandard1.3/Google.Apis.pdb",
+        "lib/netstandard1.3/Google.Apis.xml",
+        "lib/netstandard2.0/Google.Apis.dll",
+        "lib/netstandard2.0/Google.Apis.pdb",
+        "lib/netstandard2.0/Google.Apis.xml"
+      ]
+    },
+    "Google.Apis.Auth/1.49.0": {
+      "sha512": "3V9ohvixQtjaEvk7T9Ac7E/KvwEPa7eL4aMNreJDI0CEPzCdQdk2zCvaJPRrNIjhe+UuBeOeom1oAOMFB74JHg==",
+      "type": "package",
+      "path": "google.apis.auth/1.49.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.auth.1.49.0.nupkg.sha512",
+        "google.apis.auth.nuspec",
+        "lib/net45/Google.Apis.Auth.PlatformServices.dll",
+        "lib/net45/Google.Apis.Auth.dll",
+        "lib/net45/Google.Apis.Auth.pdb",
+        "lib/net45/Google.Apis.Auth.xml",
+        "lib/netstandard1.3/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.dll",
+        "lib/netstandard1.3/Google.Apis.Auth.pdb",
+        "lib/netstandard1.3/Google.Apis.Auth.xml",
+        "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.dll",
+        "lib/netstandard2.0/Google.Apis.Auth.pdb",
+        "lib/netstandard2.0/Google.Apis.Auth.xml"
+      ]
+    },
+    "Google.Apis.Core/1.49.0": {
+      "sha512": "9DgGdtyzgrCfHWwc/HiDXDbykNMeKQozbEHYEUEcezRuH+YR3fvq7YGVBDmUM8g6qEL3kDk6h5EU4h0IJwue1w==",
+      "type": "package",
+      "path": "google.apis.core/1.49.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "NuGetIcon.png",
+        "google.apis.core.1.49.0.nupkg.sha512",
+        "google.apis.core.nuspec",
+        "lib/net45/Google.Apis.Core.dll",
+        "lib/net45/Google.Apis.Core.pdb",
+        "lib/net45/Google.Apis.Core.xml",
+        "lib/netstandard1.3/Google.Apis.Core.dll",
+        "lib/netstandard1.3/Google.Apis.Core.pdb",
+        "lib/netstandard1.3/Google.Apis.Core.xml",
+        "lib/netstandard2.0/Google.Apis.Core.dll",
+        "lib/netstandard2.0/Google.Apis.Core.pdb",
+        "lib/netstandard2.0/Google.Apis.Core.xml"
+      ]
+    },
+    "Google.Apis.YouTube.v3/1.49.0.2120": {
+      "sha512": "E1baYPeuhnRxE0KdLUccuaGNQ+l4rGwXFmYqJoqxq17x2zAUqssaTl4RZDUyRFj/KPSpa1OZwkIQCr0+IeDdDQ==",
+      "type": "package",
+      "path": "google.apis.youtube.v3/1.49.0.2120",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "google.apis.youtube.v3.1.49.0.2120.nupkg.sha512",
+        "google.apis.youtube.v3.nuspec",
+        "lib/net40/Google.Apis.YouTube.v3.dll",
+        "lib/net40/Google.Apis.YouTube.v3.pdb",
+        "lib/net40/Google.Apis.YouTube.v3.xml",
+        "lib/net45/Google.Apis.YouTube.v3.dll",
+        "lib/net45/Google.Apis.YouTube.v3.pdb",
+        "lib/net45/Google.Apis.YouTube.v3.xml",
+        "lib/netstandard1.0/Google.Apis.YouTube.v3.dll",
+        "lib/netstandard1.0/Google.Apis.YouTube.v3.pdb",
+        "lib/netstandard1.0/Google.Apis.YouTube.v3.xml",
+        "lib/netstandard1.3/Google.Apis.YouTube.v3.dll",
+        "lib/netstandard1.3/Google.Apis.YouTube.v3.pdb",
+        "lib/netstandard1.3/Google.Apis.YouTube.v3.xml",
+        "lib/netstandard2.0/Google.Apis.YouTube.v3.dll",
+        "lib/netstandard2.0/Google.Apis.YouTube.v3.pdb",
+        "lib/netstandard2.0/Google.Apis.YouTube.v3.xml"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
@@ -4858,10 +5021,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.2": {
-      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4884,8 +5047,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "NuGet.Frameworks/4.7.0": {
@@ -9430,6 +9594,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "EspartoWord.Services.YouTube/1.0.0": {
+      "type": "project",
+      "path": "../../Services/EspartoWord.Services.YouTube/EspartoWord.Services.YouTube.csproj",
+      "msbuildProject": "../../Services/EspartoWord.Services.YouTube/EspartoWord.Services.YouTube.csproj"
+    },
     "EspartoWorld.Common/1.0.0": {
       "type": "project",
       "path": "../../EspartoWorld.Common/EspartoWorld.Common.csproj",
@@ -9484,6 +9653,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "BuildBundlerMinifier >= 3.2.449",
+      "EspartoWord.Services.YouTube >= 1.0.0",
       "EspartoWorld.Common >= 1.0.0",
       "EspartoWorld.Data >= 1.0.0",
       "EspartoWorld.Data.Models >= 1.0.0",
@@ -9509,11 +9679,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web\\EspartoWorld.Web.csproj",
+      "projectUniqueName": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web\\EspartoWorld.Web.csproj",
       "projectName": "EspartoWorld.Web",
-      "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web\\EspartoWorld.Web.csproj",
+      "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web\\EspartoWorld.Web.csproj",
       "packagesPath": "C:\\Users\\anton\\.nuget\\packages\\",
-      "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web\\obj\\",
+      "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -9531,32 +9701,35 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj": {
-              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj"
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj"
             },
-            "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data\\EspartoWorld.Data.csproj": {
-              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data\\EspartoWorld.Data.csproj"
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Data\\EspartoWorld.Data\\EspartoWorld.Data.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Data\\EspartoWorld.Data\\EspartoWorld.Data.csproj"
             },
-            "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj": {
-              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj"
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\EspartoWorld.Common\\EspartoWorld.Common.csproj"
             },
-            "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj": {
-              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj"
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWord.Services.YouTube\\EspartoWord.Services.YouTube.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWord.Services.YouTube\\EspartoWord.Services.YouTube.csproj"
             },
-            "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj": {
-              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj"
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj"
             },
-            "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Messaging\\EspartoWorld.Services.Messaging.csproj": {
-              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Messaging\\EspartoWorld.Services.Messaging.csproj"
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj"
             },
-            "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services\\EspartoWorld.Services.csproj": {
-              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services\\EspartoWorld.Services.csproj"
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Messaging\\EspartoWorld.Services.Messaging.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Messaging\\EspartoWorld.Services.Messaging.csproj"
             },
-            "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj": {
-              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj"
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services\\EspartoWorld.Services.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services\\EspartoWorld.Services.csproj"
             },
-            "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj": {
-              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj"
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj"
+            },
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj"
             }
           }
         }

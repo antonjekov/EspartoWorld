@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u+2VcX6BYcDnK3E0diB0E30DhVE/IlTHIhdNpR1UufewTp7GzEDGrszAtoBj0dMyXuXft4dsA7ebV0nFZR9JGA==",
+  "dgSpecHash": "4ivdND9inzBhqjhKbtOmrEOmNkSR3SPJREP/FY59JOhgkNazBDXQaKJpvAFnUCn7ngY+NV3pDYgBFiN/7p6sKA==",
   "success": true,
-  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj",
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Data\\EspartoWorld.Data.Models\\EspartoWorld.Data.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.9\\microsoft.aspnetcore.cryptography.keyderivation.3.1.9.nupkg.sha512",

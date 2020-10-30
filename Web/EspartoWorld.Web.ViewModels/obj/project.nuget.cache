@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "oswiDAZu6aACyz6uIHiBiB5pqOum3pb5F0NqmZYhHIVciyXTf26bo1CVW+fH3jraHkPjTTu8UYlL38ht4dX2cw==",
+  "dgSpecHash": "hl5Kt+YOtJSYtS+Se3FjB9ZXXYowiTXLpSLFA3CdxWICm0kfz14YTgl7FQs0v92akSvWG/TPyFuTNk6YG2EK1w==",
   "success": true,
-  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj",
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anton\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",

@@ -7,3 +7,12 @@ C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Services\EspartoWorld.Se
 C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Services\EspartoWorld.Services.Mapping\obj\Debug\netstandard2.1\EspartoWorld.Services.Mapping.csproj.CoreCompileInputs.cache
 C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Services\EspartoWorld.Services.Mapping\obj\Debug\netstandard2.1\EspartoWorld.Services.Mapping.dll
 C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Services\EspartoWorld.Services.Mapping\obj\Debug\netstandard2.1\EspartoWorld.Services.Mapping.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Mapping\bin\Debug\netstandard2.1\EspartoWorld.Services.Mapping.deps.json
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Mapping\bin\Debug\netstandard2.1\EspartoWorld.Services.Mapping.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Mapping\bin\Debug\netstandard2.1\EspartoWorld.Services.Mapping.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Mapping\obj\Debug\netstandard2.1\EspartoWorld.Services.Mapping.csprojAssemblyReference.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Mapping\obj\Debug\netstandard2.1\EspartoWorld.Services.Mapping.AssemblyInfoInputs.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Mapping\obj\Debug\netstandard2.1\EspartoWorld.Services.Mapping.AssemblyInfo.cs
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Mapping\obj\Debug\netstandard2.1\EspartoWorld.Services.Mapping.csproj.CoreCompileInputs.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Mapping\obj\Debug\netstandard2.1\EspartoWorld.Services.Mapping.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Mapping\obj\Debug\netstandard2.1\EspartoWorld.Services.Mapping.pdb

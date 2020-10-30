@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1hF0PL9TFircncg8VjWdSFxVmH7BvSCxaQvviaVbo/OVbHBGkerfLSgj2ITyR0le6LBBArk5LbKpdmtE/NQruQ==",
+  "dgSpecHash": "5cA17t4IGwQnYRqDjKsvzq5wkzernba1tlWrOkHvgF7ldStvi9UKlZx7mvzSk8KUw/ALS93dMtQv1WrjRB2EhQ==",
   "success": true,
-  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj",
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"

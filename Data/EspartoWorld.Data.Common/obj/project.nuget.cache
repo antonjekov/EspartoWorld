@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O/YMbb87G5QQAx17zKr5QOe+teV7dhLVQpCI8QZW16gzHcAg2+KoNvOrDQwfSVwMKmkYxScv0VvTW2s1ZwgWFA==",
+  "dgSpecHash": "hsJEmNV6z86ykeM4/JshGGZfFRzcMhSEUBXE8ghGO6fPVPpJwi7WVYLLoSSQStX5vidEJJzWdvi9RgaeePyqNw==",
   "success": true,
-  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj",
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Data\\EspartoWorld.Data.Common\\EspartoWorld.Data.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kZf5oIO5Xyubw/vphjnc6gSFoy0CeCg1B0iu057TLJVLBNgtv148ju8WR0CNgkCsw44SHTvG6y2lc3rTdYVC+g==",
+  "dgSpecHash": "HZfuHxkvvia4gKKWdYRIhBlYvKXxWMmgohyD540gWQp80AeO2Zn5HkxbmIsAmtCqI8nzdJlXN3ps4E27hQTfpA==",
   "success": true,
-  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj",
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anton\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lIPTka7IpBDUZ2v2oQ6qyBRWKKECAf2MV9kow7NtlXOEEgS/nrRG0I++5Te+V5XVOF8OJK6uJfnl5VMRZFPXcw==",
+  "dgSpecHash": "l+6a3D106G6AHKzYi1QkRw5Teh+McAht9W6sV2hYQWB8wihLvyCjCmwb63A685dOdNMgkEDE2r1Zq0oPf2jx/A==",
   "success": true,
-  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\EspartoWorld\\Services\\EspartoWorld.Services.Messaging\\EspartoWorld.Services.Messaging.csproj",
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Messaging\\EspartoWorld.Services.Messaging.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",

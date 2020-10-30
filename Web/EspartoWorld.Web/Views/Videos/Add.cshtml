@@ -1,0 +1,24 @@
+﻿@model IEnumerable<EspartoWorld.Web.ViewModels.Videos.VideoViewModel>;
+@{
+    foreach (var item in Model)
+    {
+        string imageUrl = $"https://img.youtube.com/vi/{item.VideoId}/mqdefault.jpg";
+        {<div class="row mb-3 shadow rounded">
+                <div class="col-lg-4 my-2">
+                    <img src=@imageUrl alt="Video Image" />
+                </div>
+                <div class="col-lg-8 my-3">
+                    <form method="post">
+                        <div class="form-group">
+                            <label for="videoTitle">Title: </label>
+                            <input type="text" class="form-control" name="title" id="videoTitle" value="@item.Title ">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="videoId" id="videoId" hidden value="@item.VideoId">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+            </div>}
+    }
+}
