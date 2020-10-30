@@ -1,5 +1,6 @@
 ﻿namespace EspartoWorld.Services.Data
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -27,7 +28,7 @@
 
         public IEnumerable<T> GetAll<T>()
         {
-            return this.courseRepository.All().To<T>().ToList();
+            return this.courseRepository.All().Where(x => x.StartDate >= DateTime.Now).OrderBy(x => x.StartDate).To<T>().ToList();
         }
 
         public T GetById<T>(int courseId)
@@ -37,7 +38,7 @@
 
         public T GetNextCourse<T>()
         {
-            return this.courseRepository.All().OrderByDescending(x => x.StartDate).To<T>().FirstOrDefault();
+            return this.courseRepository.All().Where(x => x.StartDate >= DateTime.Now).OrderBy(x => x.StartDate).To<T>().FirstOrDefault();
         }
     }
 }

@@ -1,29 +1,22 @@
-﻿<table class="table table-hover">
+﻿@model IEnumerable<EspartoWorld.Web.ViewModels.Courses.CourseViewModel>
+
+<table class="table table-hover">
     <thead>
         <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Dates</th>
+            <th scope="col">Title</th>
         </tr>
     </thead>
     <tbody>
+        @foreach (var item in Model)
+        {
         <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-           
+            <td>@item.StartDateString - @item.EndDateString</td>
+            <td>@item.Title</td>
+            <td>
+                <a class="btn btn-primary" href="/Courses/Details/@item.Id">Details</a>
+            </td>
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            
-        </tr>
+        }        
     </tbody>
 </table>

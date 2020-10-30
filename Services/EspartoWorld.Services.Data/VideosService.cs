@@ -28,7 +28,7 @@
 
         public ICollection<T> GetAll<T>()
         {
-            return this.videoRepository.All().To<T>().ToList();
+            return this.videoRepository.All().OrderByDescending(x => x.CreatedOn).To<T>().ToList();
         }
 
         public T GetById<T>(int videoId)

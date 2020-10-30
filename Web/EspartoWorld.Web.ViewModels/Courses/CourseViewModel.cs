@@ -14,6 +14,8 @@ namespace EspartoWorld.Web.ViewModels.Courses
 
         public string StartDateString => this.StartDate.ToString("dd.MM.yyyy");
 
+        public string EndDateString => this.StartDate.AddDays(this.LengthInDays).ToString("dd.MM.yyyy");
+
         public string Place { get; set; }
 
         public double Price { get; set; }

@@ -929,3 +929,4 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\Esparto
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Videos\All.cshtml.g.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Videos\Play.cshtml.g.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Courses\All.cshtml.g.cs
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Details.cshtml.g.cs
