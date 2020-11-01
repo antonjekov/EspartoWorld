@@ -1,0 +1,137 @@
+﻿<!-- Visit https://codepen.io/nicolaskadis/full/brQEOd/ for the latest, no js version! -->
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-4 card-container">
+            <div class="card card-flip m-2">
+                <div class="front card-block">
+                    <!-- To add FontAwesome Icons use Unicode characters and to set size use font-size instead of fa-*x because when calculating the height (see js), the size of the icon is not calculated if using classes -->
+                    <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+                    <h4 class="card-title">Front Title</h4>
+                    <h6 class="card-subtitle text-muted">Front Sub-title</h6>
+                    <p class="card-text">Front Text</p>
+                </div>
+                <div class="back card-block">
+                    <p>
+                        Some example text<br> to
+                        <br> increase
+                        <br> card
+                        <br> height
+                        <br> to
+                        <br> something
+                        <br> long
+                    </p>
+                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 card-container">
+            <div class="card card-flip m-2">
+                <div class="front card-block">
+                    <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+                    <h4 class="card-title">Front Title</h4>
+                    <h6 class="card-subtitle text-muted">Front Sub-title</h6>
+                    <p class="card-text">Front Text</p>
+                </div>
+                <div class="back card-block">
+                    <p>Some example short text</p>
+                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 card-container">
+            <div class="card card-flip m-2">
+                <div class="front card-block">
+                    <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+                    <h4 class="card-title">Front Title</h4>
+                    <h6 class="card-subtitle text-muted">Front Sub-title</h6>
+                    <p class="card-text">Front Text</p>
+                </div>
+                <div class="back card-block">
+                    <p>Some example text</p>
+                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 card-container">
+            <div class="card card-flip m-2">
+                <div class="front card-block">
+                    <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+                    <h4 class="card-title">Front Title</h4>
+                    <h6 class="card-subtitle text-muted">Front Sub-title</h6>
+                    <p class="card-text">Front Text</p>
+                </div>
+                <div class="back card-block">
+                    <p>
+                        Some example text<br> to
+                        <br> increase
+                        <br> card
+                        <br> height
+                        <br> to
+                        <br> something
+                        <br> long
+                    </p>
+                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 card-container">
+            <div class="card card-flip m-2">
+                <div class="front card-block">
+                    <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+                    <h4 class="card-title">Front Title</h4>
+                    <h6 class="card-subtitle text-muted">Front Sub-title</h6>
+                    <p class="card-text">Front Text</p>
+                </div>
+                <div class="back card-block">
+                    <p>Some example short text</p>
+                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 card-container">
+            <div class="card card-flip m-2">
+                <div class="front card-block">
+                    <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
+                    <h4 class="card-title">Front Title</h4>
+                    <h6 class="card-subtitle text-muted">Front Sub-title</h6>
+                    <p class="card-text">Front Text</p>
+                </div>
+                <div class="back card-block">
+                    <p>Some example text</p>
+                    <a href="#" class="btn btn-outline-primary">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @*@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>*@
+    <script>
+        $(document).ready(function () {
+            var front = document.getElementsByClassName("front");
+            var back = document.getElementsByClassName("back");
+
+            var highest = 0;
+            var absoluteSide = "";
+
+            for (var i = 0; i < front.length; i++) {
+                if (front[i].offsetHeight > back[i].offsetHeight) {
+                    if (front[i].offsetHeight > highest) {
+                        highest = front[i].offsetHeight;
+                        absoluteSide = ".front";
+                    }
+                } else if (back[i].offsetHeight > highest) {
+                    highest = back[i].offsetHeight;
+                    absoluteSide = ".back";
+                }
+            }
+            $(".front").css("height", highest);
+            $(".back").css("height", highest);
+            $(absoluteSide).css("position", "absolute");
+        });
+    </script>
+}

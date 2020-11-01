@@ -41,4 +41,10 @@
     <ProjectReference Include="..\EspartoWorld.Web.Infrastructure\EspartoWorld.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\EspartoWorld.Web.ViewModels\EspartoWorld.Web.ViewModels.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Update="wwwroot\img\background1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

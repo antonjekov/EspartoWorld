@@ -8,7 +8,7 @@
     <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
 </head>
-<body>
+<body style="background-color: #eaeede">
     <header>
         <partial name="_AdminNavbarPartial" />
 
@@ -52,7 +52,7 @@
                             </div>
                         </li>
                         <li class="nav-item text-dark">
-                            <a class="nav-link" href="/obras">Obras de arte</a>
+                            <a class="nav-link" href="/Exposition/All">Exposición</a>
                         </li>
                         <li class="nav-item text-dark">
                             <a class="nav-link text-dark" asp-area="" asp-controller="" asp-action="">
@@ -67,7 +67,7 @@
         </nav>
     </header>
     
-    <div class="container">
+    <div class="container" >
         <partial name="_CookieConsentPartial" />
         <main role="main" class="pb-3">
             @this.RenderBody()
