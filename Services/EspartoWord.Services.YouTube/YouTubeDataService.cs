@@ -10,7 +10,6 @@
 
     public class YouTubeDataService : IYouTubeDataService
     {
-        //private const string ApiKey = "AIzaSyAh4m1bc7z1YwWY0PZjoyxg7nxCTOvXVFA";
         private readonly YouTubeService youTubeDateService;
 
         public YouTubeDataService(string apiKey)
