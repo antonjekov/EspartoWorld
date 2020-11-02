@@ -9,9 +9,9 @@ C:\gitHub\Software-University\C# .NET Core\EspartoWorld\EspartoWorld.Common\obj\
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\bin\Debug\netstandard2.1\EspartoWorld.Common.deps.json
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\bin\Debug\netstandard2.1\EspartoWorld.Common.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\bin\Debug\netstandard2.1\EspartoWorld.Common.pdb
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\obj\Debug\netstandard2.1\EspartoWorld.Common.csprojAssemblyReference.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\obj\Debug\netstandard2.1\EspartoWorld.Common.AssemblyInfoInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\obj\Debug\netstandard2.1\EspartoWorld.Common.AssemblyInfo.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\obj\Debug\netstandard2.1\EspartoWorld.Common.csproj.CoreCompileInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\obj\Debug\netstandard2.1\EspartoWorld.Common.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\obj\Debug\netstandard2.1\EspartoWorld.Common.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\EspartoWorld.Common\obj\Debug\netstandard2.1\EspartoWorld.Common.csprojAssemblyReference.cache

@@ -10,9 +10,9 @@ C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Services\EspartoWorld.Se
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\bin\Debug\netstandard2.1\EspartoWorld.Services.deps.json
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\bin\Debug\netstandard2.1\EspartoWorld.Services.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\bin\Debug\netstandard2.1\EspartoWorld.Services.pdb
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.csprojAssemblyReference.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.AssemblyInfoInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.AssemblyInfo.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.csproj.CoreCompileInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.csprojAssemblyReference.cache

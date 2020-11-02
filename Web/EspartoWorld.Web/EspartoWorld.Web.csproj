@@ -43,8 +43,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="wwwroot\img\background.jpg">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\img\background1.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
 </Project>

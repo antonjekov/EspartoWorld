@@ -25,6 +25,7 @@
     public class Startup
     {
         private readonly IConfiguration configuration;
+        private string youTubeApiKey;
 
         public Startup(IConfiguration configuration)
         {
@@ -61,12 +62,16 @@
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
+            // External Api variables
+            this.youTubeApiKey = this.configuration["YouTube:ApiKey"];
+
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<ICoursesService, CoursesService>();
             services.AddTransient<IVideosService, VideosService>();
-            services.AddTransient<IYouTubeDataService, YouTubeDataService>();
+            //services.AddTransient<IYouTubeDataService, YouTubeDataService>();
+            services.AddSingleton<IYouTubeDataService>(x => new YouTubeDataService(this.youTubeApiKey));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

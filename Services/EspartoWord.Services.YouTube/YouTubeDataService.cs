@@ -10,14 +10,14 @@
 
     public class YouTubeDataService : IYouTubeDataService
     {
-        private const string ApiKey = "AIzaSyAh4m1bc7z1YwWY0PZjoyxg7nxCTOvXVFA";
+        //private const string ApiKey = "AIzaSyAh4m1bc7z1YwWY0PZjoyxg7nxCTOvXVFA";
         private readonly YouTubeService youTubeDateService;
 
-        public YouTubeDataService()
+        public YouTubeDataService(string apiKey)
         {
             this.youTubeDateService = new YouTubeService(new BaseClientService.Initializer()
             {
-                ApiKey = ApiKey,
+                ApiKey = apiKey,
                 ApplicationName = this.GetType().ToString(),
             });
         }

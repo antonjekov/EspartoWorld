@@ -932,4 +932,5 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\Esparto
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Courses\Details.cshtml.g.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_AdminNavbarPartial.cshtml.g.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Exposition\All.cshtml.g.cs
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\wwwroot\img\background1.jpg
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\_IndexCarouselPartial.cshtml.g.cs
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\_IndexAsideSectionPartial.cshtml.g.cs
