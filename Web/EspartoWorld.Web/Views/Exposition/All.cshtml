@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row text-center">
         <div class="col-md-4 card-container">
-            <div class="card card-flip m-2">
+            <div class="card card-flip border border-dark  m-2">
                 <div class="front card-block">
                     <!-- To add FontAwesome Icons use Unicode characters and to set size use font-size instead of fa-*x because when calculating the height (see js), the size of the icon is not calculated if using classes -->
                     <span class="card-img-top fa" style="font-size: 4em">&#xf118;</span>
@@ -134,4 +134,8 @@
             $(absoluteSide).css("position", "absolute");
         });
     </script>
+}
+
+@section Styles{ 
+<link rel="stylesheet" href="~/css/flipCards.css"/>
 }

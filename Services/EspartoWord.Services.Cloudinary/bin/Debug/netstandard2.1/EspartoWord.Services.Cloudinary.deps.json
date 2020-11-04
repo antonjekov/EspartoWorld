@@ -1,0 +1,42 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "EspartoWord.Services.Cloudinary/1.0.0": {
+        "dependencies": {
+          "CloudinaryDotNet": "1.13.1"
+        },
+        "runtime": {
+          "EspartoWord.Services.Cloudinary.dll": {}
+        }
+      },
+      "CloudinaryDotNet/1.13.1": {
+        "runtime": {
+          "lib/netstandard1.3/CloudinaryDotNet.dll": {
+            "assemblyVersion": "1.13.1.0",
+            "fileVersion": "1.13.1.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EspartoWord.Services.Cloudinary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CloudinaryDotNet/1.13.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-LembXe3pvwKdFAvNaZvSJXiVaRpo+HL/V1UfyHpv3PXTVcjXxuak3+BGgNjM5jfI5TOngWi0oUMLYZ7sBHuWHA==",
+      "path": "cloudinarydotnet/1.13.1",
+      "hashPath": "cloudinarydotnet.1.13.1.nupkg.sha512"
+    }
+  }
+}

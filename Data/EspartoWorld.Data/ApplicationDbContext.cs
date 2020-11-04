@@ -30,6 +30,8 @@
 
         public DbSet<Video> Videos { get; set; }
 
+        public DbSet<ExposicionItem> ExposicionItems { get; set; }
+
         public override int SaveChanges() => this.SaveChanges(true);
 
         public override int SaveChanges(bool acceptAllChangesOnSuccess)
@@ -76,6 +78,13 @@
             {
                 foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
             }
+
+            // Configure relations
+            builder.Entity<ExposicionItem>()
+                .HasOne(ei => ei.Author)
+                .WithMany(a => a.ExposicionItems)
+                .HasForeignKey(ei => ei.AuthorId)
+                .OnDelete(DeleteBehavior.Restrict);
         }
 
         private static void SetIsDeletedQueryFilter<T>(ModelBuilder builder)

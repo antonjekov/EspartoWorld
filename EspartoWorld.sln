@@ -41,6 +41,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EspartoWorld.Web.ViewModels
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspartoWord.Services.YouTube", "Services\EspartoWord.Services.YouTube\EspartoWord.Services.YouTube.csproj", "{BC86517F-9309-4661-9155-9D6524BCF9DD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspartoWord.Services.Cloudinary", "Services\EspartoWord.Services.Cloudinary\EspartoWord.Services.Cloudinary.csproj", "{D77B9919-0693-48B4-9E42-4698BF137432}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +109,10 @@ Global
 		{BC86517F-9309-4661-9155-9D6524BCF9DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC86517F-9309-4661-9155-9D6524BCF9DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC86517F-9309-4661-9155-9D6524BCF9DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D77B9919-0693-48B4-9E42-4698BF137432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D77B9919-0693-48B4-9E42-4698BF137432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D77B9919-0693-48B4-9E42-4698BF137432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D77B9919-0693-48B4-9E42-4698BF137432}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -126,6 +132,7 @@ Global
 		{3EE06C6E-C8F3-418A-A309-8AC81976A074} = {7A731632-6714-44E2-A9E4-069EBA9E666C}
 		{13B7AACB-9C85-4409-8D4B-95A67D0DFFF7} = {E389DEB6-5F90-444B-A054-12A10D39C76F}
 		{BC86517F-9309-4661-9155-9D6524BCF9DD} = {516E002B-9E6E-4456-B7F6-EAA353966DE6}
+		{D77B9919-0693-48B4-9E42-4698BF137432} = {516E002B-9E6E-4456-B7F6-EAA353966DE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {384484BE-4680-4529-9CC2-AD37BA4D12D1}

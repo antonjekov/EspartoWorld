@@ -7,57 +7,9 @@
     <div class="col-lg-8">
         <partial name="_IndexCarouselPartial" />
     </div>
-    <aside class="col-lg-4 ">
-        <div class="card text-white">
-            <div class="card-body">
-                <a href="/courses/details/@Model.NextCourse.Id" >
-                    <h5 class="text-light">Proximo CURSO</h5>
-                    <div class="d-flex border-bottom-blue pt-3 pb-4 align-items-center justify-content-between text-black">
-                        <div class="pr-3">
-                            <h5>@Model.NextCourse.Title</h5>
-                        </div>
-                        @if (@Model.NextCourse.ImageUrl != null)
-                        {
-                            <div class="rotate-img">
-                                <img src=@Model.NextCourse.ImageUrl alt="thumb" class="img-fluid img-lg">
-                                <div class="badge-positioned">
-                                    <span class="badge badge-danger font-weight-bold">Ultimas plasaz</span>
-                                </div>
-                            </div>
-                        }
-                    </div>
-                    <div class="dropdown-divider"></div>
-                </a>
-
-                <a href="/news/all">
-                    <h5 class="text-dark">Ultimas NOTICIAS</h5>
-                    <div class="d-flex border-bottom-blue pb-4 pt-4 align-items-center justify-content-between text-dark">
-                        <div class="pr-3">
-                            <h5>Virus Kills Member Of Advising Iran’s Supreme</h5>
-                        </div>
-                        <div class="rotate-img">
-                            <img src="assets/images/dashboard/home_2.jpg" alt="thumb" class="img-fluid img-lg">
-
-                        </div>
-                    </div>
-                    <div class="dropdown-divider"></div>
-                </a>
-
-                <a href="/videos/all">
-                    <h5 class="text-dark">Ultimo en VIDEOS</h5>
-                    <div class="d-flex pt-4 align-items-center justify-content-between text-dark">
-                        <div class="pr-3">
-                            <h6>@Model.LastVideo.Title</h6>
-                        </div>
-                        <div class="rotate-img">
-                            <img src="https://img.youtube.com/vi/@Model.LastVideo.VideoId/mqdefault.jpg" alt="thumb" class="img-fluid img-lg">
-                        </div>
-                    </div>
-                    <div class="dropdown-divider"></div>
-                </a>
-            </div>
-        </div>
-    </aside>
+    <aside class="col-lg-4">
+        <partial name="_IndexAsideSectionPartial" model="Model">
+    </aside>    
 </div>
 
 <div class="row">
