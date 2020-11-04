@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace EspartoWorld.Data.Migrations
+﻿namespace EspartoWorld.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class ExposicionItem : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -23,7 +24,7 @@ namespace EspartoWorld.Data.Migrations
                     IsSold = table.Column<bool>(nullable: false),
                     ImageUrl = table.Column<string>(nullable: false),
                     Description = table.Column<string>(nullable: false),
-                    AuthorId = table.Column<string>(nullable: false)
+                    AuthorId = table.Column<string>(nullable: false),
                 },
                 constraints: table =>
                 {

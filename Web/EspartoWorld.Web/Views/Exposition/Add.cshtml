@@ -1,0 +1,126 @@
+﻿@model EspartoWorld.Web.ViewModels.ExposicionItems.ExpositionItemInputModel
+@using  EspartoWorld.Data.Models
+@{
+    ViewData["Title"] = "Add Exposicion item";
+}
+<h1>Add Exposicion item</h1>
+<hr />
+<form asp-action="Add" asp-controller="Exposition" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="IsSold" class="control-label">Item is sold:</label>
+                <input asp-for="IsSold" class="form-control" />
+                <span asp-validation-for="IsSold" class="text-danger"></span>
+            </div>*@
+
+            <div class="form-group">
+                <div class="form-check">
+                    <input asp-for="IsSold" class="form-check-input" >
+                    <label asp-for="IsSold" class="control-label form-check-label">Item is sold</label>
+                </div>
+                <span asp-validation-for="IsSold" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <select asp-for="Category" asp-items="@Html.GetEnumSelectList<Category>()" class="form-control"></select>
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label asp-for="ImageUrl" class="control-label"></label>
+                <input asp-for="ImageUrl" class="form-control" placeholder="Please upload image for this course" readonly />
+                <span asp-validation-for="ImageUrl" class="text-danger"></span>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button id="upload_widget" class="btn btn-success m-1">Upload image</button>
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="~/img/background.jpg" class="img-fluid max-width:100% m-1" id="courseImage" alt="Course image">
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="form-group">
+            <input type="submit" value="Create" class="btn btn-success m-1" />
+        </div>
+        <span>
+            <button class="btn btn-primary m-1" asp-action="All">Ver todos</button>
+        </span>
+        <span>
+            <button class="btn btn-success m-1" onclick="ClearAllInputs()">Clear all</button>
+        </span>
+    </div>
+</form>
+
+@section Scripts{
+
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        var myWidget = cloudinary.createUploadWidget({
+            cloudName: 'mielproject',
+            uploadPreset: 'k21wtmfa',
+            folder: 'EspartoWorld',
+            sources: ['local', 'url', 'camera'],
+            multiple: false,
+            resourceType: 'image',
+            cropping: 'true',
+            maxImageFileSize: 500000,
+            maxImageWidth: 1500,
+            maxImageHeight: 800,
+            croppingValidateDimensions: true,
+            theme: 'minimal',
+            // TO DO WIDGET TRANSLATE
+            //language: 'es',
+            //text: {
+            //    'es': {
+            //        'back': 'volver',
+            //        "menu": {
+            //            "camera": "Camara",
+            //            "browse" : "Buscar"
+            //        },
+            //    },
+            //},
+            singleUploadAutoClose: true
+        }, (error, result) => {
+            if (!error && result && result.event === "success") {
+                console.log('Done! Here is the image info: ', result.info);
+                document.getElementById("ImageUrl").value = result.info.secure_url;
+                document.getElementById("courseImage").src = result.info.secure_url;
+            }
+        }
+        )
+
+        document.getElementById("upload_widget").addEventListener("click", function () {
+            myWidget.open();
+        }, false);
+
+        function ClearAllInputs() {
+            let inputs = document.querySelectorAll('input:not([type="submit"]):not([type="hidden"]')
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].value = "";
+            }
+        }
+    </script>
+}

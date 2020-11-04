@@ -26,11 +26,6 @@
         [HttpPost]
         public async Task<IActionResult> AddAsync(CourseInputModel input)
         {
-            if (!this.ModelState.IsValid)
-            {
-                return this.View(input);
-            }
-
             var id = await this.coursesService.AddAsync(input);
             return this.Redirect($"/Courses/Details/{id}");
         }

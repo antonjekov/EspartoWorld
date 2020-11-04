@@ -70,6 +70,7 @@
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<ICoursesService, CoursesService>();
             services.AddTransient<IVideosService, VideosService>();
+            services.AddTransient<IExposicionItemService, ExposicionItemService>();
             services.AddSingleton<IYouTubeDataService>(x => new YouTubeDataService(this.youTubeApiKey));
         }
 
