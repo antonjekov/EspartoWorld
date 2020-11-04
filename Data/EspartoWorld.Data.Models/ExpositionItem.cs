@@ -4,7 +4,7 @@
 
     using EspartoWorld.Data.Common.Models;
 
-    public class ExposicionItem : BaseDeletableModel<int>
+    public class ExpositionItem : BaseDeletableModel<int>
     {
         [Required]
         public string Title { get; set; }

@@ -1,6 +1,24 @@
 ﻿namespace EspartoWorld.Web.ViewModels.ExposicionItems
 {
-    public class ExpositionItemViewModel
+    using EspartoWorld.Data.Models;
+    using EspartoWorld.Services.Mapping;
+
+    public class ExpositionItemViewModel : IMapFrom<ExpositionItem>
     {
+        public int Id { get; set; }
+
+        public string Title { get; set; }
+
+        public Category Category { get; set; }
+
+        public double Price { get; set; }
+
+        public bool IsSold { get; set; }
+
+        public string ImageUrl { get; set; }
+
+        public string Description { get; set; }
+
+        public string AuthorId { get; set; }
     }
 }

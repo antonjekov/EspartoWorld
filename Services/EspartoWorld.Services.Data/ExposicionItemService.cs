@@ -7,19 +7,20 @@
     using EspartoWorld.Data.Common.Repositories;
     using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Mapping;
+    using Microsoft.AspNetCore.Identity;
 
     public class ExposicionItemService : IExposicionItemService
     {
-        private readonly IDeletableEntityRepository<ExposicionItem> exposicionItems;
+        private readonly IDeletableEntityRepository<ExpositionItem> exposicionItems;
 
-        public ExposicionItemService(IDeletableEntityRepository<ExposicionItem> exposicionItems)
+        public ExposicionItemService(IDeletableEntityRepository<ExpositionItem> exposicionItems)
         {
             this.exposicionItems = exposicionItems;
         }
 
         public async Task<int> AddAsync<T>(T input)
         {
-            var item = AutoMapperConfig.MapperInstance.Map<ExposicionItem>(input);
+            var item = AutoMapperConfig.MapperInstance.Map<ExpositionItem>(input);
             await this.exposicionItems.AddAsync(item);
             await this.exposicionItems.SaveChangesAsync();
             return item.Id;

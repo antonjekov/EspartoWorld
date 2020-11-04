@@ -3,8 +3,9 @@
     using System.ComponentModel.DataAnnotations;
 
     using EspartoWorld.Data.Models;
+    using EspartoWorld.Services.Mapping;
 
-    public class ExpositionItemInputModel
+    public class ExpositionItemInputModel : IMapTo<ExpositionItem>
     {
         [Required]
         public string Title { get; set; }

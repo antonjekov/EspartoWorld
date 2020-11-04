@@ -1,22 +1,27 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
     using System.Threading.Tasks;
-
+    using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.ExposicionItems;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     public class ExpositionController : BaseController
     {
         private readonly IExposicionItemService expositionItemService;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public ExpositionController(IExposicionItemService exposicionItemService)
+        public ExpositionController(IExposicionItemService exposicionItemService, UserManager<ApplicationUser> userManager)
         {
             this.expositionItemService = exposicionItemService;
+            this.userManager = userManager;
         }
 
         public IActionResult Add()
         {
+            var userId = this.userManager.GetUserId(this.User);
+            this.ViewData["userId"] = userId;
             return this.View();
         }
 

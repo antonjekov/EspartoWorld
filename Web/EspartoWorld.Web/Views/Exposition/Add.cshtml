@@ -19,15 +19,18 @@
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
+            <div class="form-group">
+                <input asp-for="AuthorId" class="form-control" value="@ViewData["userId"]" hidden/>
+            </div>
             @*<div class="form-group">
-                <label asp-for="IsSold" class="control-label">Item is sold:</label>
-                <input asp-for="IsSold" class="form-control" />
-                <span asp-validation-for="IsSold" class="text-danger"></span>
-            </div>*@
+            <label asp-for="IsSold" class="control-label">Item is sold:</label>
+            <input asp-for="IsSold" class="form-control" />
+            <span asp-validation-for="IsSold" class="text-danger"></span>
+        </div>*@
 
             <div class="form-group">
                 <div class="form-check">
-                    <input asp-for="IsSold" class="form-check-input" >
+                    <input asp-for="IsSold" class="form-check-input">
                     <label asp-for="IsSold" class="control-label form-check-label">Item is sold</label>
                 </div>
                 <span asp-validation-for="IsSold" class="text-danger"></span>

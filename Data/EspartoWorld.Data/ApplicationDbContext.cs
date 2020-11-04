@@ -30,7 +30,7 @@
 
         public DbSet<Video> Videos { get; set; }
 
-        public DbSet<ExposicionItem> ExposicionItems { get; set; }
+        public DbSet<ExpositionItem> ExpositionItems { get; set; }
 
         public override int SaveChanges() => this.SaveChanges(true);
 
@@ -80,7 +80,7 @@
             }
 
             // Configure relations
-            builder.Entity<ExposicionItem>()
+            builder.Entity<ExpositionItem>()
                 .HasOne(ei => ei.Author)
                 .WithMany(a => a.ExposicionItems)
                 .HasForeignKey(ei => ei.AuthorId)

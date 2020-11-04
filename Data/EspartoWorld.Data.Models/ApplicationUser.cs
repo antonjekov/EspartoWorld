@@ -16,7 +16,7 @@ namespace EspartoWorld.Data.Models
             this.Roles = new HashSet<IdentityUserRole<string>>();
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
-            this.ExposicionItems = new HashSet<ExposicionItem>();
+            this.ExposicionItems = new HashSet<ExpositionItem>();
         }
 
         // Audit info
@@ -35,6 +35,6 @@ namespace EspartoWorld.Data.Models
 
         public virtual ICollection<IdentityUserLogin<string>> Logins { get; set; }
 
-        public virtual ICollection<ExposicionItem> ExposicionItems { get; set; }
+        public virtual ICollection<ExpositionItem> ExposicionItems { get; set; }
     }
 }
