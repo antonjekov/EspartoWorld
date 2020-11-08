@@ -39,9 +39,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EspartoWorld.Web.Tests", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EspartoWorld.Web.ViewModels", "Web\EspartoWorld.Web.ViewModels\EspartoWorld.Web.ViewModels.csproj", "{13B7AACB-9C85-4409-8D4B-95A67D0DFFF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspartoWord.Services.YouTube", "Services\EspartoWord.Services.YouTube\EspartoWord.Services.YouTube.csproj", "{BC86517F-9309-4661-9155-9D6524BCF9DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EspartoWord.Services.YouTube", "Services\EspartoWord.Services.YouTube\EspartoWord.Services.YouTube.csproj", "{BC86517F-9309-4661-9155-9D6524BCF9DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EspartoWord.Services.Cloudinary", "Services\EspartoWord.Services.Cloudinary\EspartoWord.Services.Cloudinary.csproj", "{D77B9919-0693-48B4-9E42-4698BF137432}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EspartoWord.Services.Cloudinary", "Services\EspartoWord.Services.Cloudinary\EspartoWord.Services.Cloudinary.csproj", "{D77B9919-0693-48B4-9E42-4698BF137432}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

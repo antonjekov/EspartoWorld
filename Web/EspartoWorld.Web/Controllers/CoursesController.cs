@@ -1,21 +1,17 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
-    using EspartoWorld.Data.Common.Repositories;
-    using EspartoWorld.Data.Models;
+    using System.Threading.Tasks;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.Courses;
     using Microsoft.AspNetCore.Mvc;
-    using System.Threading.Tasks;
 
     public class CoursesController : BaseController
     {
         private readonly ICoursesService coursesService;
-        private readonly IDeletableEntityRepository<Course> repository;
 
-        public CoursesController(ICoursesService coursesService, IDeletableEntityRepository<Course> repository)
+        public CoursesController(ICoursesService coursesService)
         {
             this.coursesService = coursesService;
-            this.repository = repository;
         }
 
         public IActionResult Add()

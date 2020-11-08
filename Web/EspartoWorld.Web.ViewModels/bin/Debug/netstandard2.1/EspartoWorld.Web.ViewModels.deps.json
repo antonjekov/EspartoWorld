@@ -11,6 +11,7 @@
         "dependencies": {
           "EspartoWorld.Data.Models": "1.0.0",
           "EspartoWorld.Services.Mapping": "1.0.0",
+          "EspartoWorld.Web.Infrastructure": "1.0.0",
           "StyleCop.Analyzers": "1.2.0-beta.205"
         },
         "runtime": {
@@ -386,6 +387,14 @@
         "runtime": {
           "EspartoWorld.Services.Mapping.dll": {}
         }
+      },
+      "EspartoWorld.Web.Infrastructure/1.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "runtime": {
+          "EspartoWorld.Web.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -651,6 +660,11 @@
       "sha512": ""
     },
     "EspartoWorld.Services.Mapping/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EspartoWorld.Web.Infrastructure/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -21,6 +21,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\EspartoWorld.Data.Models\EspartoWorld.Data.Models.csproj" />
     <ProjectReference Include="..\..\Services\EspartoWorld.Services.Mapping\EspartoWorld.Services.Mapping.csproj" />
+    <ProjectReference Include="..\EspartoWorld.Web.Infrastructure\EspartoWorld.Web.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

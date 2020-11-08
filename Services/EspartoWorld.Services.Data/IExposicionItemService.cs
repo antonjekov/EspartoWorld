@@ -9,6 +9,12 @@
 
         IEnumerable<T> GetAll<T>();
 
+        IEnumerable<T> GetAllForModerate<T>();
+
+        public IEnumerable<T> GetAllAccepted<T>();
+
         T GetById<T>(int itemId);
+
+        Task Edit<T>(T input);
     }
 }

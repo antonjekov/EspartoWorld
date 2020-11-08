@@ -1061,3 +1061,7 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\Espar
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Tests.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Tests.pdb
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Tests.genruntimeconfig.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\appsettings.Production.json
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll

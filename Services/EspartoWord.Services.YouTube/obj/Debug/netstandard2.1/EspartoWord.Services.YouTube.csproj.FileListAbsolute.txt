@@ -6,7 +6,7 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\Es
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.YouTube\obj\Debug\netstandard2.1\EspartoWord.Services.YouTube.csprojAssemblyReference.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.YouTube\obj\Debug\netstandard2.1\EspartoWord.Services.YouTube.AssemblyInfoInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.YouTube\obj\Debug\netstandard2.1\EspartoWord.Services.YouTube.AssemblyInfo.cs
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.YouTube\obj\Debug\netstandard2.1\EspartoWord.Services.YouTube.csproj.CoreCompileInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.YouTube\obj\Debug\netstandard2.1\EspartoWord.Services.YouTube.csproj.CopyComplete
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.YouTube\obj\Debug\netstandard2.1\EspartoWord.Services.YouTube.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.YouTube\obj\Debug\netstandard2.1\EspartoWord.Services.YouTube.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.YouTube\obj\Debug\netstandard2.1\EspartoWord.Services.YouTube.csproj.CoreCompileInputs.cache

@@ -1,6 +1,7 @@
 ﻿namespace EspartoWorld.Services.Data
 {
     using System.Collections.Generic;
+    using System.Data.Common;
     using System.Linq;
     using System.Threading.Tasks;
 
@@ -26,9 +27,26 @@
             return item.Id;
         }
 
+        public async Task Edit<T>(T input)
+        {
+            var item = AutoMapperConfig.MapperInstance.Map<ExpositionItem>(input);
+            this.exposicionItems.Update(item);
+            await this.exposicionItems.SaveChangesAsync();
+        }
+
         public IEnumerable<T> GetAll<T>()
         {
             return this.exposicionItems.All().To<T>().ToList();
+        }
+
+        public IEnumerable<T> GetAllAccepted<T>()
+        {
+            return this.exposicionItems.All().Where(x => x.Accepted == true).To<T>().ToList();
+        }
+
+        public IEnumerable<T> GetAllForModerate<T>()
+        {
+            return this.exposicionItems.All().Where(x => x.Accepted == false).To<T>().ToList();
         }
 
         public T GetById<T>(int itemId)

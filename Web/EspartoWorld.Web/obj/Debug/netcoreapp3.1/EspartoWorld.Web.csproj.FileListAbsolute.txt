@@ -936,3 +936,10 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\Esparto
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\_IndexAsideSectionPartial.cshtml.g.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Exposition\Details.cshtml.g.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Exposition\Add.cshtml.g.cs
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\appsettings.Production.json
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Contact\Index.cshtml.g.cs
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Exposition\ThankYou.cshtml.g.cs
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Exposition\Moderate.cshtml.g.cs

@@ -26,6 +26,7 @@
     {
         private readonly IConfiguration configuration;
         private string youTubeApiKey;
+        private string sendGridApiKey;
 
         public Startup(IConfiguration configuration)
         {
@@ -64,9 +65,12 @@
 
             // External Api variables
             this.youTubeApiKey = this.configuration["YouTube:ApiKey"];
+            this.sendGridApiKey = this.configuration["SendGrid:ApiKey"];
 
             // Application services
             services.AddTransient<IEmailSender, NullMessageSender>();
+            services.AddTransient((provider) => new SendGridEmailSender(this.sendGridApiKey));
+            services.AddTransient<MailKitEmailSender>();
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<ICoursesService, CoursesService>();
             services.AddTransient<IVideosService, VideosService>();

@@ -1,8 +1,8 @@
 ﻿@model EspartoWorld.Web.ViewModels.Courses.CourseInputModel
 @{
-    ViewData["Title"] = "Add Course";
+    ViewData["Title"] = "Añadir curso";
 }
-<h1>Add Course</h1>
+<h1>Añadir curso</h1>
 <hr />
 <form asp-action="Add" asp-controller="Courses" method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -48,23 +48,22 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
+                <textarea rows="3" asp-for="Description" class="form-control" ></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
         </div>
         <div class="col-md-4">
-            <div class="form-group">
+            <div class="form-group" id="imageGroup">
                 <label asp-for="ImageUrl" class="control-label"></label>
                 <input asp-for="ImageUrl" class="form-control" placeholder="Please upload image for this course" readonly />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
-            </div>
-            <div class="d-flex justify-content-center">
-                <button id="upload_widget" class="btn btn-success m-1">Upload image</button>
+                <div class="d-flex justify-content-center">
+                    <button id="upload_widget" class="btn btn-success m-1">Upload image</button>
+                </div>
             </div>
             <div class="d-flex justify-content-center">
                 <img src="~/img/background.jpg" class="img-fluid max-width:100% m-1" id="courseImage" alt="Course image">
             </div>
-
         </div>
     </div>
     <div class="d-flex justify-content-center">
@@ -72,7 +71,7 @@
             <input type="submit" value="Create" class="btn btn-success m-1" />
         </div>
         <span>
-            <button class="btn btn-primary m-1" asp-action="All">Ver todos cursos</button>
+            <button class="btn btn-primary m-1" asp-action="All">Todos cursos</button>
         </span>
         <span>
             <button class="btn btn-success m-1" onclick="ClearAllInputs()">Clear all</button>
@@ -115,9 +114,9 @@
             singleUploadAutoClose: true
         }, (error, result) => {
             if (!error && result && result.event === "success") {
-                console.log('Done! Here is the image info: ', result.info);
                 document.getElementById("ImageUrl").value = result.info.secure_url;
-                document.getElementById("courseImage").src = result.info.secure_url;
+                document.getElementById("imageGroup").style.visibility = "hidden";
+                document.getElementById("courseImage").src = result.info.secure_url
             }
         }
         )
@@ -128,6 +127,7 @@
 
         function ClearAllInputs() {
             let inputs = document.querySelectorAll('input:not([type="submit"]):not([type="hidden"]')
+            document.getElementById("Description").value=''
             for (var i = 0; i < inputs.length; i++) {
                 inputs[i].value = "";
             }

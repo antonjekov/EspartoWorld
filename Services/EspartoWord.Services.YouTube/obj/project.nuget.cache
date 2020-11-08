@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fBpKe/XM+4Kwc9I2gcjDD43WRRLxd8ceTliIVcOv4bDq3vADkImdbAQE22D1YLoA6ekErEbeB/Ug4BZNMVI6hA==",
+  "dgSpecHash": "l65PehWyPKgwMKQuJirYLCu+z4CEI2vciwIXUBEtqWfMOlZkExxNx6EKeG0C+kQrlC4kH5zrn58vn+GjLST9TA==",
   "success": true,
   "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWord.Services.YouTube\\EspartoWord.Services.YouTube.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "C:\\Users\\anton\\.nuget\\packages\\google.apis.youtube.v3\\1.49.0.2120\\google.apis.youtube.v3.1.49.0.2120.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.261\\stylecop.analyzers.unstable.1.2.0.261.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []

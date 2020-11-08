@@ -78,13 +78,6 @@
             {
                 foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
             }
-
-            // Configure relations
-            builder.Entity<ExpositionItem>()
-                .HasOne(ei => ei.Author)
-                .WithMany(a => a.ExposicionItems)
-                .HasForeignKey(ei => ei.AuthorId)
-                .OnDelete(DeleteBehavior.Restrict);
         }
 
         private static void SetIsDeletedQueryFilter<T>(ModelBuilder builder)

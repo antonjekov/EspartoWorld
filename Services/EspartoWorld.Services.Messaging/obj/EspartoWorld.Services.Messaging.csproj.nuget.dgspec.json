@@ -40,6 +40,10 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.9.0, )"
+            },
             "Sendgrid": {
               "target": "Package",
               "version": "[9.21.0, )"

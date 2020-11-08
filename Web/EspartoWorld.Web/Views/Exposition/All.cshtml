@@ -12,7 +12,7 @@
                     </div>
                     <div class="back card-block card-body d-flex flex-column">
                         <h4 class="card-title m-2">@item.Title</h4>
-                        <p class="card-text m-1"><b>Author:</b> @item.AuthorId</p>
+                        <p class="card-text m-1"><b>Author:</b> @item.Author.UserName</p>
                         <p class="card-text m-1">@item.Description</p>
                         @if (item.IsSold)
                         {

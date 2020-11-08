@@ -436,6 +436,19 @@
         "runtime": {
           "bin/placeholder/EspartoWorld.Services.Mapping.dll": {}
         }
+      },
+      "EspartoWorld.Web.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "bin/placeholder/EspartoWorld.Web.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EspartoWorld.Web.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -1308,12 +1321,18 @@
       "type": "project",
       "path": "../../Services/EspartoWorld.Services.Mapping/EspartoWorld.Services.Mapping.csproj",
       "msbuildProject": "../../Services/EspartoWorld.Services.Mapping/EspartoWorld.Services.Mapping.csproj"
+    },
+    "EspartoWorld.Web.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../EspartoWorld.Web.Infrastructure/EspartoWorld.Web.Infrastructure.csproj",
+      "msbuildProject": "../EspartoWorld.Web.Infrastructure/EspartoWorld.Web.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
       "EspartoWorld.Data.Models >= 1.0.0",
       "EspartoWorld.Services.Mapping >= 1.0.0",
+      "EspartoWorld.Web.Infrastructure >= 1.0.0",
       "StyleCop.Analyzers >= 1.2.0-beta.205"
     ]
   },
@@ -1351,6 +1370,9 @@
             },
             "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj": {
               "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj"
+            },
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj"
             }
           }
         }

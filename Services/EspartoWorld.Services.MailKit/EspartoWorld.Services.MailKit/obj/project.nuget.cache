@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "jOzZ4MBVKOoKXmw96CYC5aUyMIKG0HOrDE/FdqS5iodp81rs/1izf6BHVel9uaeDrFGKeKUYqSs6SsgWaXh2Kg==",
+  "success": true,
+  "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.MailKit\\EspartoWorld.Services.MailKit\\EspartoWorld.Services.MailKit.csproj",
+  "expectedPackageFiles": [
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.261\\stylecop.analyzers.unstable.1.2.0.261.nupkg.sha512"
+  ],
+  "logs": []
+}

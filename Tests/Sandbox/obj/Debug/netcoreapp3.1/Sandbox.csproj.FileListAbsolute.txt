@@ -184,3 +184,6 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\Sandb
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.pdb
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.genruntimeconfig.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\Sandbox\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\Sandbox\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\Sandbox\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll

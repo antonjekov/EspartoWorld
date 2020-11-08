@@ -10,7 +10,8 @@
       "EspartoWord.Services.YouTube/1.0.0": {
         "dependencies": {
           "EspartoWorld.Services.Mapping": "1.0.0",
-          "Google.Apis.YouTube.v3": "1.49.0.2120"
+          "Google.Apis.YouTube.v3": "1.49.0.2120",
+          "StyleCop.Analyzers.Unstable": "1.2.0.261"
         },
         "runtime": {
           "EspartoWord.Services.YouTube.dll": {}
@@ -94,6 +95,7 @@
           }
         }
       },
+      "StyleCop.Analyzers.Unstable/1.2.0.261": {},
       "System.Reflection.Emit/4.7.0": {},
       "EspartoWorld.Services.Mapping/1.0.0": {
         "dependencies": {
@@ -159,6 +161,13 @@
       "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "path": "newtonsoft.json/12.0.3",
       "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.261": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FpInVJVmFyWIRz4oIpPpLuOkW3oFhfU4CcT7bkeZlN+iwG1T37hGVZFQ8bA2fsJv5vAHOlqLpvk7HyU3q6tF2w==",
+      "path": "stylecop.analyzers.unstable/1.2.0.261",
+      "hashPath": "stylecop.analyzers.unstable.1.2.0.261.nupkg.sha512"
     },
     "System.Reflection.Emit/4.7.0": {
       "type": "package",

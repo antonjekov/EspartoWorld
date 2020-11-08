@@ -1,0 +1,22 @@
+﻿@model IEnumerable<EspartoWorld.Web.ViewModels.ExposicionItems.ExpositionItemViewModel>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Author.Email</td>
+                <td>
+                    <a class="btn btn-success" href="/Exposition/Details/@item.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

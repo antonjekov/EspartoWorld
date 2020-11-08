@@ -1,9 +1,11 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
     using System.Threading.Tasks;
+
     using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.ExposicionItems;
+    using EspartoWorld.Web.ViewModels.ExpositionItems;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
@@ -29,19 +31,37 @@
         public async Task<IActionResult> AddAsync(ExpositionItemInputModel input)
         {
             var id = await this.expositionItemService.AddAsync(input);
-            return this.Redirect($"/Exposition/Details/{id}");
+            return this.Redirect("/Exposition/ThankYou");
         }
 
         public IActionResult All()
         {
-            var items = this.expositionItemService.GetAll<ExpositionItemViewModel>();
+            var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>();
             return this.View(items);
         }
 
         public IActionResult Details(int id)
         {
-            var item = this.expositionItemService.GetById<ExpositionItemViewModel>(id);
+            var item = this.expositionItemService.GetById<ExpositionItemModerateViewModel>(id);
             return this.View(item);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Details(ExpositionItemModerateInputModel input)
+        {
+            await this.expositionItemService.Edit<ExpositionItemModerateInputModel>(input);
+            return this.Redirect("/Exposition/Moderate");
+        }
+
+        public IActionResult ThankYou()
+        {
+            return this.View();
+        }
+
+        public IActionResult Moderate()
+        {
+            var items = this.expositionItemService.GetAllForModerate<ExpositionItemViewModel>();
+            return this.View(items);
         }
     }
 }

@@ -1,0 +1,5 @@
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.MailKit\EspartoWorld.Services.MailKit\bin\Debug\netstandard2.0\EspartoWorld.Services.MailKit.deps.json
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.MailKit\EspartoWorld.Services.MailKit\bin\Debug\netstandard2.0\EspartoWorld.Services.MailKit.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.MailKit\EspartoWorld.Services.MailKit\obj\Debug\netstandard2.0\EspartoWorld.Services.MailKit.csprojAssemblyReference.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.MailKit\EspartoWorld.Services.MailKit\obj\Debug\netstandard2.0\EspartoWorld.Services.MailKit.AssemblyInfoInputs.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.MailKit\EspartoWorld.Services.MailKit\obj\Debug\netstandard2.0\EspartoWorld.Services.MailKit.AssemblyInfo.cs

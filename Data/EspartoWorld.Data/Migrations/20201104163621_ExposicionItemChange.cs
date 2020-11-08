@@ -1,8 +1,9 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
-
-namespace EspartoWorld.Data.Migrations
+﻿namespace EspartoWorld.Data.Migrations
 {
+    using System;
+
+    using Microsoft.EntityFrameworkCore.Migrations;
+
     public partial class ExposicionItemChange : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -26,7 +27,7 @@ namespace EspartoWorld.Data.Migrations
                     IsSold = table.Column<bool>(nullable: false),
                     ImageUrl = table.Column<string>(nullable: false),
                     Description = table.Column<string>(nullable: false),
-                    AuthorId = table.Column<string>(nullable: false)
+                    AuthorId = table.Column<string>(nullable: false),
                 },
                 constraints: table =>
                 {
@@ -71,7 +72,7 @@ namespace EspartoWorld.Data.Migrations
                     IsSold = table.Column<bool>(type: "bit", nullable: false),
                     ModifiedOn = table.Column<DateTime>(type: "datetime2", nullable: true),
                     Price = table.Column<double>(type: "float", nullable: false),
-                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                 },
                 constraints: table =>
                 {

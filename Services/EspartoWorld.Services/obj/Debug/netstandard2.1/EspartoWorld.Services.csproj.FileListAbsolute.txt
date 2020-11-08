@@ -15,4 +15,3 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\Es
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.csproj.CoreCompileInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.pdb
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services\obj\Debug\netstandard2.1\EspartoWorld.Services.csprojAssemblyReference.cache

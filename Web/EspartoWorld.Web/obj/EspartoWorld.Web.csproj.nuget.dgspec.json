@@ -341,6 +341,12 @@
             "Google.Apis.YouTube.v3": {
               "target": "Package",
               "version": "[1.49.0.2120, )"
+            },
+            "StyleCop.Analyzers.Unstable": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0.261, )"
             }
           },
           "imports": [
@@ -536,6 +542,10 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "MailKit": {
+              "target": "Package",
+              "version": "[2.9.0, )"
+            },
             "Sendgrid": {
               "target": "Package",
               "version": "[9.21.0, )"
@@ -669,6 +679,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[1.2.0-beta.205, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
             }
           },
           "imports": [
@@ -720,6 +734,9 @@
               },
               "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj": {
                 "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj"
+              },
+              "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj": {
+                "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.Infrastructure\\EspartoWorld.Web.Infrastructure.csproj"
               }
             }
           }
