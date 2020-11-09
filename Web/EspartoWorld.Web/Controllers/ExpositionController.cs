@@ -42,14 +42,19 @@
 
         public IActionResult Details(int id)
         {
-            var item = this.expositionItemService.GetById<ExpositionItemModerateViewModel>(id);
+            var item = this.expositionItemService.GetById<ExpositionItemModerateModel>(id);
             return this.View(item);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Details(ExpositionItemModerateInputModel input)
+        public async Task<IActionResult> Details(ExpositionItemModerateModel input)
         {
-            await this.expositionItemService.Edit<ExpositionItemModerateInputModel>(input);
+            if (!this.ModelState.IsValid)
+            {
+                return this.View();
+            }
+
+            await this.expositionItemService.Edit<ExpositionItemModerateModel>(input);
             return this.Redirect("/Exposition/Moderate");
         }
 
@@ -62,6 +67,12 @@
         {
             var items = this.expositionItemService.GetAllForModerate<ExpositionItemViewModel>();
             return this.View(items);
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            await this.expositionItemService.Delete(id);
+            return this.Redirect("/Exposition/All");
         }
     }
 }

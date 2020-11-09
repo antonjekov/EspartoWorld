@@ -16,5 +16,7 @@
         T GetById<T>(int itemId);
 
         Task Edit<T>(T input);
+
+        Task Delete(int itemId);
     }
 }

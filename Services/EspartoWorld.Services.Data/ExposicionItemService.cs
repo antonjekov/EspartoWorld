@@ -9,6 +9,7 @@
     using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Mapping;
     using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
 
     public class ExposicionItemService : IExposicionItemService
     {
@@ -52,6 +53,13 @@
         public T GetById<T>(int itemId)
         {
             return this.exposicionItems.All().Where(x => x.Id == itemId).To<T>().FirstOrDefault();
+        }
+
+        public async Task Delete(int itemId)
+        {
+            var item = this.exposicionItems.All().Where(x => x.Id == itemId).FirstOrDefault();
+            this.exposicionItems.Delete(item);
+            await this.exposicionItems.SaveChangesAsync();
         }
     }
 }
