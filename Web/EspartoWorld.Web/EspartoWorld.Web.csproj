@@ -43,6 +43,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="wwwroot\favicon.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Content>
     <Content Update="wwwroot\img\background.jpg">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
