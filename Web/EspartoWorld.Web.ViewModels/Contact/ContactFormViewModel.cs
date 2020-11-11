@@ -1,7 +1,7 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace EspartoWorld.Web.ViewModels.Contact
+﻿namespace EspartoWorld.Web.ViewModels.Contact
 {
+    using System.ComponentModel.DataAnnotations;
+
     public class ContactFormViewModel
     {
         [Required(AllowEmptyStrings = false, ErrorMessage = "Моля въведете вашите имена")]
@@ -23,7 +23,7 @@ namespace EspartoWorld.Web.ViewModels.Contact
         [Display(Name = "Съдържание на съобщението")]
         public string Content { get; set; }
 
-        //[GoogleReCaptchaValidation]
-        //public string RecaptchaValue { get; set; }
+        // [GoogleReCaptchaValidation]
+        // public string RecaptchaValue { get; set; }
     }
 }

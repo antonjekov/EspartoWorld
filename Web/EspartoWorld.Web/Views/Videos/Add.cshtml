@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<EspartoWorld.Web.ViewModels.Videos.VideoViewModel>;
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     foreach (var item in Model)
     {
@@ -16,7 +17,7 @@
                         <div class="form-group">
                             <input type="text" class="form-control" name="videoId" id="videoId" hidden value="@item.VideoId">
                         </div>
-                        <button type="submit" class="btn btn-success">Add</button>
+                        <button type="submit" class="btn btn-success">@localizer["Add"]</button>
                     </form>
                 </div>
             </div>}

@@ -21,6 +21,7 @@
 
         [Required]
         [Url]
+        [Display(Name = "Image Url")]
         public string ImageUrl { get; set; }
 
         [Required]

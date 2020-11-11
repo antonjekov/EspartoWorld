@@ -1,5 +1,4 @@
-﻿
-namespace EspartoWorld.Web.ViewModels.ExpositionItems
+﻿namespace EspartoWorld.Web.ViewModels.ExpositionItems
 {
     using System.ComponentModel.DataAnnotations;
 

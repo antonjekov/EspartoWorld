@@ -1,6 +1,5 @@
 ﻿namespace EspartoWorld.Web.ViewModels.Home
 {
-
     using EspartoWorld.Web.ViewModels.Courses;
     using EspartoWorld.Web.ViewModels.Videos;
 

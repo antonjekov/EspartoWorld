@@ -1,22 +1,24 @@
 ﻿@model IEnumerable<EspartoWorld.Web.ViewModels.Courses.CourseViewModel>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
 
 <table class="table table-hover">
     <thead>
         <tr>
-            <th scope="col">Dates</th>
-            <th scope="col">Title</th>
+            <th scope="col">@localizer["Dates"]</th>
+            <th scope="col">@localizer["Title"]</th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
-        <tr>
-            <td>@item.StartDateString - @item.EndDateString</td>
-            <td>@item.Title</td>
-            <td>
-                <a class="btn btn-success" href="/Courses/Details/@item.Id">Details</a>
-            </td>
-        </tr>
-        }        
+            <tr>
+                <td>@item.StartDateString - @item.EndDateString</td>
+                <td>@item.Title</td>
+                <td>
+                    <a class="btn btn-success" href="/Courses/Details/@item.Id">@localizer["Details"]</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

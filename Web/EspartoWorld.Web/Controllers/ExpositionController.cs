@@ -30,7 +30,7 @@
         [HttpPost]
         public async Task<IActionResult> AddAsync(ExpositionItemInputModel input)
         {
-            var id = await this.expositionItemService.AddAsync(input);
+            await this.expositionItemService.AddAsync(input);
             return this.Redirect("/Exposition/ThankYou");
         }
 

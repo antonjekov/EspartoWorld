@@ -303,6 +303,14 @@
         "runtime": {
           "EspartoWorld.Web.dll": {}
         },
+        "resources": {
+          "es/EspartoWorld.Web.resources.dll": {
+            "locale": "es"
+          },
+          "en/EspartoWorld.Web.resources.dll": {
+            "locale": "en"
+          }
+        },
         "compile": {
           "EspartoWorld.Web.dll": {}
         }

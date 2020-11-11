@@ -1,7 +1,9 @@
 ﻿@model EspartoWorld.Web.ViewModels.Home.HomeViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
 
 <div class="card mb-1">
-    <h5 class="card-header">Proximo CURSO</h5>
+    <h5 class="card-header">@localizer["Next course"]</h5>
     <a asp-controller="Courses" asp-action="Details" asp-route-id=@Model.NextCourse.Id>
         <div class="card-body row">
             <div class="col-8">
@@ -13,7 +15,7 @@
                     <div class="rotate-img">
                         <img src=@Model.NextCourse.ImageUrl alt="thumb" class="img-fluid img-lg">
                         <div class="badge-positioned">
-                            <span class="badge badge-danger font-weight-bold">Ultimas plasaz</span>
+                            <span class="badge badge-danger font-weight-bold">@localizer["Last places"]</span>
                         </div>
                     </div>
                 }
@@ -23,7 +25,7 @@
 </div>
 
 <div class="card mb-1">
-    <h5 class="card-header">Ultimos ARTICULOS</h5>
+    <h5 class="card-header">@localizer["Latest ARTICLES"]</h5>
     <a asp-controller="Articuls" asp-action="Details" asp-route-id=@Model.NextCourse.Id>
         <div class="card-body row">
             <div class="col-8">
@@ -34,9 +36,6 @@
                 {
                     <div class="rotate-img">
                         <img src=@Model.NextCourse.ImageUrl alt="thumb" class="img-fluid img-lg">
-                        <div class="badge-positioned">
-                            <span class="badge badge-danger font-weight-bold">Ultimas plasaz</span>
-                        </div>
                     </div>
                 }
             </div>
@@ -45,7 +44,7 @@
 </div>
 
 <div class="card mb-1">
-    <h5 class="card-header">Ultimo en VIDEOS</h5>
+    <h5 class="card-header">@localizer["Latest VIDEOS"]</h5>
     <a asp-controller="Videos" asp-action="All">
         <div class="card-body row">
             <div class="col-8">

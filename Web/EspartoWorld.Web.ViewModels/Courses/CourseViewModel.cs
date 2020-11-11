@@ -1,11 +1,10 @@
-﻿using EspartoWorld.Data.Models;
-using EspartoWorld.Services.Mapping;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace EspartoWorld.Web.ViewModels.Courses
+﻿namespace EspartoWorld.Web.ViewModels.Courses
 {
+    using System;
+
+    using EspartoWorld.Data.Models;
+    using EspartoWorld.Services.Mapping;
+
     public class CourseViewModel : IMapFrom<Course>
     {
         public int Id { get; set; }

@@ -26,9 +26,9 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\Esparto
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.csprojAssemblyReference.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.AssemblyInfoInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.AssemblyInfo.cs
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.csproj.CoreCompileInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.csproj.CopyComplete
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.pdb
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\bin\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\bin\Debug\netstandard2.1\EspartoWorld.Web.Infrastructure.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.csproj.CoreCompileInputs.cache

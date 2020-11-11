@@ -1,8 +1,9 @@
 ﻿@model EspartoWorld.Web.ViewModels.Courses.CourseInputModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @{
     ViewData["Title"] = "Añadir curso";
 }
-<h1>Añadir curso</h1>
+<h1>@localizer["Add course"]</h1>
 <hr />
 <form asp-action="Add" asp-controller="Courses" method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -48,7 +49,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Description" class="control-label"></label>
-                <textarea rows="3" asp-for="Description" class="form-control" ></textarea>
+                <textarea rows="3" asp-for="Description" class="form-control"></textarea>
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
         </div>
@@ -127,7 +128,7 @@
 
         function ClearAllInputs() {
             let inputs = document.querySelectorAll('input:not([type="submit"]):not([type="hidden"]')
-            document.getElementById("Description").value=''
+            document.getElementById("Description").value = ''
             for (var i = 0; i < inputs.length; i++) {
                 inputs[i].value = "";
             }

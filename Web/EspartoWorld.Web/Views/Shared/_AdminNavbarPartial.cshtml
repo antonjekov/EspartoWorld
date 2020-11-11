@@ -1,41 +1,36 @@
-﻿<nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom box-shadow ">
-    <div class="container">
-        <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Administrador</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#admin-navbar" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" id="admin-navbar">
-            <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Anadir
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" asp-area="" asp-controller="Courses" asp-action="Add">Curso</a>
-                        <a class="dropdown-item" asp-area="" asp-controller="Videos" asp-action="Add">Video</a>
-                        <a class="dropdown-item" asp-area="" asp-controller="Articuls" asp-action="Add">Articulo</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Editar
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" asp-area="" asp-controller="Courses" asp-action="Edit">Curso</a>
-                        <a class="dropdown-item" asp-area="" asp-controller="Videos" asp-action="Edit">Video</a>
-                        <a class="dropdown-item" asp-area="" asp-controller="Articuls" asp-action="Edit">Articulo</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                        Revisar
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" asp-area="" asp-controller="Exposition" asp-action="Moderate">Obras</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+<nav class="navbar navbar-expand-sm navbar-light bg-light border-bottom box-shadow ">
+    <a class="navbar-brand ml-4" asp-area="" asp-controller="Home" asp-action="Index">@localizer["Administrator"]</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#admin-navbar" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse" id="admin-navbar">
+        <ul class="navbar-nav flex-grow-1">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">@localizer["Add"]</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" asp-area="" asp-controller="Courses" asp-action="Add">@localizer["Course"]</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Videos" asp-action="Add">@localizer["Video"]</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Articuls" asp-action="Add">@localizer["Article"]</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">@localizer["Edit"]</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" asp-area="" asp-controller="Courses" asp-action="Edit">@localizer["Course"]</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Videos" asp-action="Edit">@localizer["Video"]</a>
+                    <a class="dropdown-item" asp-area="" asp-controller="Articuls" asp-action="Edit">@localizer["Article"]</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">@localizer["Check"]</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" asp-area="" asp-controller="Exposition" asp-action="Moderate">@localizer["Artworks"]</a>
+                </div>
+            </li>
+        </ul>
     </div>
 </nav>

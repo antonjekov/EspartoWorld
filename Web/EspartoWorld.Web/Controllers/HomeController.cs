@@ -1,6 +1,7 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
     using System.Diagnostics;
+
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels;
     using EspartoWorld.Web.ViewModels.Courses;

@@ -1,5 +1,7 @@
 ﻿namespace EspartoWorld.Web
 {
+    using System.Collections.Generic;
+    using System.Globalization;
     using System.Reflection;
 
     using EspartoWorld.Data;
@@ -21,6 +23,7 @@
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
+    using Microsoft.Extensions.Options;
 
     public class Startup
     {
@@ -36,6 +39,23 @@
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Multilanguage
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddMvc()
+                .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization();
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var cultures = new List<CultureInfo>
+                {
+                    new CultureInfo("en"),
+                    new CultureInfo("es"),
+                };
+                options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("en");
+                options.SupportedCultures = cultures;
+                options.SupportedUICultures = cultures;
+            });
+
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
@@ -104,6 +124,10 @@
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            // Multilanguage
+            app.UseRequestLocalization(app.ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
+
             app.UseCookiePolicy();
 
             app.UseRouting();
