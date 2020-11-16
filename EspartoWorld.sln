@@ -43,6 +43,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EspartoWord.Services.YouTub
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EspartoWord.Services.Cloudinary", "Services\EspartoWord.Services.Cloudinary\EspartoWord.Services.Cloudinary.csproj", "{D77B9919-0693-48B4-9E42-4698BF137432}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0E8A111B-B3A7-4EBF-AB9D-233DB12CF49F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

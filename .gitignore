@@ -349,3 +349,6 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
+bin/ 	# ignore bin directory 
+*.obj 	# ignore any files with .obj postfix 
+
