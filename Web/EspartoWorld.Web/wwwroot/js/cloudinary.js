@@ -36,10 +36,3 @@ document.getElementById("upload_widget").addEventListener("click", function () {
     myWidget.open();
 }, false);
 
-//function ClearAllInputs() {
-//    let inputs = document.querySelectorAll('input:not([type="submit"]):not([type="hidden"]')
-//    document.getElementById("Description").value = ''
-//    for (var i = 0; i < inputs.length; i++) {
-//        inputs[i].value = "";
-//    }
-//}

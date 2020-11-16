@@ -3,7 +3,7 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\Es
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.Cloudinary\obj\Debug\netstandard2.1\EspartoWord.Services.Cloudinary.AssemblyInfoInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.Cloudinary\obj\Debug\netstandard2.1\EspartoWord.Services.Cloudinary.AssemblyInfo.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.Cloudinary\bin\Debug\netstandard2.1\EspartoWord.Services.Cloudinary.pdb
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.Cloudinary\obj\Debug\netstandard2.1\EspartoWord.Services.Cloudinary.csprojAssemblyReference.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.Cloudinary\obj\Debug\netstandard2.1\EspartoWord.Services.Cloudinary.csproj.CoreCompileInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.Cloudinary\obj\Debug\netstandard2.1\EspartoWord.Services.Cloudinary.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.Cloudinary\obj\Debug\netstandard2.1\EspartoWord.Services.Cloudinary.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWord.Services.Cloudinary\obj\Debug\netstandard2.1\EspartoWord.Services.Cloudinary.csprojAssemblyReference.cache

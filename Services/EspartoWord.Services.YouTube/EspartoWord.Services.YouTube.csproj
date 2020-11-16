@@ -11,6 +11,7 @@
   <ItemGroup>
     <AdditionalFiles Include="stylecop.json" />
   </ItemGroup>
+  
 
   <ItemGroup>
     <PackageReference Include="Google.Apis.YouTube.v3" Version="1.49.0.2120" />

@@ -461,7 +461,6 @@ C:\gitHub\Software-University\C# .NET Core\EspartoWorld\Web\EspartoWorld.Web\obj
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\appsettings.json
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\bundleconfig.json
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\libman.json
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\EspartoWorld.Web.StaticWebAssets.xml
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\EspartoWorld.Web.exe
@@ -887,8 +886,6 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\Esparto
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.csprojAssemblyReference.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.AssemblyInfoInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.AssemblyInfo.cs
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.csproj.CoreCompileInputs.cache
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.RazorAssemblyInfo.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.RazorAssemblyInfo.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.TagHelpers.input.cache
@@ -966,9 +963,12 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\Esparto
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Views.Videos.Play.es.resources
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\Razor\Views\Videos\Edit.cshtml.g.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Views.Videos.Edit.es.resources
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Views.Courses.Details.es.resources
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Views.Exposition.All.es.resources
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Views.Exposition.Moderate.es.resources
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Views.Exposition.Details.es.resources
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.Views.Exposition.ThankYou.es.resources
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\bin\Debug\netcoreapp3.1\bundleconfig.json
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.csproj.CoreCompileInputs.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web\obj\Debug\netcoreapp3.1\EspartoWorld.Web.MvcApplicationPartsAssemblyInfo.cache

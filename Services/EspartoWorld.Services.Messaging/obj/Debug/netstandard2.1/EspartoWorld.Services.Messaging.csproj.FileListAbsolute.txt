@@ -14,5 +14,5 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\Es
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Messaging\obj\Debug\netstandard2.1\EspartoWorld.Services.Messaging.AssemblyInfo.cs
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Messaging\obj\Debug\netstandard2.1\EspartoWorld.Services.Messaging.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Messaging\obj\Debug\netstandard2.1\EspartoWorld.Services.Messaging.pdb
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Messaging\obj\Debug\netstandard2.1\EspartoWorld.Services.Messaging.csprojAssemblyReference.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Messaging\obj\Debug\netstandard2.1\EspartoWorld.Services.Messaging.csproj.CoreCompileInputs.cache
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Services\EspartoWorld.Services.Messaging\obj\Debug\netstandard2.1\EspartoWorld.Services.Messaging.csprojAssemblyReference.cache
