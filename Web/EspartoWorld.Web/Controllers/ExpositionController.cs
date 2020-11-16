@@ -42,6 +42,11 @@
 
         public IActionResult Details(int id)
         {
+            if (id == 0)
+            {
+                return this.Redirect("/Exposition/Moderate");
+            }
+
             var item = this.expositionItemService.GetById<ExpositionItemModerateModel>(id);
             return this.View(item);
         }
@@ -71,6 +76,11 @@
 
         public async Task<IActionResult> Delete(int id)
         {
+            if (id == 0)
+            {
+                return this.Redirect("/Exposition/All");
+            }
+
             await this.expositionItemService.Delete(id);
             return this.Redirect("/Exposition/All");
         }

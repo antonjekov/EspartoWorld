@@ -55,13 +55,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Views\Shared\_CulturePartial.en.resx">
+    <EmbeddedResource Update="Views\Shared\_CulturePartial.en.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Views\Shared\_CulturePartial.es.resx">
+    <EmbeddedResource Update="Views\Shared\_CulturePartial.es.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Views\Videos\Add.es.resx">
+    <EmbeddedResource Update="Views\Videos\Add.es.resx">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

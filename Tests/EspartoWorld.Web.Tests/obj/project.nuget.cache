@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "bd135lQOUaJZxqkMvXjuVoRCuBNH3kftsksIdt9pLFLqjCZbKMNxYRLZQayT/KVrQWgX2GwalQ8WYhsCIB70jg==",
+  "dgSpecHash": "Njewkl/wlyh9HZZSFbvj4VKzhfXiIy6eoyGpId38Ma5E67ap1NNi3zNMJN89K8/JkNSLjMvCMsEa+YUS5BkiHg==",
   "success": true,
   "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Tests\\EspartoWorld.Web.Tests\\EspartoWorld.Web.Tests.csproj",
   "expectedPackageFiles": [
@@ -42,8 +42,8 @@
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.9\\microsoft.entityframeworkcore.sqlserver.3.1.9.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.9\\microsoft.extensions.caching.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.9\\microsoft.extensions.caching.memory.3.1.9.nupkg.sha512",
-    "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.9\\microsoft.extensions.configuration.3.1.9.nupkg.sha512",
-    "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.9\\microsoft.extensions.configuration.abstractions.3.1.9.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.10\\microsoft.extensions.configuration.3.1.10.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.10\\microsoft.extensions.configuration.abstractions.3.1.10.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.9\\microsoft.extensions.configuration.binder.3.1.9.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration.commandline\\3.1.9\\microsoft.extensions.configuration.commandline.3.1.9.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration.environmentvariables\\3.1.9\\microsoft.extensions.configuration.environmentvariables.3.1.9.nupkg.sha512",
@@ -70,7 +70,7 @@
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.logging.eventsource\\3.1.9\\microsoft.extensions.logging.eventsource.3.1.9.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.options\\3.1.9\\microsoft.extensions.options.3.1.9.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.options.configurationextensions\\3.1.9\\microsoft.extensions.options.configurationextensions.3.1.9.nupkg.sha512",
-    "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.9\\microsoft.extensions.primitives.3.1.9.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.10\\microsoft.extensions.primitives.3.1.10.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.identity.client\\3.0.8\\microsoft.identity.client.3.0.8.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\5.5.0\\microsoft.identitymodel.jsonwebtokens.5.5.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.identitymodel.logging\\5.5.0\\microsoft.identitymodel.logging.5.5.0.nupkg.sha512",

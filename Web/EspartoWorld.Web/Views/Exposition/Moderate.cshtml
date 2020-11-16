@@ -1,10 +1,16 @@
 ﻿@model IEnumerable<EspartoWorld.Web.ViewModels.ExposicionItems.ExpositionItemViewModel>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{
+    ViewData["Title"] = localizer["Moderate"];
+}
 
 <table class="table table-hover">
     <thead>
         <tr>
-            <th scope="col">Title</th>
-            <th scope="col">Author</th>
+            <th scope="col">@localizer["Title"]</th>
+            <th scope="col">@localizer["Author"]</th>
         </tr>
     </thead>
     <tbody>
@@ -14,7 +20,7 @@
                 <td>@item.Title</td>
                 <td>@item.Author.Email</td>
                 <td>
-                    <a class="btn btn-success" href="/Exposition/Details/@item.Id">Details</a>
+                    <a class="btn btn-success" asp-controller="Exposition" asp-action="Details" asp-route-id="@item.Id">@localizer["Details"]</a>
                 </td>
             </tr>
         }

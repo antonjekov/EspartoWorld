@@ -1,7 +1,14 @@
-﻿<h3 class="text-success">Gracias por compartir con nosotros vuestro trabajo de artesania!</h3>
-<p class="text-dark">Despues de revisar que vuestra obra de arte cumple todos criterios de esta pagina vamos a publicarla para pueden desfrutarla todos nuestros visitantes. Nos guardamos derecho para revisar descripcion titulo y otros elementos en manera que va a favorecer presentacion.</p>
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{
+    ViewData["Title"] = localizer["Thank you"];
+}
+
+<h3 class="text-success">@localizer["Thank you for sharing your craft work with us!"]</h3>
+<p class="text-dark">@localizer["After checking that your work of art meets all the criteria of this page, we will publish it so that all our visitors can enjoy it. We reserve the right to review title description and other elements in a way that will favor presentation."]</p>
 <div class="d-flex justify-content-center">
     <span>
-        <a class="btn btn-success m-1" asp-action="All">Ver toda exposicion</a>
+        <a class="btn btn-success m-1" asp-action="All">@localizer["See all exhibition"]</a>
     </span>
 </div>

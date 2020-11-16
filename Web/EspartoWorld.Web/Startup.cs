@@ -18,7 +18,9 @@
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
+    using Microsoft.AspNetCore.Localization;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Razor;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
@@ -28,8 +30,6 @@
     public class Startup
     {
         private readonly IConfiguration configuration;
-        private string youTubeApiKey;
-        private string sendGridApiKey;
 
         public Startup(IConfiguration configuration)
         {
@@ -40,20 +40,20 @@
         public void ConfigureServices(IServiceCollection services)
         {
             // Multilanguage
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            // services.AddLocalization(options => options.ResourcesPath = "Resources");
             services.AddMvc()
-                .AddViewLocalization(Microsoft.AspNetCore.Mvc.Razor.LanguageViewLocationExpanderFormat.Suffix)
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization();
             services.Configure<RequestLocalizationOptions>(options =>
             {
-                var cultures = new List<CultureInfo>
+                var supportedCultures = new[]
                 {
-                    new CultureInfo("en"),
-                    new CultureInfo("es"),
+            new CultureInfo("en-US"),
+            new CultureInfo("es"),
                 };
-                options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("en");
-                options.SupportedCultures = cultures;
-                options.SupportedUICultures = cultures;
+                options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
             });
 
             services.AddDbContext<ApplicationDbContext>(
@@ -83,19 +83,16 @@
             services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>));
             services.AddScoped<IDbQueryRunner, DbQueryRunner>();
 
-            // External Api variables
-            this.youTubeApiKey = this.configuration["YouTube:ApiKey"];
-            this.sendGridApiKey = this.configuration["SendGrid:ApiKey"];
-
             // Application services
-            services.AddTransient<IEmailSender, NullMessageSender>();
-            services.AddTransient((provider) => new SendGridEmailSender(this.sendGridApiKey));
-            services.AddTransient<MailKitEmailSender>();
+            // services.AddTransient<IEmailSender, NullMessageSender>();
+            // services.AddTransient<IEmailSender>(x => new SendGridEmailSender(this.configuration["SendGrid:ApiKey"]));
+            services.AddTransient<IEmailSender>(x => new MailKitEmailSender(this.configuration["EmailSender:Email"], this.configuration["EmailSender:Password"]));
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<ICoursesService, CoursesService>();
             services.AddTransient<IVideosService, VideosService>();
             services.AddTransient<IExposicionItemService, ExposicionItemService>();
-            services.AddSingleton<IYouTubeDataService>(x => new YouTubeDataService(this.youTubeApiKey));
+            services.AddSingleton<IYouTubeDataService>(x => new YouTubeDataService(this.configuration["YouTube:ApiKey"]));
+            services.AddTransient<IContactFormService, ContactFormService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -125,12 +122,12 @@
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            // Multilanguage
-            app.UseRequestLocalization(app.ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
-
             app.UseCookiePolicy();
 
             app.UseRouting();
+
+            // Multilanguage
+            app.UseRequestLocalization(app.ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
             app.UseAuthentication();
             app.UseAuthorization();

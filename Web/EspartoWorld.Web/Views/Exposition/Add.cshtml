@@ -5,7 +5,7 @@
 @model EspartoWorld.Web.ViewModels.ExposicionItems.ExpositionItemInputModel
 
 @{
-    ViewData["Title"] = "Añadir de exposicion";
+    ViewData["Title"] = localizer["Add to exposition"];
 }
 <h1>@localizer["Add to exposition"]</h1>
 <hr />
@@ -76,49 +76,9 @@
 </form>
 
 @section Scripts{
-
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-
-    <script type="text/javascript">
-
-        var myWidget = cloudinary.createUploadWidget({
-            cloudName: 'mielproject',
-            uploadPreset: 'k21wtmfa',
-            folder: 'EspartoWorld',
-            sources: ['local', 'url', 'camera'],
-            multiple: false,
-            resourceType: 'image',
-            cropping: 'true',
-            maxImageFileSize: 500000,
-            maxImageWidth: 1500,
-            maxImageHeight: 800,
-            croppingValidateDimensions: true,
-            theme: 'minimal',
-            // TO DO WIDGET TRANSLATE
-            //language: 'es',
-            //text: {
-            //    'es': {
-            //        'back': 'volver',
-            //        "menu": {
-            //            "camera": "Camara",
-            //            "browse" : "Buscar"
-            //        },
-            //    },
-            //},
-            singleUploadAutoClose: true
-        }, (error, result) => {
-            if (!error && result && result.event === "success") {
-                document.getElementById("ImageUrl").value = result.info.secure_url;
-                document.getElementById("imageGroup").style.visibility = "hidden";
-                document.getElementById("courseImage").src = result.info.secure_url
-            }
-        }
-        )
-
-        document.getElementById("upload_widget").addEventListener("click", function () {
-            myWidget.open();
-        }, false);
-
+    <script src = "~/js/cloudinary.js"></script>
+    <script >
         function ClearAllInputs() {
             let inputs = document.querySelectorAll('input:not([type="submit"]):not([type="hidden"]')
             document.getElementById("Description").value = ''

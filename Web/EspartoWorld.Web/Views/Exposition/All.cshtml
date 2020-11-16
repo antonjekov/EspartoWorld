@@ -1,4 +1,10 @@
 ﻿@model IEnumerable<EspartoWorld.Web.ViewModels.ExposicionItems.ExpositionItemViewModel>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{
+    ViewData["Title"] = localizer["All in exposition"];
+}
 
 <div class="container">
     <div class="row text-center">
@@ -12,50 +18,26 @@
                     </div>
                     <div class="back card-block card-body d-flex flex-column">
                         <h4 class="card-title m-2">@item.Title</h4>
-                        <p class="card-text m-1"><b>Author:</b> @item.Author.UserName</p>
+                        <p class="card-text m-1"><b>@localizer["Author"]:</b> @item.Author.UserName</p>
                         <p class="card-text m-1">@item.Description</p>
                         @if (item.IsSold)
                         {
-                            <h5 class="card-text text-muted m-1 mt-auto"><b>SOLD</b></h5>
+                            <h5 class="card-text text-muted m-1 mt-auto"><b>@localizer["SOLD"]</b></h5>
                         }
                         else
                         {
                             <h5 class="card-text text-danger m-1 mt-auto"><b>@item.Price &euro;</b></h5>
-                            <a href="#" class="btn btn-primary mt-auto">Buy</a>
+                            <a href="#" class="btn btn-primary mt-auto">@localizer["Buy"]</a>
                         }
                     </div>
                 </div>
             </div>
         }
-
     </div>
 </div>
 
 @section Scripts {
-    <script>
-        $(document).ready(function () {
-            var front = document.getElementsByClassName("front");
-            var back = document.getElementsByClassName("back");
-
-            var highest = 0;
-            var absoluteSide = "";
-
-            for (var i = 0; i < front.length; i++) {
-                if (front[i].offsetHeight > back[i].offsetHeight) {
-                    if (front[i].offsetHeight > highest) {
-                        highest = front[i].offsetHeight;
-                        absoluteSide = ".front";
-                    }
-                } else if (back[i].offsetHeight > highest) {
-                    highest = back[i].offsetHeight;
-                    absoluteSide = ".back";
-                }
-            }
-            $(".front").css("height", highest);
-            $(".back").css("height", highest);
-            $(absoluteSide).css("position", "absolute");
-        });
-    </script>
+    <script src="~/js/flipCards.js"></script>
 }
 
 @section Styles{

@@ -26,6 +26,13 @@
             return video.Id;
         }
 
+        public async Task DeleteAsync(int videoId)
+        {
+            var video = this.videoRepository.All().Where(x => x.Id == videoId).FirstOrDefault();
+            this.videoRepository.Delete(video);
+            await this.videoRepository.SaveChangesAsync();
+        }
+
         public ICollection<T> GetAll<T>()
         {
             return this.videoRepository.All().OrderByDescending(x => x.CreatedOn).To<T>().ToList();
@@ -39,6 +46,13 @@
         public T GetLastVideo<T>()
         {
             return this.videoRepository.All().OrderByDescending(v => v.CreatedOn).To<T>().FirstOrDefault();
+        }
+
+        public async Task Edit<T>(T input)
+        {
+            var item = AutoMapperConfig.MapperInstance.Map<Video>(input);
+            this.videoRepository.Update(item);
+            await this.videoRepository.SaveChangesAsync();
         }
     }
 }

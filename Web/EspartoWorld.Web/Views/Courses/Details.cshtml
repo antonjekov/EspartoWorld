@@ -1,4 +1,10 @@
 ﻿@model EspartoWorld.Web.ViewModels.Courses.CourseViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{
+    ViewData["Title"] = localizer["Details"];
+}
 
 <div class="row mb-2">
     <div class="col-sm-4 mb-2">
@@ -10,18 +16,18 @@
         <img class="img-fluid" src=@Model.ImageUrl />
     </div>
     <div class="col-sm-4">
-        <div><b>Fecha:</b> @Model.StartDateString - @Model.EndDateString </div>
-        <div><b>Lugar:</b> @Model.Place</div>
-        <div><b>Plazas:</b> maximo @Model.GroupSize personas.</div>
-        <div><b>Organizador:</b> @Model.Organizer</div>
-        <div><b>Precio:</b> @Model.Price €</div>
+        <div><b>@localizer["Date"]:</b> @Model.StartDateString - @Model.EndDateString </div>
+        <div><b>@localizer["Place"]:</b> @Model.Place</div>
+        <div><b>@localizer["Places"]:</b> @localizer["maximum"] @Model.GroupSize @localizer["people"].</div>
+        <div><b>@localizer["Organizer"]:</b> @Model.Organizer</div>
+        <div><b>@localizer["Price"]:</b> @Model.Price €</div>
     </div>
     <div class="col-sm-4">
-        <div><b>Mas informacion acerca de curso:</b></div>
+        <div><b>@localizer["I want to participate"]:</b></div>
         <div> @Model.Description</div>
     </div>
 </div>
 <div class="row mb-3">
-    <a class="btn btn-primary m-1" href="/Courses/All">Todos cursos</a>
-    <a class="btn btn-success m-1" href="#">Quiero participar</a>
+    <a class="btn btn-primary m-1" asp-controller="Courses" asp-action="All">@localizer["All courses"]</a>
+    <a class="btn btn-success m-1" href="#">@localizer["I want to participate"]</a>
 </div>

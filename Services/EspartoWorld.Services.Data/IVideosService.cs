@@ -9,8 +9,12 @@
 
         ICollection<T> GetAll<T>();
 
-        T GetById<T>(int courseId);
+        T GetById<T>(int videoId);
 
         T GetLastVideo<T>();
+
+        Task DeleteAsync(int videoId);
+
+        Task Edit<T>(T input);
     }
 }

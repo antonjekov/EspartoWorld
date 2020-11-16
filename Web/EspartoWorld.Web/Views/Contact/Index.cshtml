@@ -1,11 +1,12 @@
-﻿@*@inject Microsoft.Extensions.Configuration.IConfiguration Configuration*@
-
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+@inject Microsoft.Extensions.Configuration.IConfiguration  Configuration
 @model EspartoWorld.Web.ViewModels.Contact.ContactFormViewModel
 @{
-    this.ViewData["Title"] = "Изпратете ни съобщение";
+    this.ViewData["Title"] = @localizer["Send message"];
 }
 
-<form method="post">
+<form asp-action="Index" asp-controller="Contact" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
         <label asp-for="Name"></label>
@@ -28,21 +29,20 @@
         <span asp-validation-for="Content" class="text-danger"></span>
     </div>
     <p>
-        Натискайки бутона "Изпратете ни съобщение", вие потвърждавате, че сте запознати и съгласни с нашата
-        <a asp-area="" asp-controller="Home" asp-action="Privacy">политика за опазване на личните данни</a>
+        @localizer["By clicking the Send message button, you confirm that you are agree with our"] <a asp-area="" asp-controller="Home" asp-action="Privacy">@localizer["privacy policy"]</a>.
     </p>
     <input type="hidden" id="RecaptchaValue" name="RecaptchaValue" />
-    <button type="submit" class="btn btn-primary">Изпратете ни съобщение</button>
+    <button type="submit" class="btn btn-primary">@localizer["Send message"]</button>
 </form>
 
-@*@section Scripts
-{
-    <script src="https://www.google.com/recaptcha/api.js?render=@this.Configuration["GoogleReCaptcha:Key"]"></script>
-    <script>
-        grecaptcha.ready(function () {
-            grecaptcha.execute('@this.Configuration["GoogleReCaptcha:Key"]', { action: 'contact_form' }).then(function (token) {
-                document.getElementById("RecaptchaValue").value = token;
+@section Scripts
+    {
+        <script src="https://www.google.com/recaptcha/api.js?render=@this.Configuration["GoogleReCaptcha:Key"]"></script>
+        <script>
+            grecaptcha.ready(function () {
+                grecaptcha.execute('@this.Configuration["GoogleReCaptcha:Key"]', { action: 'contact_form' }).then(function (token) {
+                    document.getElementById("RecaptchaValue").value = token;
+                });
             });
-        });
-    </script>
-}*@
+        </script>
+    }

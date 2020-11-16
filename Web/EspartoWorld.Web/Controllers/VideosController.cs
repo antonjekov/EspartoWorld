@@ -49,5 +49,25 @@
             this.ViewData["VideoId"] = id;
             return this.View("Play", id);
         }
+
+        public IActionResult Edit()
+        {
+            var videos = this.videosService.GetAll<VideoEditInputViewModel>();
+            return this.View(videos);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(VideoEditInputViewModel input)
+        {
+            await this.videosService.Edit(input);
+            var videos = this.videosService.GetAll<VideoEditInputViewModel>();
+            return this.View(videos);
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            await this.videosService.DeleteAsync(id);
+            return this.Redirect("/Videos/Edit");
+        }
     }
 }

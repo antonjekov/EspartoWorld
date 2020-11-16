@@ -1,0 +1,60 @@
+﻿@model IEnumerable<EspartoWorld.Web.ViewModels.Videos.VideoEditInputViewModel>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{
+    ViewData["Title"] = localizer["Edit videos"];
+}
+<h1>@localizer["Edit videos"]</h1>
+<hr />
+<table class="table table-hover">
+    <thead>
+        <tr class="row">
+            <th class="col-2">@localizer["Image"]</th>
+            <th class="col-8 text-center">@localizer["Title"]</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            string imageUrl = $"https://img.youtube.com/vi/{item.VideoId}/mqdefault.jpg";
+            <tr class="row">
+                <td class="col-2"><img class="img-thumbnail" src=@imageUrl alt="Video Image"></td>
+                <td class="col-8">
+                    @item.Title
+                    <form form asp-action="Edit" asp-controller="Videos" method="post" style="display:none" id="@item.Id">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <div class="form-group">
+                            <input asp-for="@item.Title" class="form-control" name="Title">
+                        </div>
+                        <input asp-for="@item.VideoId" style="display:none" class="form-control" name="VideoId">
+                        <input asp-for="@item.Id" style="display:none" class="form-control" name="Id">
+                        <button type="submit" class="btn btn-danger">@localizer["Edit"]</button>
+                        <button type="button" class="btn btn-success m-1" onclick="CancelEditField(@item.VideoId)">@localizer["Cancel"]</button>
+                    </form>
+                </td>
+                <td class="col-2">
+                    <button type="button" class="btn btn-success m-1" onclick="ShowEditField(@item.Id)" id="@item.VideoId">@localizer["Edit"]</button>
+                    <a class="btn btn-danger m-1" asp-controller="Videos" asp-action="Delete" asp-route-id="@item.Id">@localizer["Delete"]</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts{
+    <script type="text/javascript">
+        function ShowEditField(id) {
+            let btn = event.target
+            btn.style.display = 'none'
+            document.getElementById(id).style.display = "block"
+        }
+
+        function CancelEditField(id) {
+            id.style.display = ""
+            let btnCancel = event.target
+            btnCancel.parentElement.style.display = "none"
+        }
+    </script>
+}

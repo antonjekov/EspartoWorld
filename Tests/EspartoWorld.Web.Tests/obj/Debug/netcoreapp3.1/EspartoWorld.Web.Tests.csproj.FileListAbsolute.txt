@@ -1065,3 +1065,9 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\Espar
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\MailKit.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\MimeKit.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\Views\Shared\_CulturePartial.en.resx
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\Views\Shared\_CulturePartial.es.resx
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\Views\Videos\Add.es.resx
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\en\EspartoWorld.Web.resources.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\es\EspartoWorld.Web.resources.dll
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Tests\EspartoWorld.Web.Tests\bin\Debug\netcoreapp3.1\es\EspartoWorld.Web.ViewModels.resources.dll

@@ -2,28 +2,34 @@
 {
     using System.ComponentModel.DataAnnotations;
 
-    public class ContactFormViewModel
+    using EspartoWorld.Data.Models;
+    using EspartoWorld.Services.Mapping;
+    using EspartoWorld.Web.Infrastructure;
+
+    public class ContactFormViewModel : IMapTo<ContactFormMessage>
     {
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Моля въведете вашите имена")]
-        [Display(Name = "Вашите имена")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please enter your names")]
+        [Display(Name = "Your names")]
         public string Name { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Моля въведете вашият email адрес")]
-        [EmailAddress(ErrorMessage = "Моля въведете валиден email адрес")]
-        [Display(Name = "Вашият email адрес")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please enter your email address")]
+        [EmailAddress(ErrorMessage = "Please enter valid email address")]
+        [Display(Name = "Your email address")]
         public string Email { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Моля въведете заглавие на съобщението")]
-        [StringLength(100, ErrorMessage = "Заглавието трябва да е поне {2} и не повече от {1} символа.", MinimumLength = 5)]
-        [Display(Name = "Заглавие на съобщението")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Message title")]
+        [StringLength(100, ErrorMessage = "The title must be at least {2} and no more than {1} characters.", MinimumLength = 3)]
+        [Display(Name = "Message title")]
         public string Title { get; set; }
 
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Моля въведете съдържание на съобщението")]
-        [StringLength(10000, ErrorMessage = "Съобщението трябва да е поне {2} символа.", MinimumLength = 20)]
-        [Display(Name = "Съдържание на съобщението")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Please enter the content of the message")]
+        [StringLength(10000, ErrorMessage = "The message must be at least {2} characters.", MinimumLength = 20)]
+        [Display(Name = "Message")]
         public string Content { get; set; }
 
-        // [GoogleReCaptchaValidation]
-        // public string RecaptchaValue { get; set; }
+        public string Ip { get; set; }
+
+        [GoogleReCaptchaValidation]
+        public string RecaptchaValue { get; set; }
     }
 }

@@ -10,7 +10,16 @@
 
     public class MailKitEmailSender : IEmailSender
     {
-       public async Task SendEmailAsync(string from, string fromName, string to, string subject, string htmlContent, IEnumerable<EmailAttachment> attachments = null)
+        private readonly string gmailEmail;
+        private readonly string password;
+
+        public MailKitEmailSender(string gmailEmail, string password)
+        {
+            this.gmailEmail = gmailEmail;
+            this.password = password;
+        }
+
+        public async Task SendEmailAsync(string from, string fromName, string to, string subject, string htmlContent, IEnumerable<EmailAttachment> attachments = null)
         {
             // create message
             var email = new MimeMessage();
@@ -22,7 +31,7 @@
             // send email
             using var smtp = new SmtpClient();
             await smtp.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            await smtp.AuthenticateAsync("espartoworld@gmail.com", "k13antonj");
+            await smtp.AuthenticateAsync(this.gmailEmail, this.password);
             await smtp.SendAsync(email);
             await smtp.DisconnectAsync(true);
         }

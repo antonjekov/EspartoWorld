@@ -2,6 +2,12 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer localizer
 
+@{
+    ViewData["Title"] = localizer["All courses"];
+}
+<h1>@localizer["All courses"]</h1>
+<hr />
+
 <table class="table table-hover">
     <thead>
         <tr>
@@ -16,7 +22,7 @@
                 <td>@item.StartDateString - @item.EndDateString</td>
                 <td>@item.Title</td>
                 <td>
-                    <a class="btn btn-success" href="/Courses/Details/@item.Id">@localizer["Details"]</a>
+                    <a asp-action="Details" asp-controller="Courses" asp-route-id="@item.Id" class="btn btn-success">@localizer["Details"]</a>
                 </td>
             </tr>
         }

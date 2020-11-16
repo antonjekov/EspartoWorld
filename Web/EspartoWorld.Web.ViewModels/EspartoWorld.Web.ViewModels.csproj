@@ -24,4 +24,10 @@
     <ProjectReference Include="..\EspartoWorld.Web.Infrastructure\EspartoWorld.Web.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="Contact\ContactFormViewModel.es.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
 </Project>

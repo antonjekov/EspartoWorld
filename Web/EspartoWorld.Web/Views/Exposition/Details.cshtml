@@ -1,9 +1,13 @@
-﻿@model EspartoWorld.Web.ViewModels.ExpositionItems.ExpositionItemModerateModel
-@using  EspartoWorld.Data.Models
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using EspartoWorld.Data.Models
+@model EspartoWorld.Web.ViewModels.ExpositionItems.ExpositionItemModerateModel
+@inject IViewLocalizer localizer
+
 @{
-    ViewData["Title"] = "Revisar obra";
+    ViewData["Title"] = localizer["Check artwork"];
 }
-<h1>Revisar obra</h1>
+
+<h1>@localizer["Check artwork"]</h1>
 <hr />
 
 <form asp-action="Details" asp-controller="Exposition" method="post">
@@ -23,7 +27,7 @@
             <div class="form-group">
                 <div class="form-check">
                     <input asp-for="IsSold" class="form-check-input">
-                    <label asp-for="IsSold" class="control-label form-check-label">Item is sold</label>
+                    <label asp-for="IsSold" class="control-label form-check-label">@localizer["Item is sold"]</label>
                 </div>
                 <span asp-validation-for="IsSold" class="text-danger"></span>
             </div>
@@ -55,11 +59,11 @@
     <div class="d-flex justify-content-center">
         <div class="form-group">
             <button type="button" class="btn btn-success m-1" data-toggle="modal" data-target="#exampleModalCenter">
-                Todo correcto
+                @localizer["All right"]
             </button>
-            <a class="btn btn-primary m-1" asp-action="Moderate">Ver todo para revision</a>
+            <a class="btn btn-primary m-1" asp-action="Moderate">@localizer["See all for moderate"]</a>
             <button type="button" class="btn btn-danger m-1" data-toggle="modal" data-target="#modalNotAccepted">
-                No etoy de acuerdo.
+                @localizer["I disagree"]
             </button>
 
             <!-- Modal Accepted-->
@@ -67,17 +71,17 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle"><b>Acepto</b></h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle"><b>@localizer["I agree"]</b></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            Si estas seguro que informacion para esta obra de arte esta revisada clic en button Publicar.
+                           @localizer["If you are sure that the information for this work of art is reviewed, click on the Publish button."]
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="submit" id="accepted" class="btn btn-success">Publicar</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">@localizer["Close"]</button>
+                            <button type="submit" id="accepted" class="btn btn-success">@localizer["Publish"]</button>
                         </div>
                     </div>
                 </div>
@@ -88,17 +92,17 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle"><b>No Acepto</b></h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle"><b>@localizer["I do not accept"]</b></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="modal-body">
-                            Si estas seguro que no quieres Publicar esta obra click Rechazar y borrar.
+                            @localizer["If you are sure that you do not want to publish this work click Reject and delete."]
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <a class="btn btn-danger m-1" asp-action="Delete" asp-route-id=@Model.Id>Rechazar y borrar</a>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">@localizer["Close"]</button>
+                            <a class="btn btn-danger m-1" asp-action="Delete" asp-route-id=@Model.Id>@localizer["Reject and delete"]</a>
                         </div>
                     </div>
                 </div>
