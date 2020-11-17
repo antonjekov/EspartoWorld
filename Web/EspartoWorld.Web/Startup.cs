@@ -93,6 +93,8 @@
             services.AddTransient<IExposicionItemService, ExposicionItemService>();
             services.AddSingleton<IYouTubeDataService>(x => new YouTubeDataService(this.configuration["YouTube:ApiKey"]));
             services.AddTransient<IContactFormService, ContactFormService>();
+            services.AddTransient<IManufacturersService, ManufacturersService>();
+            services.AddTransient<IProductsService, ProductsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

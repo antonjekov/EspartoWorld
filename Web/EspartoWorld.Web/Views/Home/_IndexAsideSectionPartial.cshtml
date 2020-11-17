@@ -2,63 +2,71 @@
 @using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer localizer
 
-<div class="card mb-1">
-    <h5 class="card-header">@localizer["Next course"]</h5>
-    <a asp-controller="Courses" asp-action="Details" asp-route-id=@Model.NextCourse.Id>
-        <div class="card-body row">
-            <div class="col-8">
-                <p class="card-text">@Model.NextCourse.Title</p>
-            </div>
-            <div class="col-4">
-                @if (@Model.NextCourse.ImageUrl != null)
-                {
-                    <div class="rotate-img">
-                        <img src=@Model.NextCourse.ImageUrl alt="thumb" class="img-fluid img-lg">
-                        <div class="badge-positioned">
-                            <span class="badge badge-danger font-weight-bold">@localizer["Last places"]</span>
+@if (Model.NextCourse != null)
+{
+    <div class="card mb-1">
+        <h5 class="card-header">@localizer["Next course"]</h5>
+        <a asp-controller="Courses" asp-action="Details" asp-route-id=@Model.NextCourse.Id>
+            <div class="card-body row">
+                <div class="col-8">
+                    <p class="card-text">@Model.NextCourse.Title</p>
+                </div>
+                <div class="col-4">
+                    @if (@Model.NextCourse.ImageUrl != null)
+                    {
+                        <div class="rotate-img">
+                            <img src=@Model.NextCourse.ImageUrl alt="thumb" class="img-fluid img-lg">
+                            <div class="badge-positioned">
+                                <span class="badge badge-danger font-weight-bold">@localizer["Last places"]</span>
+                            </div>
                         </div>
-                    </div>
-                }
+                    }
+                </div>
             </div>
-        </div>
-    </a>
-</div>
+        </a>
+    </div>
 
-<div class="card mb-1">
-    <h5 class="card-header">@localizer["Latest ARTICLES"]</h5>
-    <a asp-controller="Articuls" asp-action="Details" asp-route-id=@Model.NextCourse.Id>
-        <div class="card-body row">
-            <div class="col-8">
-                <p class="card-text">@Model.NextCourse.Title</p>
-            </div>
-            <div class="col-4">
-                @if (@Model.NextCourse.ImageUrl != null)
-                {
-                    <div class="rotate-img">
-                        <img src=@Model.NextCourse.ImageUrl alt="thumb" class="img-fluid img-lg">
-                    </div>
-                }
-            </div>
-        </div>
-    </a>
-</div>
+}
 
-<div class="card mb-1">
-    <h5 class="card-header">@localizer["Latest VIDEOS"]</h5>
-    <a asp-controller="Videos" asp-action="All">
-        <div class="card-body row">
-            <div class="col-8">
-                <p class="card-text">@Model.LastVideo.Title</p>
+@if (Model.NextCourse != null)
+{
+    <div class="card mb-1">
+        <h5 class="card-header">@localizer["Latest ARTICLES"]</h5>
+        <a asp-controller="Articuls" asp-action="Details" asp-route-id=@Model.NextCourse.Id>
+            <div class="card-body row">
+                <div class="col-8">
+                    <p class="card-text">@Model.NextCourse.Title</p>
+                </div>
+                <div class="col-4">
+                    @if (@Model.NextCourse.ImageUrl != null)
+                    {
+                        <div class="rotate-img">
+                            <img src=@Model.NextCourse.ImageUrl alt="thumb" class="img-fluid img-lg">
+                        </div>
+                    }
+                </div>
             </div>
-            <div class="col-4">
-                @if (@Model.NextCourse.ImageUrl != null)
-                {
+        </a>
+    </div>
+}
+
+@if (Model.LastVideo != null)
+{
+    <div class="card mb-1">
+        <h5 class="card-header">@localizer["Latest VIDEOS"]</h5>
+        <a asp-controller="Videos" asp-action="All">
+            <div class="card-body row">
+                <div class="col-8">
+                    <p class="card-text">@Model.LastVideo.Title</p>
+                </div>
+                <div class="col-4">
                     <div class="rotate-img">
                         <img src="https://img.youtube.com/vi/@Model.LastVideo.VideoId/mqdefault.jpg" alt="thumb" class="img-fluid img-lg">
                     </div>
-                }
+
+                </div>
             </div>
-        </div>
-    </a>
-</div>
+        </a>
+    </div>
+}
 

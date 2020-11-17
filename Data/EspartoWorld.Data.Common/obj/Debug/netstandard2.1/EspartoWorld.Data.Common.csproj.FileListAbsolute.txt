@@ -15,4 +15,3 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Data\Espart
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Data\EspartoWorld.Data.Common\obj\Debug\netstandard2.1\EspartoWorld.Data.Common.csproj.CoreCompileInputs.cache
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Data\EspartoWorld.Data.Common\obj\Debug\netstandard2.1\EspartoWorld.Data.Common.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Data\EspartoWorld.Data.Common\obj\Debug\netstandard2.1\EspartoWorld.Data.Common.pdb
-C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Data\EspartoWorld.Data.Common\obj\Debug\netstandard2.1\EspartoWorld.Data.Common.csprojAssemblyReference.cache

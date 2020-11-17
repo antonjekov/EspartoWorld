@@ -38,3 +38,4 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\Esparto
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\es\EspartoWorld.Web.ViewModels.resources.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.Courses.CourseInputModel.es.resources
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.Videos.VideoEditInputViewModel.es.resources
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.Manufacturers.ManufacturerInputModel.es.resources
