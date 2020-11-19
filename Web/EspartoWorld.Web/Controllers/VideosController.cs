@@ -3,9 +3,11 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    using EspartoWorld.Common;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Services.YouTube;
     using EspartoWorld.Web.ViewModels.Videos;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class VideosController : BaseController
@@ -19,6 +21,7 @@
             this.youTubeDataService = youTubeDataService;
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> Add()
         {
             var newVideos = await this.youTubeDataService.GetLastVideosAsync("esparto", 10);
@@ -31,6 +34,7 @@
             return this.View(videos);
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> AddAsync(VideoInputModel input)
         {
@@ -50,12 +54,14 @@
             return this.View("Play", id);
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Edit()
         {
             var videos = this.videosService.GetAll<VideoEditInputViewModel>();
             return this.View(videos);
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Edit(VideoEditInputViewModel input)
         {
@@ -64,6 +70,7 @@
             return this.View(videos);
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> Delete(int id)
         {
             await this.videosService.DeleteAsync(id);

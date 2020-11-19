@@ -15,6 +15,8 @@
 
         T GetById<T>(int itemId);
 
+        bool IdIsValid(int id);
+
         Task Edit<T>(T input);
 
         Task Delete(int itemId);

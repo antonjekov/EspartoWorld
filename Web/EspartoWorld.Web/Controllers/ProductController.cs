@@ -3,9 +3,11 @@
     using System.Linq;
     using System.Threading.Tasks;
 
+    using EspartoWorld.Common;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.Manufacturers;
     using EspartoWorld.Web.ViewModels.Product;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class ProductController : BaseController
@@ -19,11 +21,13 @@
             this.manufacturersService = manufacturersService;
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Add()
         {
             return this.View();
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Add(ProductInputModel input)
         {
@@ -53,17 +57,22 @@
         public IActionResult All(int productSort)
         {
             var products = this.productsService.GetAllVisibleOrderedCreatedOn<ProductViewModel>();
-            switch (productSort)
+            return productSort switch
             {
-                case 1: return this.View(products.OrderBy(x => x.Price));
-                case 2: return this.View(products.OrderByDescending(x => x.Price));
-                case 3: return this.View(products.OrderByDescending(x => x.TimesBought));
-                default: return this.View(products);
-            }
+                1 => this.View(products.OrderBy(x => x.Price)),
+                2 => this.View(products.OrderByDescending(x => x.Price)),
+                3 => this.View(products.OrderByDescending(x => x.TimesBought)),
+                _ => this.View(products),
+            };
         }
 
         public IActionResult Details(int id)
         {
+            if (!this.productsService.IdIsValid(id))
+            {
+                return this.Redirect("/Product/All");
+            }
+
             var product = this.productsService.GetById<ProductViewModel>(id);
             return this.View(product);
         }

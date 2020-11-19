@@ -31,6 +31,11 @@
             return this.productsRepository.All().Where(x => x.Id == id).To<T>().FirstOrDefault();
         }
 
+        public bool IdIsValid(int id)
+        {
+            return this.productsRepository.AllAsNoTracking().Any(x => x.Id == id);
+        }
+
         public IEnumerable<T> GetAll<T>()
         {
             return this.productsRepository.All().To<T>().ToList();

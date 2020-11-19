@@ -40,5 +40,10 @@
         {
             return this.courseRepository.All().Where(x => x.StartDate >= DateTime.Now).OrderBy(x => x.StartDate).To<T>().FirstOrDefault();
         }
+
+        public bool IdIsValid(int id)
+        {
+            return this.courseRepository.AllAsNoTracking().Any(x => x.Id == id);
+        }
     }
 }

@@ -11,6 +11,8 @@
 
         IEnumerable<T> GetAll<T>();
 
+        bool IdIsValid(int id);
+
         IEnumerable<T> GetAllVisibleOrderedCreatedOn<T>();
     }
 }

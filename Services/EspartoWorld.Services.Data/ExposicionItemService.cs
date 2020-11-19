@@ -55,6 +55,11 @@
             return this.exposicionItems.All().Where(x => x.Id == itemId).To<T>().FirstOrDefault();
         }
 
+        public bool IdIsValid(int id)
+        {
+            return this.exposicionItems.AllAsNoTracking().Any(x => x.Id == id);
+        }
+
         public async Task Delete(int itemId)
         {
             var item = this.exposicionItems.All().Where(x => x.Id == itemId).FirstOrDefault();

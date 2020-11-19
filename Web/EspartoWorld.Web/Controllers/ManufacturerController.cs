@@ -2,8 +2,10 @@
 {
     using System.Threading.Tasks;
 
+    using EspartoWorld.Common;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.Manufacturers;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class ManufacturerController : BaseController
@@ -15,11 +17,13 @@
             this.manufacturersService = manufacturersService;
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Add()
         {
             return this.View();
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> AddAsync(ManufacturerInputModel input)
         {

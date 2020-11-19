@@ -16,8 +16,11 @@
 </head>
 <body>
     <header>
+        @*@if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        {
+            <partial name="_AdminNavbarPartial" />
+        }*@
         <partial name="_AdminNavbarPartial" />
-
         <nav class="navbar navbar-expand-xl navbar-dark bg-primary border-bottom box-shadow mb-3">
             <a class="navbar-brand ml-4" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#user-navbar" aria-controls="navbarSupportedContent"

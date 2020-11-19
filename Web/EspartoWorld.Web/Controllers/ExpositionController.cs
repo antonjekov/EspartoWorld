@@ -2,6 +2,7 @@
 {
     using System.Threading.Tasks;
 
+    using EspartoWorld.Common;
     using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.ExposicionItems;
@@ -29,6 +30,7 @@
             return this.View();
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> AddAsync(ExpositionItemInputModel input)
         {
@@ -42,9 +44,10 @@
             return this.View(items);
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Details(int id)
         {
-            if (id == 0)
+            if (!this.expositionItemService.IdIsValid(id))
             {
                 return this.Redirect("/Exposition/Moderate");
             }
@@ -53,6 +56,7 @@
             return this.View(item);
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> Details(ExpositionItemModerateModel input)
         {
@@ -70,12 +74,14 @@
             return this.View();
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Moderate()
         {
             var items = this.expositionItemService.GetAllForModerate<ExpositionItemViewModel>();
             return this.View(items);
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> Delete(int id)
         {
             if (id == 0)

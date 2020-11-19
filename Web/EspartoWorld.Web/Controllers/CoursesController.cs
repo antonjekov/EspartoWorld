@@ -2,8 +2,10 @@
 {
     using System.Threading.Tasks;
 
+    using EspartoWorld.Common;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.Courses;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
     public class CoursesController : BaseController
@@ -15,11 +17,13 @@
             this.coursesService = coursesService;
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public IActionResult Add()
         {
             return this.View();
         }
 
+        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> AddAsync(CourseInputModel input)
         {
@@ -35,6 +39,11 @@
 
         public IActionResult Details(int id)
         {
+            if (!this.coursesService.IdIsValid(id))
+            {
+                return this.Redirect("/Courses/All");
+            }
+
             var course = this.coursesService.GetById<CourseViewModel>(id);
             return this.View(course);
         }

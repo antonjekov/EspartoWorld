@@ -9,6 +9,8 @@
 
         IEnumerable<T> GetAll<T>();
 
+        bool IdIsValid(int id);
+
         T GetById<T>(int courseId);
 
         T GetNextCourse<T>();
