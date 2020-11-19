@@ -1,16 +1,14 @@
-﻿using EspartoWorld.Services.Data;
-using EspartoWorld.Web.ViewModels.Manufacturers;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace EspartoWorld.Web.Controllers
+﻿namespace EspartoWorld.Web.Controllers
 {
+    using System.Threading.Tasks;
+
+    using EspartoWorld.Services.Data;
+    using EspartoWorld.Web.ViewModels.Manufacturers;
+    using Microsoft.AspNetCore.Mvc;
+
     public class ManufacturerController : BaseController
     {
-        private IManufacturersService manufacturersService;
+        private readonly IManufacturersService manufacturersService;
 
         public ManufacturerController(IManufacturersService manufacturersService)
         {

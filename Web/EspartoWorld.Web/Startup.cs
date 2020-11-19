@@ -59,8 +59,10 @@
             services.AddDbContext<ApplicationDbContext>(
                 options => options.UseSqlServer(this.configuration.GetConnectionString("DefaultConnection")));
 
+            // In class IdentityOptionsProvider we switch off options that we dont want to use for examle email confirmation or password must have symbols and numbers and letters
             services.AddDefaultIdentity<ApplicationUser>(IdentityOptionsProvider.GetIdentityOptions)
-                .AddRoles<ApplicationRole>().AddEntityFrameworkStores<ApplicationDbContext>();
+                .AddRoles<ApplicationRole>() // Should be here if we need to use roles
+                .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.Configure<CookiePolicyOptions>(
                 options =>
@@ -72,6 +74,7 @@
             services.AddControllersWithViews(
                 options =>
                     {
+                        // this option puts in all actions attribute ValidateAntiforgeryToken and protect us for CSRF Attacks(is not possible from other forms that are not ours to send us data)
                         options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
                     }).AddRazorRuntimeCompilation();
             services.AddRazorPages();
@@ -131,6 +134,7 @@
             // Multilanguage
             app.UseRequestLocalization(app.ApplicationServices.GetRequiredService<IOptions<RequestLocalizationOptions>>().Value);
 
+            // UseAuthentication and UseAuthorization must be between UseRouting and UseEndpoints
             app.UseAuthentication();
             app.UseAuthorization();
 

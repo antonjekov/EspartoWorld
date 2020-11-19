@@ -1,10 +1,12 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
+    using System.Linq;
+    using System.Threading.Tasks;
+
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.Manufacturers;
     using EspartoWorld.Web.ViewModels.Product;
     using Microsoft.AspNetCore.Mvc;
-    using System.Threading.Tasks;
 
     public class ProductController : BaseController
     {
@@ -39,6 +41,31 @@
 
             await this.productsService.AddAsync<ProductInputModel>(input);
             return this.Redirect("/");
+        }
+
+        public IActionResult All()
+        {
+            var products = this.productsService.GetAllVisibleOrderedCreatedOn<ProductViewModel>();
+            return this.View(products);
+        }
+
+        [HttpPost]
+        public IActionResult All(int productSort)
+        {
+            var products = this.productsService.GetAllVisibleOrderedCreatedOn<ProductViewModel>();
+            switch (productSort)
+            {
+                case 1: return this.View(products.OrderBy(x => x.Price));
+                case 2: return this.View(products.OrderByDescending(x => x.Price));
+                case 3: return this.View(products.OrderByDescending(x => x.TimesBought));
+                default: return this.View(products);
+            }
+        }
+
+        public IActionResult Details(int id)
+        {
+            var product = this.productsService.GetById<ProductViewModel>(id);
+            return this.View(product);
         }
     }
 }

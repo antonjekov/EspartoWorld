@@ -6,6 +6,7 @@
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.ExposicionItems;
     using EspartoWorld.Web.ViewModels.ExpositionItems;
+    using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
@@ -20,6 +21,7 @@
             this.userManager = userManager;
         }
 
+        [Authorize]
         public IActionResult Add()
         {
             var userId = this.userManager.GetUserId(this.User);

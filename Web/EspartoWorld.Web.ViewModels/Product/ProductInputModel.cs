@@ -26,6 +26,11 @@
         [Range(0, 1000, ErrorMessage = "Price should be between {1} and {2} EUR")]
         public double Price { get; set; }
 
+        [Required(ErrorMessage = "Please upload image for this course")]
+        [Url(ErrorMessage = "Please fill valid URL")]
+        [Display(Name = "URL of image")]
+        public string ImageUrl { get; set; }
+
         public string ManufacturerId { get; set; }
 
         public ManufacturerInputModel ManufacturerInput { get; set; }

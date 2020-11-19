@@ -1,0 +1,47 @@
+﻿@model IEnumerable<EspartoWorld.Web.ViewModels.Product.ProductViewModel>
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@{
+    ViewData["Title"] = localizer["All products"];
+}
+
+<div class="container">
+    <div class="m-3">
+        <form id="SearchForm" asp-action="All" asp-controller="Product" method="post">
+            <label for="ProductSort">Sort By: </label>
+            <select onchange="Submit()" name="ProductSort" id="ProductSort" class="selectpicker">
+                <option value="0" selected>--</option>
+                <option value="1">more cheaper first</option>
+                <option value="2">more expensive first</option>
+                <option value="3">best seller</option>
+            </select>
+        </form>
+    </div>
+    <div class="row text-center">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-6 col-lg-4 col-xl-3 py-2">
+                <div class="card border-primary h-100">
+                    <img class="card-img-top img-fluid" src=@product.ImageUrl alt="Product Image">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <h5 class="card-text text-danger m-1 mt-auto hide"><b>@product.Price &euro;</b></h5>
+                        <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id" class="btn btn-success hide">View more</a>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts{ 
+<script>
+    function Submit() {
+        document.getElementById("SearchForm").submit()
+    }
+</script>
+}
+
+
+

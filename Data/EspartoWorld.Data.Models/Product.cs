@@ -21,6 +21,9 @@
         [Range(0, 1000)]
         public double Price { get; set; }
 
+        [Required]
+        public string ImageUrl { get; set; }
+
         public bool Visible { get; set; } = true;
 
         public int TimesBought { get; set; } = 0;

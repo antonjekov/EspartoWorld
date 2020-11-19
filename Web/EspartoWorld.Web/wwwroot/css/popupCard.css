@@ -1,5 +1,13 @@
-﻿.card:hover {
+﻿.hide {
+    display: none;
+}
+
+.card:hover {    
     transform: scale(1.1);
     transition: 1s;
     box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card:hover .hide{
+    display:block
 }

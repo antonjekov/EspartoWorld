@@ -1,6 +1,7 @@
 ﻿namespace EspartoWorld.Services.Data
 {
     using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using EspartoWorld.Data.Common.Repositories;
@@ -25,9 +26,19 @@
             throw new System.NotImplementedException();
         }
 
+        public T GetById<T>(int id)
+        {
+            return this.productsRepository.All().Where(x => x.Id == id).To<T>().FirstOrDefault();
+        }
+
         public IEnumerable<T> GetAll<T>()
         {
-            throw new System.NotImplementedException();
+            return this.productsRepository.All().To<T>().ToList();
+        }
+
+        public IEnumerable<T> GetAllVisibleOrderedCreatedOn<T>()
+        {
+            return this.productsRepository.All().Where(x => x.Visible).OrderByDescending(x => x.CreatedOn).To<T>().ToList();
         }
     }
 }
