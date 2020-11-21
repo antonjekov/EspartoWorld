@@ -7,26 +7,32 @@
 
     public class ExpositionItemInputModel : IMapTo<ExpositionItem>
     {
-        [Required]
-        [MinLength(3)]
-        [MaxLength(150)]
+        [Required(ErrorMessage ="Title for this artwork is required")]
+        [MinLength(3, ErrorMessage = "Title should be minimum 3 characters long.")]
+        [MaxLength(150, ErrorMessage = "Title should be maximum 150 characters long.")]
+        [Display(Name = "Title")]
         public string Title { get; set; }
 
-        [Required]
+        [Required(ErrorMessage ="Please choose category.")]
+        [Display(Name = "Category")]
         public Category Category { get; set; }
 
+        [Range(0, 1000, ErrorMessage = "Price should be between 0 and 1000.")]
+        [Display(Name = "Price")]
         public double Price { get; set; }
 
+        [Display(Name = "Is sold")]
         public bool IsSold { get; set; }
 
-        [Required]
-        [Url]
+        [Required(ErrorMessage ="Image url is required")]
+        [Url(ErrorMessage ="This is not a valid URL")]
         [Display(Name = "Image Url")]
         public string ImageUrl { get; set; }
 
-        [Required]
-        [MinLength(10)]
-        [MaxLength(5000)]
+        [Required(ErrorMessage ="Description for this artwork is required")]
+        [MinLength(10, ErrorMessage = "Description should be minimum 10 characters long.")]
+        [MaxLength(5000, ErrorMessage = "Title should be maximum 5000 characters long.")]
+        [Display(Name = "Description")]
         public string Description { get; set; }
 
         public string AuthorId { get; set; }

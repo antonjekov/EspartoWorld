@@ -16,12 +16,11 @@
 </head>
 <body>
     <header>
-        @*@if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        @if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
         {
             <partial name="_AdminNavbarPartial" />
-        }*@
-        <partial name="_AdminNavbarPartial" />
-        <nav class="navbar navbar-expand-xl navbar-dark bg-primary border-bottom box-shadow mb-3">
+        }
+        <nav class="navbar navbar-expand-xl navbar-dark bg-primary border-bottom box-shadow mb-2">
             <a class="navbar-brand ml-4" asp-area="" asp-controller="Home" asp-action="Index">@GlobalConstants.SystemName</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#user-navbar" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -32,9 +31,6 @@
                 <ul class="navbar-nav flex-grow-1">
                     <li>
                         <a class="nav-link" asp-area="" asp-controller="Videos" asp-action="All">@localizer["Videos"]</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="" asp-controller="Articulos" asp-action="All">@localizer["Articles"]</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link " asp-area="" asp-controller="Courses" asp-action="All">@localizer["Courses"]</a>
@@ -50,15 +46,26 @@
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            @localizer["Exposition"]
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/Exposition/All">@localizer["View"]</a>
-                            <a class="dropdown-item" href="/Exposition/Add">@localizer["Add"]</a>
-                        </div>
-                    </li>
+                    @if (this.User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                @localizer["Exposition"]
+                            </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" asp-controller="Exposition" asp-action="All">@localizer["View all artworks"]</a>
+                                <a class="dropdown-item" asp-controller="Exposition" asp-action="AllOfAuthor">@localizer["View my artworks"]</a>
+                                <a class="dropdown-item" asp-controller="Exposition" asp-action="Add">@localizer["Add"]</a>
+                            </div>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item ">
+                            <a class="nav-link" asp-controller="Exposition" asp-action="All">@localizer["Artworks"]</a>
+                        </li>
+                    }
                     <li class="nav-item ">
                         <a class="nav-link" asp-area="" asp-controller="Contact" asp-action="Index">
                             @localizer["Contact us"] <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

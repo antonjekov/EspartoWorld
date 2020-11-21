@@ -117,19 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Last places" xml:space="preserve">
-    <value>Últimas plazas</value>
+  <data name="Category" xml:space="preserve">
+    <value>Categoría</value>
   </data>
-  <data name="Latest ARTICLES" xml:space="preserve">
-    <value>Últimos ARTÍCULOS</value>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
   </data>
-  <data name="Latest ARTWORKS" xml:space="preserve">
-    <value>Últimas OBRAS DE ARTE</value>
+  <data name="Description for this artwork is required" xml:space="preserve">
+    <value>Se requiere una descripción para esta obra de arte</value>
   </data>
-  <data name="Latest VIDEOS" xml:space="preserve">
-    <value>Últimos VÍDEOS</value>
+  <data name="Description should be minimum 10 characters long." xml:space="preserve">
+    <value>La descripción debe tener un mínimo de 10 caracteres.</value>
   </data>
-  <data name="Next course" xml:space="preserve">
-    <value>Próximo CURSO</value>
+  <data name="Image Url" xml:space="preserve">
+    <value>URL de la imagen</value>
+  </data>
+  <data name="Image url is required" xml:space="preserve">
+    <value>La URL de la imagen es obligatoria</value>
+  </data>
+  <data name="Is sold" xml:space="preserve">
+    <value>Está vendido</value>
+  </data>
+  <data name="Please choose category." xml:space="preserve">
+    <value>Elija una categoría.</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="Price should be between 0 and 1000." xml:space="preserve">
+    <value>El precio debe estar entre 0 y 1000.</value>
+  </data>
+  <data name="This is not a valid URL" xml:space="preserve">
+    <value>Esta no es una URL válida</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Título</value>
+  </data>
+  <data name="Title for this artwork is required" xml:space="preserve">
+    <value>Se requiere el título de esta obra de arte</value>
+  </data>
+  <data name="Title should be maximum 150 characters long." xml:space="preserve">
+    <value>El título debe tener un máximo de 150 caracteres.</value>
+  </data>
+  <data name="Title should be maximum 5000 characters long." xml:space="preserve">
+    <value>El título debe tener un máximo de 5000 caracteres.</value>
+  </data>
+  <data name="Title should be minimum 3 characters long." xml:space="preserve">
+    <value>El título debe tener un mínimo de 3 caracteres.</value>
   </data>
 </root>

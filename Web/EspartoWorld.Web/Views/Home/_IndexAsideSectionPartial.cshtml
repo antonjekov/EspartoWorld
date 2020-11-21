@@ -28,20 +28,20 @@
 
 }
 
-@if (Model.NextCourse != null)
+@if (Model.LastArtwork != null)
 {
     <div class="card mb-1">
-        <h5 class="card-header">@localizer["Latest ARTICLES"]</h5>
-        <a asp-controller="Articuls" asp-action="Details" asp-route-id=@Model.NextCourse.Id>
+        <h5 class="card-header">@localizer["Latest ARTWORKS"]</h5>
+        <a asp-controller="Exposition" asp-action="All" >
             <div class="card-body row">
                 <div class="col-8">
-                    <p class="card-text">@Model.NextCourse.Title</p>
+                    <p class="card-text">@Model.LastArtwork.Title</p>
                 </div>
                 <div class="col-4">
-                    @if (@Model.NextCourse.ImageUrl != null)
+                    @if (@Model.LastArtwork.ImageUrl != null)
                     {
                         <div class="rotate-img">
-                            <img src=@Model.NextCourse.ImageUrl alt="thumb" class="img-fluid img-lg">
+                            <img src=@Model.LastArtwork.ImageUrl alt="thumb" class="img-fluid img-lg">
                         </div>
                     }
                 </div>

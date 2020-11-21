@@ -1,0 +1,64 @@
+﻿@model EspartoWorld.Web.ViewModels.Shared.PagingViewModel
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+<nav aria-label="...">
+    <ul class="pagination justify-content-center">
+
+        <li class="page-item @if (!Model.HasPreviousPage) {<text>disabled</text>}">
+            @if (Model.AuthorID != null)
+            {
+                <a class="page-link" asp-action="AllOfAuthor" asp-route-id="@Model.PreviousPageNumber" asp-route-author="@Model.AuthorID">@localizer["Previous"]</a>
+            }
+            else
+            {
+                <a class="page-link" asp-action="All" asp-route-id="@Model.PreviousPageNumber">@localizer["Previous"]</a>
+            }
+        </li>
+        @for (int i = Model.PageNumber - 3; i < Model.PageNumber; i++)
+        {
+            if (i > 0)
+            {
+                @if (Model.AuthorID != null)
+                {
+                    <li class="page-item"><a class="page-link" asp-action="AllOfAuthor" asp-route-id="@i" asp-route-author="@Model.AuthorID">@i</a></li>
+                }
+                else
+                {
+                    <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="@i">@i</a></li>
+                }
+            }
+        }
+        <li class="page-item active">
+            <span class="page-link">
+                @Model.PageNumber
+                <span class="sr-only">(current)</span>
+            </span>
+        </li>
+        @for (int i = Model.PageNumber + 1; i <= Model.PageNumber + 3; i++)
+        {
+            if (i <= Model.PagesCount)
+            {
+                @if (Model.AuthorID != null)
+                {
+                    <li class="page-item"><a class="page-link" asp-action="AllOfAuthor" asp-route-id="@i" asp-route-author="@Model.AuthorID">@i</a></li>
+                }
+                else
+                {
+                <li class="page-item"><a class="page-link" asp-action="All" asp-route-id="@i">@i</a></li>
+                }
+            }
+        }
+
+        <li class="page-item @if (!Model.HasNextPage) {<text>disabled</text>}">
+            @if (Model.AuthorID != null)
+            {
+                <a class="page-link" asp-action="AllOfAuthor" asp-route-id="@Model.NextPageNumber" asp-route-author="@Model.AuthorID">@localizer["Next"]</a>
+            }
+            else
+            {
+                <a class="page-link" asp-action="All" asp-route-id="@Model.NextPageNumber">@localizer["Next"]</a>
+            }
+        </li>
+    </ul>
+</nav>

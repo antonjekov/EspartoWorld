@@ -9,9 +9,13 @@
 
         IEnumerable<T> GetAll<T>();
 
+        T GetLastExpositionItem<T>();
+
         IEnumerable<T> GetAllForModerate<T>();
 
-        public IEnumerable<T> GetAllAccepted<T>();
+        public IEnumerable<T> GetAllAccepted<T>(int page, int itemsPerPage);
+
+        public IEnumerable<T> GetAllAcceptedByAuthorId<T>(string authorID, int page, int itemsPerPage);
 
         T GetById<T>(int itemId);
 
@@ -20,5 +24,9 @@
         Task Edit<T>(T input);
 
         Task Delete(int itemId);
+
+        int GetCountAccepted();
+
+        int GetCountAccepted(string authorID);
     }
 }

@@ -123,6 +123,9 @@
   <data name="Articles" xml:space="preserve">
     <value>Artículos</value>
   </data>
+  <data name="Artworks" xml:space="preserve">
+    <value>Obras de arte</value>
+  </data>
   <data name="Contact us" xml:space="preserve">
     <value>Contacta con nosotros</value>
   </data>
@@ -143,5 +146,11 @@
   </data>
   <data name="View" xml:space="preserve">
     <value>Ver</value>
+  </data>
+  <data name="View all artworks" xml:space="preserve">
+    <value>Ver todas las obras de arte</value>
+  </data>
+  <data name="View my artworks" xml:space="preserve">
+    <value>Ver mis obras de arte</value>
   </data>
 </root>

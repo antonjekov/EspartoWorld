@@ -77,7 +77,7 @@
                             </button>
                         </div>
                         <div class="modal-body">
-                           @localizer["If you are sure that the information for this work of art is reviewed, click on the Publish button."]
+                            @localizer["If you are sure that the information for this work of art is reviewed, click on the Publish button."]
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">@localizer["Close"]</button>
@@ -102,7 +102,7 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">@localizer["Close"]</button>
-                            <a class="btn btn-danger m-1" asp-action="Delete" asp-route-id=@Model.Id>@localizer["Reject and delete"]</a>
+                            <a class="btn btn-danger m-1" asp-controller="Exposition" asp-action="Delete" asp-route-id=@Model.Id>@localizer["Reject and delete"]</a>                               
                         </div>
                     </div>
                 </div>

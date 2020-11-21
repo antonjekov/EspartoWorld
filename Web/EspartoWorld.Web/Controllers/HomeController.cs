@@ -5,6 +5,7 @@
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels;
     using EspartoWorld.Web.ViewModels.Courses;
+    using EspartoWorld.Web.ViewModels.ExposicionItems;
     using EspartoWorld.Web.ViewModels.Home;
     using EspartoWorld.Web.ViewModels.Videos;
     using Microsoft.AspNetCore.Mvc;
@@ -13,11 +14,13 @@
     {
         private readonly IVideosService videosService;
         private readonly ICoursesService coursesService;
+        private readonly IExposicionItemService exposicionItemService;
 
-        public HomeController(IVideosService videosService, ICoursesService coursesService)
+        public HomeController(IVideosService videosService, ICoursesService coursesService, IExposicionItemService exposicionItemService)
         {
             this.videosService = videosService;
             this.coursesService = coursesService;
+            this.exposicionItemService = exposicionItemService;
         }
 
         public IActionResult Index()
@@ -26,6 +29,7 @@
             {
                 LastVideo = this.videosService.GetLastVideo<VideoViewModel>(),
                 NextCourse = this.coursesService.GetNextCourse<CourseViewModel>(),
+                LastArtwork = this.exposicionItemService.GetLastExpositionItem<ExpositionItemViewModel>(),
             };
             return this.View(modelInfo);
         }

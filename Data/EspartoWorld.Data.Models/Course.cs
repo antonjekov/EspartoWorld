@@ -43,10 +43,8 @@
         [MaxLength(5000)]
         public string Description { get; set; }
 
-        [Required]
         public bool IsConfirmed { get; set; }
 
-        [Required]
         public bool HaveFreePlaces { get; set; }
     }
 }

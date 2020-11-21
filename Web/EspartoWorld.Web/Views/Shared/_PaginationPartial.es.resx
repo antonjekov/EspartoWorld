@@ -117,19 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Last places" xml:space="preserve">
-    <value>Últimas plazas</value>
+  <data name="Next" xml:space="preserve">
+    <value>Próxima</value>
   </data>
-  <data name="Latest ARTICLES" xml:space="preserve">
-    <value>Últimos ARTÍCULOS</value>
-  </data>
-  <data name="Latest ARTWORKS" xml:space="preserve">
-    <value>Últimas OBRAS DE ARTE</value>
-  </data>
-  <data name="Latest VIDEOS" xml:space="preserve">
-    <value>Últimos VÍDEOS</value>
-  </data>
-  <data name="Next course" xml:space="preserve">
-    <value>Próximo CURSO</value>
+  <data name="Previous" xml:space="preserve">
+    <value>Previa</value>
   </data>
 </root>

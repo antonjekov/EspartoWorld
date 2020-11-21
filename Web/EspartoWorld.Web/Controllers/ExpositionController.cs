@@ -1,5 +1,6 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
+    using System.Security.Claims;
     using System.Threading.Tasks;
 
     using EspartoWorld.Common;
@@ -25,8 +26,6 @@
         [Authorize]
         public IActionResult Add()
         {
-            var userId = this.userManager.GetUserId(this.User);
-            this.ViewData["userId"] = userId;
             return this.View();
         }
 
@@ -34,14 +33,61 @@
         [HttpPost]
         public async Task<IActionResult> AddAsync(ExpositionItemInputModel input)
         {
+            // var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value; //In this maner we can take user from cookie not to go to database
+            var userId = this.userManager.GetUserId(this.User);
+            input.AuthorId = userId;
             await this.expositionItemService.AddAsync(input);
             return this.Redirect("/Exposition/ThankYou");
         }
 
-        public IActionResult All()
+        //public IActionResult All()
+        //{
+        //    var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>();
+        //    return this.View(items);
+        //}
+
+        public IActionResult All(int id = 1)
         {
-            var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>();
-            return this.View(items);
+            int itemsPerPage = 8;
+            var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>(id, itemsPerPage);
+            var artworksCount = this.expositionItemService.GetCountAccepted();
+            var artworks = new ExpositionItemViewModelPagination()
+            {
+                PageNumber = id,
+                ExpositionItems = items,
+                ArtworksCount = artworksCount,
+                ItemsPerPage = itemsPerPage,
+            };
+            return this.View(artworks);
+        }
+
+        //public IActionResult MyArtworks()
+        //{
+        //    var userId = this.userManager.GetUserId(this.User);
+        //    var items = this.expositionItemService.GetAllAcceptedByAuthorId<ExpositionItemViewModel>(userId);
+        //    return this.View("All", items);
+        //}
+
+        [HttpGet]
+        public IActionResult AllOfAuthor(string author, int id = 1)
+        {
+            if (author == null)
+            {
+                author = this.userManager.GetUserId(this.User);
+            }
+
+            int itemsPerPage = 4;
+            var items = this.expositionItemService.GetAllAcceptedByAuthorId<ExpositionItemViewModel>(author, id, itemsPerPage);
+            var artworksCount = this.expositionItemService.GetCountAccepted(author);
+            var artworks = new ExpositionItemViewModelPagination()
+            {
+                PageNumber = id,
+                ExpositionItems = items,
+                ArtworksCount = artworksCount,
+                ItemsPerPage = itemsPerPage,
+                AuthorID = author,
+            };
+            return this.View("All", artworks);
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
@@ -86,10 +132,23 @@
         {
             if (id == 0)
             {
-                return this.Redirect("/Exposition/All");
+                return this.Redirect("/Exposition/Moderate");
             }
 
             await this.expositionItemService.Delete(id);
+            return this.Redirect("/Exposition/Moderate");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteOwnItem(int itemId)
+        {
+            var userId = this.userManager.GetUserId(this.User);
+            var item = this.expositionItemService.GetById<ExpositionItemModerateModel>(itemId);
+            if (item.AuthorId == userId)
+            {
+                await this.expositionItemService.Delete(itemId);
+            }
+
             return this.Redirect("/Exposition/All");
         }
     }
