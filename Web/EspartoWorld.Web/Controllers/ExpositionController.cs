@@ -1,6 +1,5 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
-    using System.Security.Claims;
     using System.Threading.Tasks;
 
     using EspartoWorld.Common;
@@ -40,15 +39,9 @@
             return this.Redirect("/Exposition/ThankYou");
         }
 
-        //public IActionResult All()
-        //{
-        //    var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>();
-        //    return this.View(items);
-        //}
-
         public IActionResult All(int id = 1)
         {
-            int itemsPerPage = 8;
+            int itemsPerPage = 6;
             var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>(id, itemsPerPage);
             var artworksCount = this.expositionItemService.GetCountAccepted();
             var artworks = new ExpositionItemViewModelPagination()
@@ -61,13 +54,6 @@
             return this.View(artworks);
         }
 
-        //public IActionResult MyArtworks()
-        //{
-        //    var userId = this.userManager.GetUserId(this.User);
-        //    var items = this.expositionItemService.GetAllAcceptedByAuthorId<ExpositionItemViewModel>(userId);
-        //    return this.View("All", items);
-        //}
-
         [HttpGet]
         public IActionResult AllOfAuthor(string author, int id = 1)
         {
@@ -76,7 +62,7 @@
                 author = this.userManager.GetUserId(this.User);
             }
 
-            int itemsPerPage = 4;
+            int itemsPerPage = 6;
             var items = this.expositionItemService.GetAllAcceptedByAuthorId<ExpositionItemViewModel>(author, id, itemsPerPage);
             var artworksCount = this.expositionItemService.GetCountAccepted(author);
             var artworks = new ExpositionItemViewModelPagination()

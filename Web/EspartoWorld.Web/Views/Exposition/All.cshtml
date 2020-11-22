@@ -10,10 +10,10 @@
     <div class="row text-center">
         @foreach (var item in Model.ExpositionItems)
         {
-            <div class="col-md-3 card-container">
+            <div class="col-md-6 col-lg-4 card-container">
                 <div class="card card-flip border border-dark  m-2">
-                    <div class="front card-block">
-                        <img src=@item.ImageUrl class="card-img-top" />
+                    <div class="front card-block card-body d-flex flex-column">
+                        <img src=@item.ImageUrl class="card-img-top img-fluid" />
                     </div>
                     <div class="back card-block card-body d-flex flex-column">
                         <h4 class="card-title m-2">@item.Title</h4>
@@ -36,17 +36,13 @@
                             }
                             else
                             {
-                                @*<form class="mt-auto" asp-controller="Exposition" asp-action="AllOfAuthor" asp-route-author=@item.AuthorId method="post">
-                                        <button type="submit" class="btn btn-success">@localizer["All artworks of this author"]</button>
-                                    </form>*@
-                                <a class="mt-auto btn btn-success" asp-controller="Exposition" asp-action="AllOfAuthor" asp-route-author=@item.AuthorId>@localizer["All artworks of this author"]</a>
+                               <a class="mt-auto btn btn-success" asp-controller="Exposition" asp-action="AllOfAuthor" asp-route-author=@item.AuthorId>@localizer["All artworks of this author"]</a>
                             }
                         }
                     </div>
                 </div>
             </div>
         }
-
     </div>
     <partial name="_PaginationPartial" model="@Model" />
 </div>

@@ -40,11 +40,6 @@
             return this.exposicionItems.All().To<T>().ToList();
         }
 
-        //public IEnumerable<T> GetAllAccepted<T>()
-        //{
-        //    return this.exposicionItems.All().Where(x => x.Accepted == true).To<T>().ToList();
-        //}
-
         public IEnumerable<T> GetAllAccepted<T>(int page, int itemsPerPage)
         {
             return this.exposicionItems.AllAsNoTracking().Where(x => x.Accepted == true).OrderByDescending(x => x.Id).Skip((page - 1) * itemsPerPage).Take(itemsPerPage).To<T>().ToList();
