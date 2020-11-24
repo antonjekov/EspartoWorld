@@ -1,13 +1,48 @@
-﻿@model EspartoWorld.Web.ViewModels.Product.ProductViewModel
+﻿@model EspartoWorld.Web.ViewModels.Product.ProductDetailsModel
 @using Microsoft.AspNetCore.Mvc.Localization
 @inject IViewLocalizer localizer
 
 @{
-    ViewData["Title"] = localizer["Details"];
+    ViewData["Title"] = localizer["Product details"];
 }
 
-<div class="row mb-2">
-    <div class="col-sm-4 mb-2">
-        <h3>@Model.Name</h3>
+<div class="card">
+    <div class="row">
+        <aside class="col-sm-5 border-right">
+            <div> <a href="#"><img src="@Model.Product.ImageUrl"></a></div>
+        </aside>
+        <aside class="col-sm-7">
+            <div class="card-body p-5">
+                <h3 class="title mb-3">@Model.Product.Name</h3>
+
+                <p class="price-detail-wrap">
+                    <span class="price h3 text-warning">
+                        <span class="num">@Model.Product.Price &euro;</span>
+                    </span>
+                </p> 
+                <dl class="item-property">
+                    <dt>Description</dt>
+                    <dd>
+                        <p>@Model.Product.Description</p>
+                    </dd>
+                </dl>
+                <dl class="param param-feature">
+                    <dt>Delivery</dt>
+                    <dd>Spain peninsula without Canarias Baleares</dd>
+                </dl>  
+                <hr>
+                <form method="post" asp-action="AddToCart" asp-route-id="@Model.Product.Id">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group col-sm-5">
+                        <label asp-for="Quantity" class="control-label"></label>
+                        <input asp-for="Quantity" class="form-control" />
+                        <span class="badge badge-light font-weight-bold">@Model.Product.Quantity available</span>
+                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                    </div>
+                    <hr>
+                    <button class="btn btn-lg btn-outline-success text-uppercase" type="submit">Add to cart</button>
+                </form>
+            </div> 
+        </aside>
     </div>
 </div>

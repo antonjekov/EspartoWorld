@@ -24,7 +24,7 @@
         public int Quantity { get; set; }
 
         [Range(0, 1000, ErrorMessage = "Price should be between {1} and {2} EUR")]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
         [Required(ErrorMessage = "Please upload image for this course")]
         [Url(ErrorMessage = "Please fill valid URL")]

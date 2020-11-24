@@ -21,12 +21,12 @@
         @foreach (var product in Model)
         {
             <div class="col-md-6 col-lg-4 col-xl-3 py-2">
-                <div class="card border-primary h-100">
+                <div class="card border-primary h-100 card-popup">
                     <img class="card-img-top img-fluid" src=@product.ImageUrl alt="Product Image">
                     <div class="card-body">
                         <h5 class="card-title">@product.Name</h5>
-                        <h5 class="card-text text-danger m-1 mt-auto hide"><b>@product.Price &euro;</b></h5>
-                        <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id" class="btn btn-success hide">View more</a>
+                        <h5 class="card-text m-1 mt-auto hide text-warning"><b>@product.Price &euro;</b></h5>
+                        <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id" class="btn hide btn-outline-success text-uppercase">View more</a>
                     </div>
 
                 </div>

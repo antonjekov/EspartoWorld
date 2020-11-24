@@ -28,6 +28,7 @@
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {
               "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj": {
                 "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj"
@@ -43,10 +44,11 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Google.Apis.YouTube.v3": {
               "target": "Package",
-              "version": "[1.49.0.2120, )"
+              "version": "[1.49.0.2148, )"
             },
             "StyleCop.Analyzers.Unstable": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
@@ -70,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -98,6 +100,7 @@
         },
         "frameworks": {
           "netstandard2.1": {
+            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -109,6 +112,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -136,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,108 @@
+﻿@model EspartoWorld.Web.ViewModels.ShoppingCart.ShoppingCartViewModelExtended
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@{ ViewData["Title"] = localizer["Shopping cart"]; }
+
+@if (Model.SubtotalPrice == 0)
+{
+<h1>Your shopping cart is empty</h1>
+                <a class="btn btn-light" asp-controller="Product" asp-action="All">
+                    <i class="fas fa-shopping-cart"></i> Continue Shopping
+                </a> }
+            else
+            {
+<div class="row">
+    <div class="col-sm-12 col-md-10 col-md-offset-1">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Total</th>
+                    <th> </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.ShoppingCart)
+                {
+<tr>
+    <td class="col-sm-8 col-md-6">
+        <div class="media">
+            <a class="thumbnail pull-left" asp-controller="Product" asp-action="Details" asp-route-id="@item.Product.Id">
+                <img class="media-object" src="@item.Product.ImageUrl" style="width: 72px; height: 72px;">
+            </a>
+            <div class="media-body">
+                <h4 class="media-heading"><a asp-controller="Product" asp-action="Details" asp-route-id="@item.Product.Id">@item.Product.Name</a></h4>
+            </div>
+        </div>
+    </td>
+    <td class="col-sm-1 col-md-1" style="text-align: center">
+        <form onchange="Submit()" asp-controller="ShoppingCart" asp-action="ChangeProductQuantity" asp-route-id="@item.Product.Id" method="post">
+            <div class="form-group">
+                <input asp-for="@Model.QuantityChangeInputModel.Quantity" class="form-control" value="@item.Quantity" name="quantity">
+            </div>
+        </form>
+    </td>
+    <td class="col-sm-1 col-md-1 text-center"><strong>@item.Product.Price.ToString("N2")&euro;</strong></td>
+    <td class="col-sm-1 col-md-1 text-center"><strong>@(item.Product.Price*item.Quantity)&euro;</strong></td>
+    <td class="col-sm-1 col-md-1">
+        <a class="btn btn-danger" asp-controller="ShoppingCart" asp-action="Delete" asp-route-id="@item.Product.Id">
+            <i class="fas fa-times"></i> Remove
+        </a>
+    </td>
+</tr>
+}
+
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td><h5>Subtotal</h5></td>
+                    <td class="text-right"><h5><strong>@Model.SubtotalPrice.ToString("N2")&euro;</strong></h5></td>
+                </tr>
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td><h5>Estimated shipping</h5></td>
+                    <td class="text-right"><h5><strong>@Model.Shipping.ToString("N2")&euro;</strong></h5></td>
+                </tr>
+                <tr>
+                    <td>   </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td><h3>Total</h3></td>
+                    <td class="text-right"><h3><strong>@Model.TotalPrice.ToString("N2")&euro;</strong></h3></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="btn btn-light" asp-controller="Product" asp-action="All">
+                            <i class="fas fa-shopping-cart"></i> Continue Shopping
+                        </a>
+                    </td>
+                    <td>   </td>
+                    <td>   </td>
+                    <td colspan="2">
+                        <button type="button" class="btn btn-success">
+                            Checkout <i class="fas fa-play"></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>}
+
+@section Styles{
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
+}
+
+@section Scripts{
+    <script>
+        function Submit() {
+            let target = this.event.target;
+            target.closest('form').submit();
+        }
+    </script>
+}

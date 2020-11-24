@@ -9,17 +9,17 @@
     ".NETStandard,Version=v2.1/": {
       "EspartoWord.Services.Cloudinary/1.0.0": {
         "dependencies": {
-          "CloudinaryDotNet": "1.13.1"
+          "CloudinaryDotNet": "1.13.2"
         },
         "runtime": {
           "EspartoWord.Services.Cloudinary.dll": {}
         }
       },
-      "CloudinaryDotNet/1.13.1": {
+      "CloudinaryDotNet/1.13.2": {
         "runtime": {
           "lib/netstandard1.3/CloudinaryDotNet.dll": {
-            "assemblyVersion": "1.13.1.0",
-            "fileVersion": "1.13.1.0"
+            "assemblyVersion": "1.13.2.0",
+            "fileVersion": "1.13.2.0"
           }
         }
       }
@@ -31,12 +31,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CloudinaryDotNet/1.13.1": {
+    "CloudinaryDotNet/1.13.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-LembXe3pvwKdFAvNaZvSJXiVaRpo+HL/V1UfyHpv3PXTVcjXxuak3+BGgNjM5jfI5TOngWi0oUMLYZ7sBHuWHA==",
-      "path": "cloudinarydotnet/1.13.1",
-      "hashPath": "cloudinarydotnet.1.13.1.nupkg.sha512"
+      "sha512": "sha512-JhtiKdPRZhO4Faa4jIthbfYCsHGiAQEswALo1xte5HhDzhFHobAjH/BrU1djP6PfyT0raDg1tc3LcSL6VX2ULw==",
+      "path": "cloudinarydotnet/1.13.2",
+      "hashPath": "cloudinarydotnet.1.13.2.nupkg.sha512"
     }
   }
 }

@@ -2,10 +2,10 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.1": {
-      "MailKit/2.9.0": {
+      "MailKit/2.10.0": {
         "type": "package",
         "dependencies": {
-          "MimeKit": "2.9.2"
+          "MimeKit": "2.10.0"
         },
         "compile": {
           "lib/netstandard2.0/MailKit.dll": {}
@@ -59,10 +59,12 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "MimeKit/2.9.2": {
+      "MimeKit/2.10.0": {
         "type": "package",
         "dependencies": {
-          "Portable.BouncyCastle": "1.8.5",
+          "Portable.BouncyCastle": "1.8.8",
+          "System.Buffers": "4.5.1",
+          "System.Data.DataSetExtensions": "4.5.0",
           "System.Reflection.TypeExtensions": "4.4.0",
           "System.Security.Cryptography.Pkcs": "4.7.0",
           "System.Text.Encoding.CodePages": "4.4.0"
@@ -107,7 +109,7 @@
           "lib/netstandard1.0/Newtonsoft.Json.dll": {}
         }
       },
-      "Portable.BouncyCastle/1.8.5": {
+      "Portable.BouncyCastle/1.8.8": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
@@ -116,7 +118,7 @@
           "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
         }
       },
-      "SendGrid/9.21.0": {
+      "SendGrid/9.21.2": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "9.0.1",
@@ -147,6 +149,15 @@
       "StyleCop.Analyzers.Unstable/1.2.0.205": {
         "type": "package"
       },
+      "System.Buffers/4.5.1": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Buffers.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
       "System.Collections/4.0.11": {
         "type": "package",
         "dependencies": {
@@ -156,6 +167,15 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Collections.dll": {}
+        }
+      },
+      "System.Data.DataSetExtensions/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Data.DataSetExtensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Data.DataSetExtensions.dll": {}
         }
       },
       "System.Diagnostics.Debug/4.0.11": {
@@ -658,10 +678,10 @@
     }
   },
   "libraries": {
-    "MailKit/2.9.0": {
-      "sha512": "yFXqvORpRyveseJ4+RNOKNwabu/5vk1EVdY4oTKWvwDgWGTnOyop+U7iF6C1uYe5NroCCkKYPMPsgtMVX9FdcQ==",
+    "MailKit/2.10.0": {
+      "sha512": "+MuVBWstHANt4iescbL0zzOZX+OllALJQf+uDdIPsCx+mE3LsNthpJv/8em93VzGoFev1WGLMJfLjCBreg8STg==",
       "type": "package",
-      "path": "mailkit/2.9.0",
+      "path": "mailkit/2.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -678,16 +698,10 @@
         "lib/net48/MailKit.dll",
         "lib/net48/MailKit.pdb",
         "lib/net48/MailKit.xml",
-        "lib/netstandard1.3/MailKit.dll",
-        "lib/netstandard1.3/MailKit.pdb",
-        "lib/netstandard1.3/MailKit.xml",
-        "lib/netstandard1.6/MailKit.dll",
-        "lib/netstandard1.6/MailKit.pdb",
-        "lib/netstandard1.6/MailKit.xml",
         "lib/netstandard2.0/MailKit.dll",
         "lib/netstandard2.0/MailKit.pdb",
         "lib/netstandard2.0/MailKit.xml",
-        "mailkit.2.9.0.nupkg.sha512",
+        "mailkit.2.10.0.nupkg.sha512",
         "mailkit.nuspec"
       ]
     },
@@ -778,10 +792,10 @@
         "runtime.json"
       ]
     },
-    "MimeKit/2.9.2": {
-      "sha512": "tj8mhCKPFu4FK9F2Md1x5xN3hVY7EC5e6j8Z51ynReRWhnlFfVkIWj5jnHZu7irUsvSX3JWk0HL5LLOuECOFbw==",
+    "MimeKit/2.10.0": {
+      "sha512": "AHbCxNo6Ue98q/r81TKdCisRJSOv5EF0PWctUqhtzjDJx3xeTxguxZHyZy3ATbHfHFDRVR7TeZgmsfRP7dXs6g==",
       "type": "package",
-      "path": "mimekit/2.9.2",
+      "path": "mimekit/2.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -798,16 +812,10 @@
         "lib/net48/MimeKit.dll",
         "lib/net48/MimeKit.pdb",
         "lib/net48/MimeKit.xml",
-        "lib/netstandard1.3/MimeKit.dll",
-        "lib/netstandard1.3/MimeKit.pdb",
-        "lib/netstandard1.3/MimeKit.xml",
-        "lib/netstandard1.6/MimeKit.dll",
-        "lib/netstandard1.6/MimeKit.pdb",
-        "lib/netstandard1.6/MimeKit.xml",
         "lib/netstandard2.0/MimeKit.dll",
         "lib/netstandard2.0/MimeKit.pdb",
         "lib/netstandard2.0/MimeKit.xml",
-        "mimekit.2.9.2.nupkg.sha512",
+        "mimekit.2.10.0.nupkg.sha512",
         "mimekit.nuspec"
       ]
     },
@@ -837,29 +845,25 @@
         "tools/install.ps1"
       ]
     },
-    "Portable.BouncyCastle/1.8.5": {
-      "sha512": "EaCgmntbH1sOzemRTqyXSqYjB6pLH7VCYHhhDYZ59guHSD5qPwhIYa7kfy0QUlmTRt9IXhaXdFhNuBUArp70Ng==",
+    "Portable.BouncyCastle/1.8.8": {
+      "sha512": "1rxdf8NfyAxLlqIEciCl/yNhmz1YiLkmp6rrF8p3/NVmyHHzPWLx8djtDvSAwhPLg64BXvsRcM3+5bP1HAUdYg==",
       "type": "package",
-      "path": "portable.bouncycastle/1.8.5",
+      "path": "portable.bouncycastle/1.8.8",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net40/BouncyCastle.Crypto.dll",
         "lib/net40/BouncyCastle.Crypto.xml",
-        "lib/netstandard1.0/BouncyCastle.Crypto.dll",
-        "lib/netstandard1.0/BouncyCastle.Crypto.xml",
-        "lib/netstandard1.3/BouncyCastle.Crypto.dll",
-        "lib/netstandard1.3/BouncyCastle.Crypto.xml",
         "lib/netstandard2.0/BouncyCastle.Crypto.dll",
         "lib/netstandard2.0/BouncyCastle.Crypto.xml",
-        "portable.bouncycastle.1.8.5.nupkg.sha512",
+        "portable.bouncycastle.1.8.8.nupkg.sha512",
         "portable.bouncycastle.nuspec"
       ]
     },
-    "SendGrid/9.21.0": {
-      "sha512": "GY7NZcS0K4WjepDZhs5XxORqZDC1FmTz6iT/j9crCSCMBG4Y/9I/ia9b6ws8209Yv1uVjnDcNr0gf54ibIxIsw==",
+    "SendGrid/9.21.2": {
+      "sha512": "vYp/UPtiO9FkaziuVzoGJqmKJV4WBhN6gmryXnpL9ga/UPJH2bBmzg0As8DO75lhboORKYim8cZFdDhKVthokQ==",
       "type": "package",
-      "path": "sendgrid/9.21.0",
+      "path": "sendgrid/9.21.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -875,7 +879,7 @@
         "lib/netstandard2.0/SendGrid.dll",
         "lib/netstandard2.0/SendGrid.pdb",
         "lib/netstandard2.0/SendGrid.xml",
-        "sendgrid.9.21.0.nupkg.sha512",
+        "sendgrid.9.21.2.nupkg.sha512",
         "sendgrid.nuspec"
       ]
     },
@@ -932,6 +936,37 @@
         "stylecop.analyzers.unstable.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
+      ]
+    },
+    "System.Buffers/4.5.1": {
+      "sha512": "Rw7ijyl1qqRS0YQD/WycNst8hUUMgrMH4FCn1nNm27M4VxchZ1js3fVjQaANHO5f3sN4isvP4a+Met9Y4YomAg==",
+      "type": "package",
+      "path": "system.buffers/4.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Buffers.dll",
+        "lib/net461/System.Buffers.xml",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.1/System.Buffers.dll",
+        "lib/netstandard1.1/System.Buffers.xml",
+        "lib/netstandard2.0/System.Buffers.dll",
+        "lib/netstandard2.0/System.Buffers.xml",
+        "lib/uap10.0.16299/_._",
+        "ref/net45/System.Buffers.dll",
+        "ref/net45/System.Buffers.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.1/System.Buffers.dll",
+        "ref/netstandard1.1/System.Buffers.xml",
+        "ref/netstandard2.0/System.Buffers.dll",
+        "ref/netstandard2.0/System.Buffers.xml",
+        "ref/uap10.0.16299/_._",
+        "system.buffers.4.5.1.nupkg.sha512",
+        "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Collections/4.0.11": {
@@ -999,6 +1034,25 @@
         "ref/xamarinwatchos10/_._",
         "system.collections.4.0.11.nupkg.sha512",
         "system.collections.nuspec"
+      ]
+    },
+    "System.Data.DataSetExtensions/4.5.0": {
+      "sha512": "221clPs1445HkTBZPL+K9sDBdJRB8UN8rgjO3ztB0CQ26z//fmJXtlsr6whGatscsKGBrhJl5bwJuKSA8mwFOw==",
+      "type": "package",
+      "path": "system.data.datasetextensions/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/_._",
+        "lib/netstandard2.0/System.Data.DataSetExtensions.dll",
+        "ref/net45/_._",
+        "ref/netstandard2.0/System.Data.DataSetExtensions.dll",
+        "system.data.datasetextensions.4.5.0.nupkg.sha512",
+        "system.data.datasetextensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Diagnostics.Debug/4.0.11": {
@@ -3102,8 +3156,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "MailKit >= 2.9.0",
-      "Sendgrid >= 9.21.0",
+      "MailKit >= 2.10.0",
+      "Sendgrid >= 9.21.2",
       "StyleCop.Analyzers >= 1.2.0-beta.205"
     ]
   },
@@ -3135,6 +3189,7 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "targetAlias": "netstandard2.1",
           "projectReferences": {}
         }
       },
@@ -3146,14 +3201,15 @@
     },
     "frameworks": {
       "netstandard2.1": {
+        "targetAlias": "netstandard2.1",
         "dependencies": {
           "MailKit": {
             "target": "Package",
-            "version": "[2.9.0, )"
+            "version": "[2.10.0, )"
           },
           "Sendgrid": {
             "target": "Package",
-            "version": "[9.21.0, )"
+            "version": "[9.21.2, )"
           },
           "StyleCop.Analyzers": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers",
@@ -3177,7 +3233,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

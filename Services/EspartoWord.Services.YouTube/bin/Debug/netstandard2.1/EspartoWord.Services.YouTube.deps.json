@@ -10,7 +10,7 @@
       "EspartoWord.Services.YouTube/1.0.0": {
         "dependencies": {
           "EspartoWorld.Services.Mapping": "1.0.0",
-          "Google.Apis.YouTube.v3": "1.49.0.2120",
+          "Google.Apis.YouTube.v3": "1.49.0.2148",
           "StyleCop.Analyzers.Unstable": "1.2.0.261"
         },
         "runtime": {
@@ -67,15 +67,15 @@
           }
         }
       },
-      "Google.Apis.YouTube.v3/1.49.0.2120": {
+      "Google.Apis.YouTube.v3/1.49.0.2148": {
         "dependencies": {
           "Google.Apis": "1.49.0",
           "Google.Apis.Auth": "1.49.0"
         },
         "runtime": {
           "lib/netstandard2.0/Google.Apis.YouTube.v3.dll": {
-            "assemblyVersion": "1.49.0.2120",
-            "fileVersion": "1.49.0.2120"
+            "assemblyVersion": "1.49.0.2148",
+            "fileVersion": "1.49.0.2148"
           }
         }
       },
@@ -141,12 +141,12 @@
       "path": "google.apis.core/1.49.0",
       "hashPath": "google.apis.core.1.49.0.nupkg.sha512"
     },
-    "Google.Apis.YouTube.v3/1.49.0.2120": {
+    "Google.Apis.YouTube.v3/1.49.0.2148": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-E1baYPeuhnRxE0KdLUccuaGNQ+l4rGwXFmYqJoqxq17x2zAUqssaTl4RZDUyRFj/KPSpa1OZwkIQCr0+IeDdDQ==",
-      "path": "google.apis.youtube.v3/1.49.0.2120",
-      "hashPath": "google.apis.youtube.v3.1.49.0.2120.nupkg.sha512"
+      "sha512": "sha512-Q36JLrEG7NQCHYbC35nybKFIB3nmg0MyXkeygML9DOcfBp5EXhSHNOnyJIzSSYp8BskPNE69QeEWOtJI1YwoFQ==",
+      "path": "google.apis.youtube.v3/1.49.0.2148",
+      "hashPath": "google.apis.youtube.v3.1.49.0.2148.nupkg.sha512"
     },
     "Microsoft.CSharp/4.7.0": {
       "type": "package",

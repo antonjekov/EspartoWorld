@@ -43,12 +43,15 @@
             services.AddMvc()
                 .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
                 .AddDataAnnotationsLocalization();
+
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
             services.Configure<RequestLocalizationOptions>(options =>
             {
                 var supportedCultures = new[]
                 {
-            new CultureInfo("en-US"),
-            new CultureInfo("es"),
+                    new CultureInfo("en-US"),
+                    new CultureInfo("es"),
                 };
                 options.DefaultRequestCulture = new RequestCulture(culture: "en-US", uiCulture: "en-US");
                 options.SupportedCultures = supportedCultures;
@@ -97,6 +100,7 @@
             services.AddTransient<IContactFormService, ContactFormService>();
             services.AddTransient<IManufacturersService, ManufacturersService>();
             services.AddTransient<IProductsService, ProductsService>();
+            services.AddTransient<IShoppingCartsService, ShoppingCartsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -115,7 +119,7 @@
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+                app.UseMigrationsEndPoint();
             }
             else
             {

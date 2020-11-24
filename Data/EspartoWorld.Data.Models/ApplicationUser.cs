@@ -17,6 +17,7 @@ namespace EspartoWorld.Data.Models
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
             this.ExposicionItems = new HashSet<ExpositionItem>();
+            this.ShoppingCart = new HashSet<ShoppingCartItem>();
         }
 
         // Audit info
@@ -36,5 +37,7 @@ namespace EspartoWorld.Data.Models
         public virtual ICollection<IdentityUserLogin<string>> Logins { get; set; }
 
         public virtual ICollection<ExpositionItem> ExposicionItems { get; set; }
+
+        public virtual ICollection<ShoppingCartItem> ShoppingCart { get; set; }
     }
 }

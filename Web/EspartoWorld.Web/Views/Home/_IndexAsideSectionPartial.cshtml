@@ -4,7 +4,7 @@
 
 @if (Model.NextCourse != null)
 {
-    <div class="card mb-1">
+    <div class="card mb-1 card-popup">
         <h5 class="card-header">@localizer["Next course"]</h5>
         <a asp-controller="Courses" asp-action="Details" asp-route-id=@Model.NextCourse.Id>
             <div class="card-body row">
@@ -30,7 +30,7 @@
 
 @if (Model.LastArtwork != null)
 {
-    <div class="card mb-1">
+    <div class="card card-popup mb-1">
         <h5 class="card-header">@localizer["Latest ARTWORKS"]</h5>
         <a asp-controller="Exposition" asp-action="All" >
             <div class="card-body row">
@@ -52,7 +52,7 @@
 
 @if (Model.LastVideo != null)
 {
-    <div class="card mb-1">
+    <div class="card card-popup mb-1">
         <h5 class="card-header">@localizer["Latest VIDEOS"]</h5>
         <a asp-controller="Videos" asp-action="All">
             <div class="card-body row">

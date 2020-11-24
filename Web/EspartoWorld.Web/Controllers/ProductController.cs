@@ -4,21 +4,27 @@
     using System.Threading.Tasks;
 
     using EspartoWorld.Common;
+    using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.Manufacturers;
     using EspartoWorld.Web.ViewModels.Product;
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
 
     public class ProductController : BaseController
     {
         private readonly IProductsService productsService;
         private readonly IManufacturersService manufacturersService;
+        private readonly UserManager<ApplicationUser> userManager;
+        private readonly IShoppingCartsService shoppingCartsService;
 
-        public ProductController(IProductsService productsService, IManufacturersService manufacturersService)
+        public ProductController(IProductsService productsService, IManufacturersService manufacturersService, UserManager<ApplicationUser> userManager, IShoppingCartsService shoppingCartsService)
         {
             this.productsService = productsService;
             this.manufacturersService = manufacturersService;
+            this.userManager = userManager;
+            this.shoppingCartsService = shoppingCartsService;
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
@@ -74,7 +80,26 @@
             }
 
             var product = this.productsService.GetById<ProductViewModel>(id);
-            return this.View(product);
+            var input = new ProductDetailsModel()
+            {
+                Product = product,
+                Quantity = 1,
+            };
+            return this.View(input);
+        }
+
+        [Authorize(Roles = GlobalConstants.ClientRoleName)]
+        [HttpPost]
+        public async Task<IActionResult> AddToCart(int id, int quantity)
+        {
+            if (!this.productsService.IdIsValid(id))
+            {
+                return this.Redirect("/Product/All");
+            }
+
+            var userId = this.userManager.GetUserId(this.User);
+            await this.shoppingCartsService.AddAsync(userId, id, quantity);
+            return this.Redirect("/ShoppingCart/Index");
         }
     }
 }

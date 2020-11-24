@@ -14,7 +14,7 @@
   
 
   <ItemGroup>
-    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.49.0.2120" />
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.49.0.2148" />
     <PackageReference Include="StyleCop.Analyzers.Unstable" Version="1.2.0.261">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

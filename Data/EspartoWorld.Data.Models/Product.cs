@@ -19,7 +19,7 @@
         public int Quantity { get; set; }
 
         [Range(0, 1000)]
-        public double Price { get; set; }
+        public decimal Price { get; set; }
 
         [Required]
         public string ImageUrl { get; set; }
