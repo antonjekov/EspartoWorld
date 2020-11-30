@@ -14,5 +14,7 @@
         bool IdIsValid(int id);
 
         IEnumerable<T> GetAllVisibleOrderedCreatedOn<T>();
+
+        Task IncreaseTimesBoughtAsync(int productId);
     }
 }

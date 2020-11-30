@@ -53,6 +53,16 @@
             }
         }
 
+        public async Task DeleteAllAsync(string userId)
+        {
+            var items = this.shoppingCartItems.All().Where(x => x.ApplicationUserId == userId).ToList();
+            foreach (var item in items)
+            {
+                this.shoppingCartItems.Delete(item);
+                await this.shoppingCartItems.SaveChangesAsync();
+            }
+        }
+
         public async Task UpdateQuantityAsync(string userId, int productId, int quantity)
         {
             if (quantity == 0)

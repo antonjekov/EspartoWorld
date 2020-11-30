@@ -1,0 +1,18 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{
+    ViewData["Title"] = localizer["Successfully subscribed!"];
+}
+
+<div class="jumbotron text-center">
+    <h1 class="display-3">We hope to see You soon in this course!</h1>
+    <p class="lead"><strong>Please check your email</strong> for further information about the course.</p>
+    <hr>
+    <p>
+        Having questions? <a asp-controller="Contact" asp-action="Index">Contact us</a>
+    </p>
+    <p class="lead">
+        <a class="btn btn-primary btn-sm" asp-controller="Home" asp-action="Index">Continue to homepage</a>
+    </p>
+</div>

@@ -23,7 +23,6 @@
             await this.productsRepository.AddAsync(item);
             await this.productsRepository.SaveChangesAsync();
             return item.Id;
-            throw new System.NotImplementedException();
         }
 
         public T GetById<T>(int id)
@@ -44,6 +43,16 @@
         public IEnumerable<T> GetAllVisibleOrderedCreatedOn<T>()
         {
             return this.productsRepository.All().Where(x => x.Visible).OrderByDescending(x => x.CreatedOn).To<T>().ToList();
+        }
+
+        public async Task IncreaseTimesBoughtAsync(int productId)
+        {
+            var item = this.productsRepository.All().FirstOrDefault(x => x.Id == productId);
+            if (item != null)
+            {
+                item.TimesBought += 1;
+                await this.productsRepository.SaveChangesAsync();
+            }
         }
     }
 }

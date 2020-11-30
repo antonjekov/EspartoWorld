@@ -1,0 +1,9 @@
+﻿@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+
+@{ ViewData["Title"] = localizer["Successful payment"]; }
+
+<h1>Thanks for your order!</h1>
+<p>
+    If you have any questions, please
+    <span><a asp-controller="Contact" asp-action="Index">send email.</a></span>
+</p>

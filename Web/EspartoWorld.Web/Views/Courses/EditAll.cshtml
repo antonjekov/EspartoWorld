@@ -1,0 +1,31 @@
+﻿@model IEnumerable<EspartoWorld.Web.ViewModels.Courses.CourseViewModel>
+@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer localizer
+
+@{
+    ViewData["Title"] = localizer["All courses for edit"];
+}
+
+
+
+<table class="table table-hover">
+    <thead class="bg-light">
+        <tr>
+            <th scope="col">@localizer["Dates"]</th>
+            <th scope="col">@localizer["Title of course"]</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td><i class="far fa-calendar-alt"></i> @item.StartDateString - @item.EndDateString</td>
+                <td>@item.Title</td>
+                <td>
+                    <a asp-action="Edit" asp-controller="Courses" asp-route-id="@item.Id" class="btn btn-success">@localizer["Edit"] <i class="fas fa-play"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -12,6 +12,7 @@
     @*<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />*@
     <link href="~/css/bootstrapcustom.min.css" rel="stylesheet" asp-append-version="true" />
     <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="~/lib/font-awesome/css/all.min.css" />
     @await this.RenderSectionAsync("Styles", required: false)
 </head>
 <body>
@@ -35,16 +36,8 @@
                     <li class="nav-item">
                         <a class="nav-link " asp-area="" asp-controller="Courses" asp-action="All">@localizer["Courses"]</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            @localizer["Materials"]
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" asp-action="All" asp-controller="Product">@localizer["View"]</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
+                    <li class="nav-item">
+                        <a class="nav-link " asp-area="" asp-controller="Product" asp-action="All">@localizer["Materials"]</a>
                     </li>
                     @if (this.User.Identity.IsAuthenticated)
                     {

@@ -19,6 +19,21 @@ namespace EspartoWorld.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
+            modelBuilder.Entity("ApplicationUserCourse", b =>
+                {
+                    b.Property<int>("CoursesId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ParticipantsId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("CoursesId", "ParticipantsId");
+
+                    b.HasIndex("ParticipantsId");
+
+                    b.ToTable("ApplicationUserCourse");
+                });
+
             modelBuilder.Entity("EspartoWorld.Data.Models.ApplicationRole", b =>
                 {
                     b.Property<string>("Id")
@@ -497,6 +512,37 @@ namespace EspartoWorld.Data.Migrations
                     b.ToTable("Videos");
                 });
 
+            modelBuilder.Entity("EspartoWorld.Data.Models.Vote", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("ExpositionItemId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<byte>("Value")
+                        .HasColumnType("tinyint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ExpositionItemId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Votes");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -601,6 +647,21 @@ namespace EspartoWorld.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("ApplicationUserCourse", b =>
+                {
+                    b.HasOne("EspartoWorld.Data.Models.Course", null)
+                        .WithMany()
+                        .HasForeignKey("CoursesId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("EspartoWorld.Data.Models.ApplicationUser", null)
+                        .WithMany()
+                        .HasForeignKey("ParticipantsId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("EspartoWorld.Data.Models.ExpositionItem", b =>
                 {
                     b.HasOne("EspartoWorld.Data.Models.ApplicationUser", "Author")
@@ -638,6 +699,23 @@ namespace EspartoWorld.Data.Migrations
                     b.Navigation("ApplicationUser");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("EspartoWorld.Data.Models.Vote", b =>
+                {
+                    b.HasOne("EspartoWorld.Data.Models.ExpositionItem", "ExpositionItem")
+                        .WithMany("Votes")
+                        .HasForeignKey("ExpositionItemId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("EspartoWorld.Data.Models.ApplicationUser", "User")
+                        .WithMany("Votes")
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("ExpositionItem");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -702,6 +780,13 @@ namespace EspartoWorld.Data.Migrations
                     b.Navigation("Roles");
 
                     b.Navigation("ShoppingCart");
+
+                    b.Navigation("Votes");
+                });
+
+            modelBuilder.Entity("EspartoWorld.Data.Models.ExpositionItem", b =>
+                {
+                    b.Navigation("Votes");
                 });
 
             modelBuilder.Entity("EspartoWorld.Data.Models.Manufacturer", b =>

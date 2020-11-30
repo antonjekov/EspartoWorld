@@ -1,6 +1,8 @@
 ﻿namespace EspartoWorld.Data.Models
 {
     using System;
+    using System.Collections;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using EspartoWorld.Data.Common.Models;
@@ -11,6 +13,7 @@
         {
             this.IsConfirmed = false;
             this.HaveFreePlaces = true;
+            this.Participants = new HashSet<ApplicationUser>();
         }
 
         public DateTime StartDate { get; set; }
@@ -46,5 +49,7 @@
         public bool IsConfirmed { get; set; }
 
         public bool HaveFreePlaces { get; set; }
+
+        public virtual ICollection<ApplicationUser> Participants { get; set; }
     }
 }

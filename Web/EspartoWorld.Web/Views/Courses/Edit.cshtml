@@ -1,0 +1,85 @@
+﻿@model EspartoWorld.Web.ViewModels.Courses.CourseEditModel
+@inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
+@{
+    ViewData["Title"] = localizer["Edit course"];
+}
+<h1>@localizer["Edit course"]</h1>
+<hr />
+
+<form asp-controller="Courses" asp-action="Edit" asp-route-id="@Model.Actual.Id" method="post">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="@Model.Changed.Title" class="control-label"></label>
+                <input asp-for="@Model.Changed.Title" class="form-control" value="@Model.Actual.Title" />
+                <span asp-validation-for="@Model.Changed.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Changed.StartDate" class="control-label"></label>
+                <input asp-for="@Model.Changed.StartDate" class="form-control" value="@Model.Actual.StartDate.ToString("yyyy-MM-dd")" />
+                <span asp-validation-for="@Model.Changed.StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Changed.Place" class="control-label"></label>
+                <input asp-for="@Model.Changed.Place" class="form-control" value="@Model.Actual.Place" />
+                <span asp-validation-for="@Model.Changed.Place" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Changed.Price" class="control-label"></label>
+                <input asp-for="@Model.Changed.Price" class="form-control" value="@Model.Actual.Price" />
+                <span asp-validation-for="@Model.Changed.Price" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="@Model.Changed.GroupSize" class="control-label"></label>
+                <input asp-for="@Model.Changed.GroupSize" class="form-control" value="@Model.Actual.GroupSize" />
+                <span asp-validation-for="@Model.Changed.GroupSize" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Changed.LengthInDays" class="control-label"></label>
+                <input asp-for="@Model.Changed.LengthInDays" class="form-control" value="@Model.Actual.LengthInDays" />
+                <span asp-validation-for="@Model.Changed.LengthInDays" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Changed.Organizer" class="control-label"></label>
+                <input asp-for="@Model.Changed.Organizer" class="form-control" value="@Model.Actual.Organizer" />
+                <span asp-validation-for="@Model.Changed.Organizer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="@Model.Changed.Description" class="control-label"></label>
+                <textarea rows="3" asp-for="@Model.Changed.Description" class="form-control"></textarea>
+                <span asp-validation-for="@Model.Changed.Description" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group" id="imageGroup">
+                <label asp-for="@Model.Changed.ImageUrl" class="control-label"></label>
+                <input asp-for="@Model.Changed.ImageUrl" class="form-control" placeholder="Please upload image for this course" readonly value="@Model.Actual.ImageUrl" />
+                <span asp-validation-for="@Model.Changed.ImageUrl" class="text-danger"></span>
+                <div class="d-flex justify-content-center">
+                    <button id="upload_widget" class="btn btn-success m-1">@localizer["Upload image"]</button>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="@Model.Actual.ImageUrl" class="img-fluid max-width:100% m-1" id="courseImage" alt="Course image">
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div class="form-group">
+            <input type="submit" value=@localizer["Edit"] class="btn btn-danger m-1" />
+        </div>
+        <span>
+            <button class="btn btn-success m-1" asp-action="All" asp-controller="Courses">@localizer["Cancel"]</button>
+        </span>        
+    </div>
+</form>
+
+@section Scripts{
+    <script type="text/javascript">
+        var textarea = document.getElementsByTagName('textarea')[0].value=@Json.Serialize(Model.Actual.Description);
+    </script>
+}

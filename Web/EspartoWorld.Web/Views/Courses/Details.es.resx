@@ -120,8 +120,14 @@
   <data name="All courses" xml:space="preserve">
     <value>Todos cursos</value>
   </data>
+  <data name="all courses for which you are subscribed" xml:space="preserve">
+    <value>todos los cursos a los que estás suscrito</value>
+  </data>
   <data name="Date" xml:space="preserve">
     <value>Fecha</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
   </data>
   <data name="Details" xml:space="preserve">
     <value>Detalles</value>
@@ -149,5 +155,8 @@
   </data>
   <data name="Price" xml:space="preserve">
     <value>Precio</value>
+  </data>
+  <data name="You are subscribed for this course. Do you want to view" xml:space="preserve">
+    <value>Estás suscrito a este curso. Quieres ver</value>
   </data>
 </root>

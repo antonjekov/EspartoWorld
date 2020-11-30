@@ -23,11 +23,20 @@
         <div><b>@localizer["Price"]:</b> @Model.Price €</div>
     </div>
     <div class="col-sm-4">
-        <div><b>@localizer["I want to participate"]:</b></div>
+        <div><b>@localizer["Description"]:</b></div>
         <div> @Model.Description</div>
     </div>
 </div>
 <div class="row mb-3">
     <a class="btn btn-primary m-1" asp-controller="Courses" asp-action="All">@localizer["All courses"]</a>
-    <a class="btn btn-success m-1" href="#">@localizer["I want to participate"]</a>
+    @if (!Model.SubscribedForCourse)
+    {
+        <form asp-controller="Courses" asp-action="AddUserToCourse" asp-route-id="@Model.Id" method="post">
+            <input type="submit" value="@localizer["I want to participate"]" class="btn btn-success m-1" />
+        </form>
+    }
 </div>
+@if (Model.SubscribedForCourse)
+{
+    <h5>@localizer["You are subscribed for this course. Do you want to view"] <a class="text-success" asp-controller="Courses" asp-action="MyCourses">@localizer["all courses for which you are subscribed"] ?</a></h5>
+}

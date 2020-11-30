@@ -18,6 +18,8 @@ namespace EspartoWorld.Data.Models
             this.Logins = new HashSet<IdentityUserLogin<string>>();
             this.ExposicionItems = new HashSet<ExpositionItem>();
             this.ShoppingCart = new HashSet<ShoppingCartItem>();
+            this.Courses = new HashSet<Course>();
+            this.Votes = new HashSet<Vote>();
         }
 
         // Audit info
@@ -39,5 +41,9 @@ namespace EspartoWorld.Data.Models
         public virtual ICollection<ExpositionItem> ExposicionItems { get; set; }
 
         public virtual ICollection<ShoppingCartItem> ShoppingCart { get; set; }
+
+        public virtual ICollection<Course> Courses { get; set; }
+
+        public virtual ICollection<Vote> Votes { get; set; }
     }
 }

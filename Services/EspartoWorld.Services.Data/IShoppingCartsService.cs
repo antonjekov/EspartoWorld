@@ -11,6 +11,8 @@
 
         Task DeleteAsync(string userId, int productId);
 
+        Task DeleteAllAsync(string userId);
+
         Task UpdateQuantityAsync(string userId, int productId, int quantity);
     }
 }

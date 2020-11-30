@@ -1,5 +1,6 @@
 ﻿namespace EspartoWorld.Data.Models
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using EspartoWorld.Data.Common.Models;
@@ -9,6 +10,7 @@
         public ExpositionItem()
         {
             this.IsSold = true;
+            this.Votes = new HashSet<Vote>();
         }
 
         [Required]
@@ -32,8 +34,10 @@
         [Required]
         public string AuthorId { get; set; }
 
-        public ApplicationUser Author { get; set; }
+        public virtual ApplicationUser Author { get; set; }
 
         public bool Accepted { get; set; }
+
+        public virtual ICollection<Vote> Votes { get; set; }
     }
 }

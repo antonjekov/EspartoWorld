@@ -19,6 +19,7 @@
                         <h4 class="card-title m-2">@item.Title</h4>
                         <p class="card-text m-1"><b>@localizer["Author"]:</b> @item.Author.UserName</p>
                         <p class="card-text m-1">@item.Description</p>
+                        
                         @if (item.IsSold)
                         {
                             <h5 class="card-text text-muted m-1 mt-auto"><b>@localizer["SOLD"]</b></h5>
@@ -27,7 +28,7 @@
                         {
                             @*<h5 class="card-text text-danger m-1 mt-auto"><b>@item.Price &euro;</b></h5>
 
-                                <button href="#" class="btn btn-primary mt-1">@localizer["Buy"]</button>*@
+            <button href="#" class="btn btn-primary mt-1">@localizer["Buy"]</button>*@
                             @if (User.Identity.Name == item.Author.UserName)
                             {
                                 <form class="mt-auto" asp-controller="Exposition" asp-action="DeleteOwnItem" asp-route-itemId=@item.Id method="post">
@@ -36,7 +37,7 @@
                             }
                             else
                             {
-                               <a class="mt-auto btn btn-success" asp-controller="Exposition" asp-action="AllOfAuthor" asp-route-author=@item.AuthorId>@localizer["All artworks of this author"]</a>
+                                <a class="mt-auto btn btn-success" asp-controller="Exposition" asp-action="AllOfAuthor" asp-route-author=@item.AuthorId>@localizer["All artworks of this author"]</a>
                             }
                         }
                     </div>
@@ -46,4 +47,5 @@
     </div>
     <partial name="_PaginationPartial" model="@Model" />
 </div>
+
 

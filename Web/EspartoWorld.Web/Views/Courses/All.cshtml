@@ -5,24 +5,25 @@
 @{
     ViewData["Title"] = localizer["All courses"];
 }
-<h1>@localizer["All courses"]</h1>
-<hr />
+
+
 
 <table class="table table-hover">
-    <thead>
+    <thead class="bg-light">
         <tr>
             <th scope="col">@localizer["Dates"]</th>
-            <th scope="col">@localizer["Title"]</th>
+            <th scope="col">@localizer["Title of course"]</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         @foreach (var item in Model)
         {
             <tr>
-                <td>@item.StartDateString - @item.EndDateString</td>
+                <td><i class="far fa-calendar-alt"></i> @item.StartDateString - @item.EndDateString</td>
                 <td>@item.Title</td>
                 <td>
-                    <a asp-action="Details" asp-controller="Courses" asp-route-id="@item.Id" class="btn btn-success">@localizer["Details"]</a>
+                    <a asp-action="Details" asp-controller="Courses" asp-route-id="@item.Id" class="btn btn-success">@localizer["Details"] <i class="fas fa-play"></i></a>
                 </td>
             </tr>
         }

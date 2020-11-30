@@ -24,7 +24,7 @@
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         public async Task<IActionResult> Add()
         {
-            var newVideos = await this.youTubeDataService.GetLastVideosAsync("esparto", 10);
+            var newVideos = await this.youTubeDataService.GetLastVideosAsync("esparto", 100);
             var ourVideosVideoId = this.videosService.GetAll<VideoViewModel>().Select(x => x.VideoId).ToList();
             var videos = newVideos.Where(x => !ourVideosVideoId.Contains(x.Id.VideoId)).Select(x => new VideoViewModel()
             {

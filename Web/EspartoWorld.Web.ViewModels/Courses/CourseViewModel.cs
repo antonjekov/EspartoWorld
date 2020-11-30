@@ -34,5 +34,7 @@
         public bool IsConfirmed { get; set; }
 
         public bool HaveFreePlaces { get; set; }
+
+        public bool SubscribedForCourse { get; set; }
     }
 }

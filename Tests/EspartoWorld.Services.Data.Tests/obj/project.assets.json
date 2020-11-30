@@ -2418,6 +2418,15 @@
           "ref/netstandard1.3/System.Text.Encoding.Extensions.dll": {}
         }
       },
+      "System.Text.Json/5.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        }
+      },
       "System.Text.RegularExpressions/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2750,6 +2759,36 @@
         },
         "runtime": {
           "bin/placeholder/EspartoWorld.Services.Mapping.dll": {}
+        }
+      },
+      "EspartoWorld.Web.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "5.0.0",
+          "System.ComponentModel.Annotations": "5.0.0",
+          "System.Text.Json": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EspartoWorld.Web.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EspartoWorld.Web.Infrastructure.dll": {}
+        }
+      },
+      "EspartoWorld.Web.ViewModels/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "EspartoWorld.Data.Models": "1.0.0",
+          "EspartoWorld.Services.Mapping": "1.0.0",
+          "EspartoWorld.Web.Infrastructure": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EspartoWorld.Web.ViewModels.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EspartoWorld.Web.ViewModels.dll": {}
         }
       }
     }
@@ -7943,6 +7982,28 @@
         "system.text.encoding.extensions.nuspec"
       ]
     },
+    "System.Text.Json/5.0.0": {
+      "sha512": "+luxMQNZ2WqeffBU7Ml6njIvxc8169NW2oU+ygNudXQGZiarjE7DOtN7bILiQjTZjkmwwRZGTtLzmdrSI/Ustw==",
+      "type": "package",
+      "path": "system.text.json/5.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.5.0.0.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Text.RegularExpressions/4.3.0": {
       "sha512": "RpT2DA+L660cBt1FssIE9CAGpLFdFPuheB7pLpKpn6ZXNby7jDERe8Ua/Ne2xGiwLVG2JOqziiaVCGDon5sKFA==",
       "type": "package",
@@ -8689,12 +8750,23 @@
       "type": "project",
       "path": "../../Services/EspartoWorld.Services.Mapping/EspartoWorld.Services.Mapping.csproj",
       "msbuildProject": "../../Services/EspartoWorld.Services.Mapping/EspartoWorld.Services.Mapping.csproj"
+    },
+    "EspartoWorld.Web.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../../Web/EspartoWorld.Web.Infrastructure/EspartoWorld.Web.Infrastructure.csproj",
+      "msbuildProject": "../../Web/EspartoWorld.Web.Infrastructure/EspartoWorld.Web.Infrastructure.csproj"
+    },
+    "EspartoWorld.Web.ViewModels/1.0.0": {
+      "type": "project",
+      "path": "../../Web/EspartoWorld.Web.ViewModels/EspartoWorld.Web.ViewModels.csproj",
+      "msbuildProject": "../../Web/EspartoWorld.Web.ViewModels/EspartoWorld.Web.ViewModels.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "EspartoWorld.Data >= 1.0.0",
       "EspartoWorld.Services.Data >= 1.0.0",
+      "EspartoWorld.Web.ViewModels >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 5.0.0",
       "Microsoft.NET.Test.Sdk >= 16.8.0",
       "Moq >= 4.15.1",
@@ -8705,6 +8777,7 @@
   },
   "packageFolders": {
     "C:\\Users\\anton\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -8717,11 +8790,13 @@
       "outputPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Tests\\EspartoWorld.Services.Data.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\anton\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -8738,6 +8813,9 @@
             },
             "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj": {
               "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj"
+            },
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj"
             }
           }
         }

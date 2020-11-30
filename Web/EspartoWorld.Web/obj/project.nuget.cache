@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IXRmLzpkWD13b+LQzS28bC9+tQ3792ld6hvKDvZUJT7Hlri4MepeFLdQmmBP+dQUKMKHpHsyrRdxNHmXVJtVHQ==",
+  "dgSpecHash": "V+LmmG6/kDvohK2qu053pYnzFj2enoRnxnzLcP46qOs2vOo2zuo3cFobJNe2TEyrmph9ty4CzN9OpL+MOz4GnA==",
   "success": true,
   "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web\\EspartoWorld.Web.csproj",
   "expectedPackageFiles": [
@@ -85,6 +85,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\sendgrid\\9.21.2\\sendgrid.9.21.2.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\starkbank-ecdsa\\1.2.0\\starkbank-ecdsa.1.2.0.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\stripe.net\\39.28.0\\stripe.net.39.28.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
