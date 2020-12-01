@@ -6,9 +6,9 @@
 @if (Model.SubtotalPrice == 0)
 {
 <h1>Your shopping cart is empty</h1>
-                <a class="btn btn-light" asp-controller="Product" asp-action="All">
-                    <i class="fas fa-shopping-cart"></i> Continue Shopping
-                </a> }
+<a class="btn btn-light" asp-controller="Product" asp-action="All">
+    <i class="fas fa-shopping-cart"></i> @localizer["Continue Shopping"]
+</a> }
             else
             {
 <div class="row">
@@ -16,10 +16,10 @@
         <table class="table table-hover">
             <thead>
                 <tr>
-                    <th>Product</th>
-                    <th>Quantity</th>
-                    <th class="text-center">Price</th>
-                    <th class="text-center">Total</th>
+                    <th>@localizer["Product"]</th>
+                    <th>@localizer["Quantity"]</th>
+                    <th class="text-center">@localizer["Price"]</th>
+                    <th class="text-center">@localizer["Total"]</th>
                     <th> </th>
                 </tr>
             </thead>
@@ -48,7 +48,7 @@
     <td class="col-sm-1 col-md-1 text-center"><strong>@(item.Product.Price*item.Quantity)&euro;</strong></td>
     <td class="col-sm-1 col-md-1">
         <a class="btn btn-danger" asp-controller="ShoppingCart" asp-action="Delete" asp-route-id="@item.Product.Id">
-            <i class="fas fa-times"></i> Remove
+            <i class="fas fa-times"></i> @localizer["Remove"]
         </a>
     </td>
 </tr>
@@ -58,14 +58,14 @@
                     <td>   </td>
                     <td>   </td>
                     <td>   </td>
-                    <td><h5>Subtotal</h5></td>
+                    <td><h5>@localizer["Subtotal"]</h5></td>
                     <td class="text-right"><h5><strong>@Model.SubtotalPrice.ToString("N2")&euro;</strong></h5></td>
                 </tr>
                 <tr>
                     <td>   </td>
                     <td>   </td>
                     <td>   </td>
-                    <td><h5>Estimated shipping</h5></td>
+                    <td><h5>@localizer["Estimated shipping"]</h5></td>
                     <td class="text-right"><h5><strong>@Model.Shipping.ToString("N2")&euro;</strong></h5></td>
                 </tr>
                 <tr>
@@ -78,14 +78,14 @@
                 <tr>
                     <td>
                         <a class="btn btn-light" asp-controller="Product" asp-action="All">
-                            <i class="fas fa-shopping-cart"></i> Continue Shopping
+                            <i class="fas fa-shopping-cart"></i> @localizer["Continue Shopping"]
                         </a>
                     </td>
                     <td>   </td>
                     <td>   </td>
                     <td colspan="2">
                         <button id="checkout-button" type="button" class="btn btn-success">
-                            Checkout <i class="fas fa-play"></i>
+                            @localizer["Checkout"] <i class="fas fa-play"></i>
                         </button>
                     </td>
                 </tr>

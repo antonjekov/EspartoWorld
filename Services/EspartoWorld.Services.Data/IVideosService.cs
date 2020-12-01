@@ -9,6 +9,10 @@
 
         ICollection<T> GetAll<T>();
 
+        ICollection<T> GetAll<T>(int page, int itemsPerPage);
+
+        int GetCountAllVideos();
+
         T GetById<T>(int videoId);
 
         T GetLastVideo<T>();

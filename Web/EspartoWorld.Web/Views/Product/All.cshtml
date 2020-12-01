@@ -2,18 +2,18 @@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 
 @{
-    ViewData["Title"] = localizer["All products"];
+    ViewData["Title"] = localizer["All materials"];
 }
 
 <div class="container">
     <div class="m-3">
         <form id="SearchForm" asp-action="All" asp-controller="Product" method="post">
-            <label for="ProductSort">Sort By: </label>
+            <label for="ProductSort">@localizer["Sort By:"] </label>
             <select onchange="Submit()" name="ProductSort" id="ProductSort" class="selectpicker">
                 <option value="0" selected>--</option>
-                <option value="1">more cheaper first</option>
-                <option value="2">more expensive first</option>
-                <option value="3">best seller</option>
+                <option value="1">@localizer["more cheaper first"]</option>
+                <option value="2">@localizer["more expensive first"]</option>
+                <option value="3">@localizer["best seller"]</option>
             </select>
         </form>
     </div>
@@ -26,9 +26,8 @@
                     <div class="card-body">
                         <h5 class="card-title">@product.Name</h5>
                         <h5 class="card-text m-1 mt-auto hide text-warning"><b>@product.Price &euro;</b></h5>
-                        <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id" class="btn hide btn-outline-success text-uppercase">View more</a>
+                        <a asp-controller="Product" asp-action="Details" asp-route-id="@product.Id" class="btn hide btn-outline-success text-uppercase">@localizer["View more"]</a>
                     </div>
-
                 </div>
             </div>
         }

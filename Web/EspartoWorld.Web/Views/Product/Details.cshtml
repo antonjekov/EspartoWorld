@@ -3,7 +3,7 @@
 @inject IViewLocalizer localizer
 
 @{
-    ViewData["Title"] = localizer["Product details"];
+    ViewData["Title"] = localizer["Material details"];
 }
 
 <div class="card">
@@ -27,8 +27,8 @@
                     </dd>
                 </dl>
                 <dl class="param param-feature">
-                    <dt>Delivery</dt>
-                    <dd>Spain peninsula without Canarias Baleares</dd>
+                    <dt>@localizer["Delivery"]</dt>
+                    <dd>@localizer["Spain peninsula without Canarias Baleares"]</dd>
                 </dl>  
                 <hr>
                 <form method="post" asp-action="AddToCart" asp-route-id="@Model.Product.Id">
@@ -36,11 +36,11 @@
                     <div class="form-group col-sm-5">
                         <label asp-for="Quantity" class="control-label"></label>
                         <input asp-for="Quantity" class="form-control" />
-                        <span class="badge badge-light font-weight-bold">@Model.Product.Quantity available</span>
+                        <span class="badge badge-light font-weight-bold">@Model.Product.Quantity @localizer["available"]</span>
                         <span asp-validation-for="Quantity" class="text-danger"></span>
                     </div>
                     <hr>
-                    <button class="btn btn-lg btn-outline-success text-uppercase" type="submit">Add to cart</button>
+                    <button class="btn btn-lg btn-outline-success text-uppercase" type="submit">@localizer["Add to cart"]</button>
                 </form>
             </div> 
         </aside>

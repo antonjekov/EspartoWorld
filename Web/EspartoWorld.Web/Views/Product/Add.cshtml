@@ -4,9 +4,9 @@
 @inject Microsoft.AspNetCore.Mvc.Localization.IViewLocalizer localizer
 @inject EspartoWorld.Services.Data.IManufacturersService manufacturersService
 @{
-    ViewData["Title"] = localizer["Add product"];
+    ViewData["Title"] = localizer["Add material"];
 }
-<h1>@localizer["Add product"]</h1>
+<h1>@localizer["Add material"]</h1>
 <hr />
 <form asp-action="Add" asp-controller="Product" method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
@@ -36,7 +36,7 @@
         <div class="col-md-4" >
             <div class="form-group">
                 <label asp-for="ManufacturerId" class="control-label"></label>
-                <select onchange="HideForm()" asp-for="ManufacturerId" asp-items="@(new SelectList(manufacturersService.GetAll<ManufacturersViewModel>(),"Id","Name"))" class="form-control"><option selected value="">-- New manufacturer --</option></select>
+                <select onchange="HideForm()" asp-for="ManufacturerId" asp-items="@(new SelectList(manufacturersService.GetAll<ManufacturersViewModel>(),"Id","Name"))" class="form-control"><option selected value="">-- @localizer["New manufacturer"] --</option></select>
             </div>
             <div id="manufacturerForm">
                 <div class="form-group">
@@ -67,7 +67,7 @@
                 <input asp-for="ImageUrl" class="form-control" placeholder="Please upload image for this product" readonly />
                 <span asp-validation-for="ImageUrl" class="text-danger"></span>
                 <div class="d-flex justify-content-center">
-                    <button id="upload_widget" class="btn btn-success m-1">Upload image</button>
+                    <button id="upload_widget" class="btn btn-success m-1">@localizer["Upload image"]</button>
                 </div>
             </div>
             <div class="d-flex justify-content-center">

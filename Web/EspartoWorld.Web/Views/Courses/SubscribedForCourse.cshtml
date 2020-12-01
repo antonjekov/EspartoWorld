@@ -6,13 +6,13 @@
 }
 
 <div class="jumbotron text-center">
-    <h1 class="display-3">We hope to see You soon in this course!</h1>
-    <p class="lead"><strong>Please check your email</strong> for further information about the course.</p>
+    <h3 class="display-4">@localizer["We hope to see You soon in this course!"]</h3>
+    <p class="lead"><strong>@localizer["Please check your email"]</strong> @localizer["for further information about the course."]</p>
     <hr>
     <p>
-        Having questions? <a asp-controller="Contact" asp-action="Index">Contact us</a>
+        @localizer["Having questions?"] <a asp-controller="Contact" asp-action="Index">@localizer["Contact us"]</a>
     </p>
     <p class="lead">
-        <a class="btn btn-primary btn-sm" asp-controller="Home" asp-action="Index">Continue to homepage</a>
+        <a class="btn btn-primary btn-sm" asp-controller="Home" asp-action="Index">@localizer["Continue to homepage"]</a>
     </p>
 </div>

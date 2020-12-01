@@ -42,9 +42,18 @@
             return this.Redirect("/Videos/All");
         }
 
-        public IActionResult All()
+        public IActionResult All(int id = 1)
         {
-            var videos = this.videosService.GetAll<VideoViewModel>();
+            int itemsPerPage = 8;
+            var items = this.videosService.GetAll<VideoViewModel>(id, itemsPerPage);
+            var itemsCount = this.videosService.GetCountAllVideos();
+            var videos = new VideoViewModelPagination()
+            {
+                PageNumber = id,
+                Videos = items,
+                ItemsCount = itemsCount,
+                ItemsPerPage = itemsPerPage,
+            };
             return this.View(videos);
         }
 

@@ -48,7 +48,7 @@
             {
                 PageNumber = id,
                 ExpositionItems = items,
-                ArtworksCount = artworksCount,
+                ItemsCount = artworksCount,
                 ItemsPerPage = itemsPerPage,
             };
             return this.View(artworks);
@@ -69,7 +69,7 @@
             {
                 PageNumber = id,
                 ExpositionItems = items,
-                ArtworksCount = artworksCount,
+                ItemsCount = artworksCount,
                 ItemsPerPage = itemsPerPage,
                 AuthorID = author,
             };

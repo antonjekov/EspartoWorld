@@ -3,6 +3,7 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
+
     using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.ShoppingCart;
@@ -32,7 +33,7 @@
 
         public async Task<IActionResult> SuccessAsync(string session_id)
         {
-            //TO DO get status of payment if is paid this logic
+            // TO DO get status of payment if is paid this logic
             if (session_id != null)
             {
                 var userId = this.userManager.GetUserId(this.User);
@@ -69,8 +70,7 @@
                 Quantity = x.Quantity,
             }).ToList();
 
-            //Shipping fee
-
+            // Shipping fee
             itemOptions.Add(new SessionLineItemOptions()
             {
                 PriceData = new SessionLineItemPriceDataOptions

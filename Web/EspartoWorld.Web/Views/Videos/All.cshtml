@@ -1,7 +1,7 @@
-﻿@model IEnumerable<EspartoWorld.Web.ViewModels.Videos.VideoViewModel>
+﻿@model EspartoWorld.Web.ViewModels.Videos.VideoViewModelPagination
 <div class="container">
     <div class="row">
-        @foreach (var video in Model)
+        @foreach (var video in Model.Videos)
         {
             string imageUrl = $"https://img.youtube.com/vi/{video.VideoId}/mqdefault.jpg";
             <div class="col-md-6 col-lg-4 col-xl-3 py-2">
@@ -18,4 +18,5 @@
             </div>
         }
     </div>
+    <partial name="_PaginationPartial" model="@Model" />
 </div>

@@ -38,6 +38,16 @@
             return this.videoRepository.All().OrderByDescending(x => x.CreatedOn).To<T>().ToList();
         }
 
+        public ICollection<T> GetAll<T>(int page, int itemsPerPage)
+        {
+            return this.videoRepository.All().OrderByDescending(x => x.CreatedOn).Skip((page - 1) * itemsPerPage).Take(itemsPerPage).To<T>().ToList();
+        }
+
+        public int GetCountAllVideos()
+        {
+            return this.videoRepository.All().Count();
+        }
+
         public T GetById<T>(int videoId)
         {
             return this.videoRepository.All().Where(v => v.Id == videoId).To<T>().FirstOrDefault();

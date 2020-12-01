@@ -1,11 +1,12 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
+    using System.Threading.Tasks;
+
     using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.ShoppingCart;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
-    using System.Threading.Tasks;
 
     public class ShoppingCartController : BaseController
     {
@@ -47,7 +48,6 @@
             {
             return this.Redirect("/ShoppingCart/Index");
             }
-
         }
     }
 }
