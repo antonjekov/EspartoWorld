@@ -22,7 +22,7 @@
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        public async Task<IActionResult> Add()
+        public async Task<IActionResult> AddAsync()
         {
             var newVideos = await this.youTubeDataService.GetLastVideosAsync("esparto", 100);
             var ourVideosVideoId = this.videosService.GetAll<VideoViewModel>().Select(x => x.VideoId).ToList();
@@ -72,15 +72,15 @@
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
-        public async Task<IActionResult> Edit(VideoEditInputViewModel input)
+        public async Task<IActionResult> EditAsync(VideoEditInputViewModel input)
         {
-            await this.videosService.Edit(input);
+            await this.videosService.EditAsync(input);
             var videos = this.videosService.GetAll<VideoEditInputViewModel>();
             return this.View(videos);
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteAsync(int id)
         {
             await this.videosService.DeleteAsync(id);
             return this.Redirect("/Videos/Edit");

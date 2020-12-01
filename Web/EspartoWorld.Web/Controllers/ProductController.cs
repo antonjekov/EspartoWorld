@@ -35,7 +35,7 @@
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
-        public async Task<IActionResult> Add(ProductInputModel input)
+        public async Task<IActionResult> AddAsync(ProductInputModel input)
         {
             if (this.manufacturersService.IdExists(input.ManufacturerInput.Id))
             {
@@ -90,7 +90,7 @@
 
         [Authorize(Roles = GlobalConstants.ClientRoleName)]
         [HttpPost]
-        public async Task<IActionResult> AddToCart(int id, int quantity)
+        public async Task<IActionResult> AddToCartAsync(int id, int quantity)
         {
             if (!this.productsService.IdIsValid(id))
             {

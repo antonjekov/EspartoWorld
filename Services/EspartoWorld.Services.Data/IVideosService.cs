@@ -19,6 +19,6 @@
 
         Task DeleteAsync(int videoId);
 
-        Task Edit<T>(T input);
+        Task EditAsync<T>(T input);
     }
 }

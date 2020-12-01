@@ -28,7 +28,7 @@
             return item.Id;
         }
 
-        public async Task Edit<T>(T input)
+        public async Task EditAsync<T>(T input)
         {
             var item = AutoMapperConfig.MapperInstance.Map<ExpositionItem>(input);
             this.exposicionItems.Update(item);
@@ -60,7 +60,7 @@
             return this.exposicionItems.AllAsNoTracking().Any(x => x.Id == id);
         }
 
-        public async Task Delete(int itemId)
+        public async Task DeleteAsync(int itemId)
         {
             var item = this.exposicionItems.All().Where(x => x.Id == itemId).FirstOrDefault();
             this.exposicionItems.Delete(item);

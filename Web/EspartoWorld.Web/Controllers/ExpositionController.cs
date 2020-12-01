@@ -97,7 +97,7 @@
                 return this.View();
             }
 
-            await this.expositionItemService.Edit<ExpositionItemModerateModel>(input);
+            await this.expositionItemService.EditAsync<ExpositionItemModerateModel>(input);
             return this.Redirect("/Exposition/Moderate");
         }
 
@@ -114,25 +114,25 @@
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteAsync(int id)
         {
             if (id == 0)
             {
                 return this.Redirect("/Exposition/Moderate");
             }
 
-            await this.expositionItemService.Delete(id);
+            await this.expositionItemService.DeleteAsync(id);
             return this.Redirect("/Exposition/Moderate");
         }
 
         [HttpPost]
-        public async Task<IActionResult> DeleteOwnItem(int itemId)
+        public async Task<IActionResult> DeleteOwnItemAsync(int itemId)
         {
             var userId = this.userManager.GetUserId(this.User);
             var item = this.expositionItemService.GetById<ExpositionItemModerateModel>(itemId);
             if (item.AuthorId == userId)
             {
-                await this.expositionItemService.Delete(itemId);
+                await this.expositionItemService.DeleteAsync(itemId);
             }
 
             return this.Redirect("/Exposition/All");

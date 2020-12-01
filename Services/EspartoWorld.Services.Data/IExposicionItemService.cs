@@ -21,9 +21,9 @@
 
         bool IdIsValid(int id);
 
-        Task Edit<T>(T input);
+        Task EditAsync<T>(T input);
 
-        Task Delete(int itemId);
+        Task DeleteAsync(int itemId);
 
         int GetCountAccepted();
 

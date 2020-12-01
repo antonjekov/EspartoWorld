@@ -58,7 +58,7 @@
             return this.videoRepository.All().OrderByDescending(v => v.CreatedOn).To<T>().FirstOrDefault();
         }
 
-        public async Task Edit<T>(T input)
+        public async Task EditAsync<T>(T input)
         {
             var item = AutoMapperConfig.MapperInstance.Map<Video>(input);
             this.videoRepository.Update(item);
