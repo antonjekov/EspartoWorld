@@ -30,7 +30,11 @@
             if (this.manufacturersService.IdExists(input.Id))
             {
                 this.ModelState.AddModelError("Id", "Manufacturer with this NIF already exists");
-                return this.View();
+            }
+
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(input);
             }
 
             await this.manufacturersService.AddAsync(input);

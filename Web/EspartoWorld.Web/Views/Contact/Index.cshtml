@@ -6,7 +6,7 @@
     this.ViewData["Title"] = @localizer["Send message"];
 }
 
-<form asp-action="Index" asp-controller="Contact" method="post">
+<form id="contactForm" asp-action="Index" asp-controller="Contact" method="post">
     <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
         <label asp-for="Name"></label>
@@ -29,20 +29,26 @@
         <span asp-validation-for="Content" class="text-danger"></span>
     </div>
     <p>
-        @localizer["By clicking the Send message button, you confirm that you are agree with our"] <a asp-area="" asp-controller="Home" asp-action="Privacy">@localizer["privacy policy"]</a>.
+        @localizer["By clicking the Send message button, you confirm that you are agree with our"] <a asp-controller="Home" asp-action="Privacy">@localizer["privacy policy"]</a>.
     </p>
     <input type="hidden" id="RecaptchaValue" name="RecaptchaValue" />
-    <button type="submit" class="btn btn-primary">@localizer["Send message"]</button>
+
+    <button type="button" class="btn btn-primary" onclick="onClick()">@localizer["Send message"]</button>
 </form>
 
 @section Scripts
     {
-        <script src="https://www.google.com/recaptcha/api.js?render=@this.Configuration["GoogleReCaptcha:Key"]"></script>
-        <script>
-            grecaptcha.ready(function () {
-                grecaptcha.execute('@this.Configuration["GoogleReCaptcha:Key"]', { action: 'contact_form' }).then(function (token) {
-                    document.getElementById("RecaptchaValue").value = token;
+    <script src="https://www.google.com/recaptcha/api.js?render=@this.Configuration["GoogleReCaptcha:Key"]"></script>
+
+    @*Recapcha token is valid only 2 minutes for this is important we to rewrite it with this js function before submit the form*@
+    <script>
+            function onClick() {
+               grecaptcha.ready(function () {
+                    grecaptcha.execute('@this.Configuration["GoogleReCaptcha:Key"]', { action: 'contact_form' }).then(function (token) {
+                        document.getElementById("RecaptchaValue").value = token;
+                        document.getElementById('contactForm').submit();
+                    });
                 });
-            });
-        </script>
-    }
+            }
+    </script>
+}

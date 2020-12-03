@@ -43,6 +43,11 @@
                 return this.View();
             }
 
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(input);
+            }
+
             if (input.ManufacturerId == null)
             {
                 var manufacturerId = await this.manufacturersService.AddAsync<ManufacturerInputModel>(input.ManufacturerInput);

@@ -30,6 +30,11 @@
         [HttpPost]
         public async Task<IActionResult> IndexAsync(ContactFormViewModel model)
         {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(model);
+            }
+
             var appEmail = this.configuration.GetSection("EmailSender:Email").Value;
             var ip = this.HttpContext.Connection.RemoteIpAddress.ToString();
             await this.contactService.AddAsync(model, ip);

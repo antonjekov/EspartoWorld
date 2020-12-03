@@ -1,5 +1,6 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
+    using System;
     using System.Diagnostics;
 
     using EspartoWorld.Services.Data;
@@ -9,27 +10,51 @@
     using EspartoWorld.Web.ViewModels.Home;
     using EspartoWorld.Web.ViewModels.Videos;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Caching.Memory;
 
     public class HomeController : BaseController
     {
         private readonly IVideosService videosService;
         private readonly ICoursesService coursesService;
         private readonly IExposicionItemService exposicionItemService;
+        private readonly IMemoryCache memoryCache;
 
-        public HomeController(IVideosService videosService, ICoursesService coursesService, IExposicionItemService exposicionItemService)
+        public HomeController(IVideosService videosService, ICoursesService coursesService, IExposicionItemService exposicionItemService, IMemoryCache memoryCache)
         {
             this.videosService = videosService;
             this.coursesService = coursesService;
             this.exposicionItemService = exposicionItemService;
+            this.memoryCache = memoryCache;
         }
 
         public IActionResult Index()
         {
+            VideoViewModel lastVideo;
+            CourseViewModel nextCourse;
+            ExpositionItemViewModel lastArtwork;
+            if (!this.memoryCache.TryGetValue("LastVideo", out lastVideo))
+            {
+                lastVideo = this.videosService.GetLastVideo<VideoViewModel>();
+                this.memoryCache.Set("LastVideo", lastVideo, TimeSpan.FromMinutes(30));
+            }
+
+            if (!this.memoryCache.TryGetValue("NextCourse", out nextCourse))
+            {
+                nextCourse = this.coursesService.GetNextCourse<CourseViewModel>();
+                this.memoryCache.Set("NextCourse", nextCourse, TimeSpan.FromHours(6));
+            }
+
+            if (!this.memoryCache.TryGetValue("LastArtwork", out lastArtwork))
+            {
+                lastArtwork = this.exposicionItemService.GetLastExpositionItem<ExpositionItemViewModel>();
+                this.memoryCache.Set("LastArtwork", nextCourse, TimeSpan.FromMinutes(5));
+            }
+
             var modelInfo = new HomeViewModel()
             {
-                LastVideo = this.videosService.GetLastVideo<VideoViewModel>(),
-                NextCourse = this.coursesService.GetNextCourse<CourseViewModel>(),
-                LastArtwork = this.exposicionItemService.GetLastExpositionItem<ExpositionItemViewModel>(),
+                LastVideo = lastVideo,
+                NextCourse = nextCourse,
+                LastArtwork = lastArtwork,
             };
             return this.View(modelInfo);
         }

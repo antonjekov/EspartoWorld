@@ -38,16 +38,14 @@
         [HttpPost]
         public async Task<IActionResult> ChangeProductQuantityAsync(int id, QuantityChangeInputModel quantityModel)
         {
-            if (this.ModelState.IsValid)
+            if (!this.ModelState.IsValid)
             {
-                var userId = this.userManager.GetUserId(this.User);
-                await this.shoppingCartsService.UpdateQuantityAsync(userId, id, quantityModel.Quantity);
                 return this.Redirect("/ShoppingCart/Index");
             }
-            else
-            {
+
+            var userId = this.userManager.GetUserId(this.User);
+            await this.shoppingCartsService.UpdateQuantityAsync(userId, id, quantityModel.Quantity);
             return this.Redirect("/ShoppingCart/Index");
-            }
         }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "V+LmmG6/kDvohK2qu053pYnzFj2enoRnxnzLcP46qOs2vOo2zuo3cFobJNe2TEyrmph9ty4CzN9OpL+MOz4GnA==",
+  "dgSpecHash": "EkVxg4s6oMEAfL+1LtcJDxXbxDbcstPT8rIfBDmjIPdSX9510R2l4QNXc+44flJSA2uvL5TtT//2hjvJL8DEzQ==",
   "success": true,
   "projectFilePath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web\\EspartoWorld.Web.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.0\\microsoft.entityframeworkcore.tools.5.0.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
+    "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.caching.sqlserver\\5.0.0\\microsoft.extensions.caching.sqlserver.5.0.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration\\5.0.0\\microsoft.extensions.configuration.5.0.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\anton\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\5.0.0\\microsoft.extensions.configuration.fileextensions.5.0.0.nupkg.sha512",

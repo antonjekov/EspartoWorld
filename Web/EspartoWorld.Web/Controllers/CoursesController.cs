@@ -8,14 +8,17 @@
     using EspartoWorld.Web.ViewModels.Courses;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Localization;
 
     public class CoursesController : BaseController
     {
         private readonly ICoursesService coursesService;
+        private readonly IStringLocalizer<CoursesController> localizer;
 
-        public CoursesController(ICoursesService coursesService)
+        public CoursesController(ICoursesService coursesService, IStringLocalizer<CoursesController> localizer)
         {
             this.coursesService = coursesService;
+            this.localizer = localizer;
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
@@ -28,8 +31,15 @@
         [HttpPost]
         public async Task<IActionResult> AddAsync(CourseInputModel input)
         {
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(input);
+            }
+
             var id = await this.coursesService.AddAsync(input);
-            return this.Redirect($"/Courses/Details/{id}");
+            var message = this.localizer["Course was successfully added"];
+            this.TempData["Message"] = message.Value;
+            return this.RedirectToAction("Details", "Courses", new { id });
         }
 
         public IActionResult All()
@@ -79,7 +89,6 @@
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        [HttpGet]
         public IActionResult Edit(int id)
         {
             var course = this.coursesService.GetById<CourseViewModel>(id);
@@ -91,6 +100,13 @@
         [HttpPost]
         public async Task<IActionResult> EditAsync(CourseEditInputModel changed, int id)
         {
+            if (!this.ModelState.IsValid)
+            {
+                var course = this.coursesService.GetById<CourseViewModel>(id);
+                var input = new CourseEditModel() { Actual = course, Changed = new CourseEditInputModel() };
+                return this.View(input);
+            }
+
             changed.Id = id;
             await this.coursesService.EditAsync<CourseEditInputModel>(changed);
             return this.Redirect($"/Courses/Details/{id}");

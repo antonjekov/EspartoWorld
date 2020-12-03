@@ -33,6 +33,11 @@
         public async Task<IActionResult> AddAsync(ExpositionItemInputModel input)
         {
             // var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value; //In this maner we can take user from cookie not to go to database
+            if (!this.ModelState.IsValid)
+            {
+                return this.View(input);
+            }
+
             var userId = this.userManager.GetUserId(this.User);
             input.AuthorId = userId;
             await this.expositionItemService.AddAsync(input);

@@ -73,6 +73,9 @@
                         options.MinimumSameSitePolicy = SameSiteMode.None;
                     });
 
+            // with this service we can use Memory Cache
+            services.AddMemoryCache();
+
             services.AddControllersWithViews(
                 options =>
                     {
@@ -86,6 +89,16 @@
             });
 
             services.AddSingleton(this.configuration);
+
+            // this service is for use DistributedCache
+            services.AddDistributedSqlServerCache(
+                options =>
+                {
+                    options.ConnectionString = this.configuration.GetConnectionString("DefaultConnection");
+                    options.SchemaName = "dbo";
+                    options.TableName = "YouTubeEspartoSearchCache";
+                });
+            services.AddSession();
 
             // Data repositories
             services.AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>));
