@@ -49,7 +49,7 @@
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" asp-controller="Exposition" asp-action="All">@localizer["View all artworks"]</a>
-                                <a class="dropdown-item" asp-controller="Exposition" asp-action="All" asp-route-author ="@UserManager.GetUserId(User)">@localizer["View my artworks"]</a>
+                                <a class="dropdown-item" asp-controller="Exposition" asp-action="All" asp-route-author ="@UserManager.GetUserId(User)" asp-route-id="1">@localizer["View my artworks"]</a>
                                 <a class="dropdown-item" asp-controller="Exposition" asp-action="Add">@localizer["Add"]</a>
                             </div>
                         </li>
