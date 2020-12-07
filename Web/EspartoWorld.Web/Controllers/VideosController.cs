@@ -64,11 +64,11 @@
         {
             if (!this.ModelState.IsValid)
             {
-                return this.Redirect("/Videos/Add");
+                return this.RedirectToAction("Add", "Videos");
             }
 
             await this.videosService.AddAsync(input);
-            return this.Redirect("/Videos/All");
+            return this.RedirectToAction("All", "Videos");
         }
 
         public IActionResult All(int id = 1)
@@ -105,7 +105,7 @@
         {
             if (!this.ModelState.IsValid)
             {
-                return this.Redirect("/Videos/Edit");
+                return this.RedirectToAction("Edit", "Videos");
             }
 
             await this.videosService.EditAsync(input);
@@ -114,10 +114,11 @@
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        [HttpPost]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             await this.videosService.DeleteAsync(id);
-            return this.Redirect("/Videos/Edit");
+            return this.RedirectToAction("Edit", "Videos");
         }
     }
 }

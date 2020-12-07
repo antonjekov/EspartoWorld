@@ -58,13 +58,6 @@
             return this.Redirect("/");
         }
 
-        public IActionResult All()
-        {
-            var products = this.productsService.GetAllVisibleOrderedCreatedOn<ProductViewModel>();
-            return this.View(products);
-        }
-
-        [HttpPost]
         public IActionResult All(int productSort)
         {
             var products = this.productsService.GetAllVisibleOrderedCreatedOn<ProductViewModel>();
@@ -81,7 +74,7 @@
         {
             if (!this.productsService.IdIsValid(id))
             {
-                return this.Redirect("/Product/All");
+                return this.RedirectToAction("All", "Product");
             }
 
             var product = this.productsService.GetById<ProductViewModel>(id);
@@ -99,12 +92,12 @@
         {
             if (!this.productsService.IdIsValid(id))
             {
-                return this.Redirect("/Product/All");
+                return this.RedirectToAction("All", "Product");
             }
 
             var userId = this.userManager.GetUserId(this.User);
             await this.shoppingCartsService.AddAsync(userId, id, quantity);
-            return this.Redirect("/ShoppingCart/Index");
+            return this.RedirectToAction("Index", "ShoppingCart");
         }
     }
 }

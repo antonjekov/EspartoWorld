@@ -7,7 +7,7 @@
 
 <div class="container">
     <div class="m-3">
-        <form id="SearchForm" asp-action="All" asp-controller="Product" method="post">
+        <form id="SearchForm" asp-action="All" asp-controller="Product" method="get">
             <label for="ProductSort">@localizer["Sort By:"] </label>
             <select onchange="Submit()" name="ProductSort" id="ProductSort" class="selectpicker">
                 <option value="0" selected>--</option>

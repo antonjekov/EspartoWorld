@@ -38,7 +38,7 @@
             }
 
             await this.manufacturersService.AddAsync(input);
-            return this.Redirect("/Manufacturer/Add");
+            return this.RedirectToAction("Add", "Manufacturer");
         }
     }
 }

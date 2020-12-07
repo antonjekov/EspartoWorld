@@ -6,9 +6,9 @@
 @if (Model.SubtotalPrice == 0)
 {
 <h1>Your shopping cart is empty</h1>
-<a class="btn btn-light" asp-controller="Product" asp-action="All">
-    <i class="fas fa-shopping-cart"></i> @localizer["Continue Shopping"]
-</a> }
+                <a class="btn btn-light" asp-controller="Product" asp-action="All">
+                    <i class="fas fa-shopping-cart"></i> @localizer["Continue Shopping"]
+                </a> }
             else
             {
 <div class="row">
@@ -47,12 +47,13 @@
     <td class="col-sm-1 col-md-1 text-center"><strong>@item.Product.Price.ToString("N2")&euro;</strong></td>
     <td class="col-sm-1 col-md-1 text-center"><strong>@(item.Product.Price*item.Quantity)&euro;</strong></td>
     <td class="col-sm-1 col-md-1">
-        <a class="btn btn-danger" asp-controller="ShoppingCart" asp-action="Delete" asp-route-id="@item.Product.Id">
-            <i class="fas fa-times"></i> @localizer["Remove"]
-        </a>
+        <form asp-controller="ShoppingCart" asp-action="Delete" asp-route-id="@item.Product.Id">
+            <div class="form-group">
+                <button type="submit" class="btn btn-danger m-1"> <i class="fas fa-times"></i>@localizer["Remove"]</button>
+            </div>
+        </form>
     </td>
-</tr>
-}
+</tr>}
 
                 <tr>
                     <td>   </td>
@@ -103,14 +104,14 @@
         }
     </script>
     <script type="text/javascript">
-       var stripe = Stripe('pk_test_51HrjU3AlRqb1byiWW26T6A9jlCEdr6aokqbwOHZDzQGis9cSRlhdgQAPZ95zgmYUSLJuis1KUVbI9ZwtJVfSsfME001tPBnQfy');
+        var stripe = Stripe('pk_test_51HrjU3AlRqb1byiWW26T6A9jlCEdr6aokqbwOHZDzQGis9cSRlhdgQAPZ95zgmYUSLJuis1KUVbI9ZwtJVfSsfME001tPBnQfy');
         let checkoutButton = document.getElementById('checkout-button');
         let antiForgeryToken = document.querySelector("input[name='__RequestVerificationToken']").value;
 
         checkoutButton.addEventListener('click', function () {
             fetch('/create-checkout-session', {
                 method: 'POST',
-                headers: {'X-CSRF-TOKEN': antiForgeryToken}
+                headers: { 'X-CSRF-TOKEN': antiForgeryToken }
             })
                 .then(function (response) {
                     return response.json();

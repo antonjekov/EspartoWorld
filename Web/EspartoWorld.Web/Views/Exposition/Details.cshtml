@@ -81,12 +81,16 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">@localizer["Close"]</button>
+
                             <button type="submit" id="accepted" class="btn btn-success">@localizer["Publish"]</button>
                         </div>
                     </div>
                 </div>
             </div>
 
+        </div>
+    </div>
+</form>
             <!-- Modal Not accepted-->
             <div class="modal fade" id="modalNotAccepted" tabindex="-1" role="dialog" aria-labelledby="modalNotAcceptedTitle" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered" role="document">
@@ -102,14 +106,13 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">@localizer["Close"]</button>
-                            <a class="btn btn-danger m-1" asp-controller="Exposition" asp-action="Delete" asp-route-id=@Model.Id>@localizer["Reject and delete"]</a>                               
+                            <form asp-action="Delete" asp-controller="Exposition" asp-route-id=@Model.Id method="post">
+                                <input type="submit" value="@localizer["Reject and delete"]" class="btn btn-danger m-1" />
+                            </form>                                                      
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</form>
 
 @section Scripts{
     <script>

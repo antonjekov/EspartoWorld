@@ -17,9 +17,9 @@
         [Display(Name = "Category")]
         public Category Category { get; set; }
 
-        [Range(0, 1000, ErrorMessage = "Price should be between 0 and 1000.")]
         [Display(Name = "Price")]
-        public double Price { get; set; }
+        [Range(0, 1000, ErrorMessage = "Price should be between {1} and {2} EUR")]
+        public decimal Price { get; set; }
 
         [Display(Name = "Is sold")]
         public bool IsSold { get; set; }

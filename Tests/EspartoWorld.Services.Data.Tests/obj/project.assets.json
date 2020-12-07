@@ -8766,6 +8766,7 @@
     "net5.0": [
       "EspartoWorld.Data >= 1.0.0",
       "EspartoWorld.Services.Data >= 1.0.0",
+      "EspartoWorld.Services.Mapping >= 1.0.0",
       "EspartoWorld.Web.ViewModels >= 1.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 5.0.0",
       "Microsoft.NET.Test.Sdk >= 16.8.0",
@@ -8813,6 +8814,9 @@
             },
             "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj": {
               "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Data\\EspartoWorld.Services.Data.csproj"
+            },
+            "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj": {
+              "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Services\\EspartoWorld.Services.Mapping\\EspartoWorld.Services.Mapping.csproj"
             },
             "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj": {
               "projectPath": "C:\\gitHub\\Software-University\\C# .NET Core\\FinalProject\\EspartoWorld\\Web\\EspartoWorld.Web.ViewModels\\EspartoWorld.Web.ViewModels.csproj"

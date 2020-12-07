@@ -19,8 +19,8 @@
         [Display(Name = "Place")]
         public string Place { get; set; }
 
-        [Required(ErrorMessage ="Price is required")]
-        [Range(0, 1000, ErrorMessage = "Price should be between 0 and 1000.")]
+        [Required(ErrorMessage = "Price is required")]
+        [Range(0.00, 1000.00, ErrorMessage = "Price should be between 0 and 1000.")]
         [Display(Name = "Price")]
         public double Price { get; set; }
 

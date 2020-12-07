@@ -28,6 +28,7 @@
             return this.View(input);
         }
 
+        [HttpPost]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var userId = this.userManager.GetUserId(this.User);

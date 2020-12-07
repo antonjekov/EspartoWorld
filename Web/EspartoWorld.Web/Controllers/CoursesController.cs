@@ -60,7 +60,7 @@
         {
             if (!this.coursesService.IdIsValid(id))
             {
-                return this.Redirect("/Courses/All");
+                return this.RedirectToAction("All", "Courses");
             }
 
             var course = this.coursesService.GetById<CourseViewModel>(id);
@@ -70,16 +70,17 @@
         }
 
         [Authorize]
+        [HttpPost]
         public async Task<IActionResult> AddUserToCourseAsync(int id)
         {
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             if (this.coursesService.UserAlreadyParticipatedToCourse(id, userId))
             {
-                return this.Redirect($"/Courses/Details/{id}");
+                return this.RedirectToAction("Details", "Courses", new { id });
             }
 
             await this.coursesService.AddUserToCourseAsync(id, userId);
-            return this.Redirect("/Courses/SubscribedForCourse");
+            return this.RedirectToAction("SubscribedForCourse", "Courses");
         }
 
         [Authorize]
@@ -109,7 +110,7 @@
 
             changed.Id = id;
             await this.coursesService.EditAsync<CourseEditInputModel>(changed);
-            return this.Redirect($"/Courses/Details/{id}");
+            return this.RedirectToAction("Details", "Courses", new { id });
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]

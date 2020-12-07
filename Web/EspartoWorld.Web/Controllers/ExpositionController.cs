@@ -1,5 +1,6 @@
 ﻿namespace EspartoWorld.Web.Controllers
 {
+    using System.Linq;
     using System.Threading.Tasks;
 
     using EspartoWorld.Common;
@@ -44,32 +45,28 @@
             return this.Redirect("/Exposition/ThankYou");
         }
 
-        public IActionResult All(int id = 1)
+        public IActionResult All(Category itemCategory, int id = 1)
         {
-            int itemsPerPage = 6;
-            var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>(id, itemsPerPage);
-            var artworksCount = this.expositionItemService.GetCountAccepted();
+            int itemsPerPage = 3;
+            var items = this.expositionItemService
+                .GetAllAccepted<ExpositionItemViewModel>(id, itemsPerPage, itemCategory);
+            var artworksCount = this.expositionItemService.GetCountAccepted(itemCategory: itemCategory);
             var artworks = new ExpositionItemViewModelPagination()
             {
                 PageNumber = id,
                 ExpositionItems = items,
                 ItemsCount = artworksCount,
                 ItemsPerPage = itemsPerPage,
+                ItemCategory = (int)itemCategory,
             };
             return this.View(artworks);
         }
 
-        [HttpGet]
-        public IActionResult AllOfAuthor(string author, int id = 1)
+        public IActionResult AllOfAuthor(string author, Category itemCategory, int id = 1)
         {
-            if (author == null)
-            {
-                author = this.userManager.GetUserId(this.User);
-            }
-
-            int itemsPerPage = 6;
-            var items = this.expositionItemService.GetAllAcceptedByAuthorId<ExpositionItemViewModel>(author, id, itemsPerPage);
-            var artworksCount = this.expositionItemService.GetCountAccepted(author);
+            int itemsPerPage = 3;
+            var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>(id, itemsPerPage,  itemCategory, author: author);
+            var artworksCount = this.expositionItemService.GetCountAccepted(author, itemCategory);
             var artworks = new ExpositionItemViewModelPagination()
             {
                 PageNumber = id,
@@ -77,8 +74,9 @@
                 ItemsCount = artworksCount,
                 ItemsPerPage = itemsPerPage,
                 AuthorID = author,
+                ItemCategory = (int)itemCategory,
             };
-            return this.View("All", artworks);
+            return this.View(artworks);
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
@@ -119,6 +117,7 @@
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
+        [HttpPost]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             if (id == 0)

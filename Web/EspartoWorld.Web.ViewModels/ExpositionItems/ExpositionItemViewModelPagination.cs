@@ -8,5 +8,7 @@
     public class ExpositionItemViewModelPagination : PagingViewModel
     {
         public IEnumerable<ExpositionItemViewModel> ExpositionItems { get; set; }
+
+        public int ItemCategory { get; set; }
     }
 }
