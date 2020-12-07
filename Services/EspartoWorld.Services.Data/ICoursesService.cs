@@ -22,5 +22,7 @@
         Task AddUserToCourseAsync(int courseId, string userId);
 
         Task EditAsync<T>(T input);
+
+        Task DeleteAsync(int id);
     }
 }

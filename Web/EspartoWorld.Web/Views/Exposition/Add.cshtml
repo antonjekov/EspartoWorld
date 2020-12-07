@@ -1,15 +1,15 @@
-﻿@using  EspartoWorld.Data.Models
+﻿@model EspartoWorld.Web.ViewModels.ExposicionItems.ExpositionItemInputModel
+@using  EspartoWorld.Data.Models
 @using Microsoft.AspNetCore.Mvc.Localization
+@inject Microsoft.Extensions.Configuration.IConfiguration  Configuration
 @inject IViewLocalizer localizer
-
-@model EspartoWorld.Web.ViewModels.ExposicionItems.ExpositionItemInputModel
 
 @{
     ViewData["Title"] = localizer["Add to exposition"];
 }
 <h1>@localizer["Add to exposition"]</h1>
 <hr />
-<form asp-action="Add" asp-controller="Exposition" method="post">
+<form asp-action="Add" asp-controller="Exposition" id="AddForm" method="post">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="row">
         <div class="col-lg-4">
@@ -61,7 +61,7 @@
     </div>
     <div class="d-flex justify-content-center">
         <div class="form-group">
-            <input type="submit" value="@localizer["Add"]" class="btn btn-success m-1"/>
+            <input type="button" value="@localizer["Add"]" class="btn btn-success m-1" onclick="onClick()"/>
         </div>
         <span>
             <a class="btn btn-primary m-1" asp-action="All">@localizer["Exposition"]</a>
@@ -70,12 +70,15 @@
             <button class="btn btn-success m-1" onclick="ClearAllInputs()">@localizer["Clear all"]</button>
         </span>
     </div>
+    @*Recaptcha token*@
+    <input type="hidden" id="RecaptchaValue" name="RecaptchaValue" />
 </form>
 
 @section Scripts{
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
-    <script src = "~/js/cloudinary.js"></script>
-    <script >
+    <script src="https://www.google.com/recaptcha/api.js?render=@this.Configuration["GoogleReCaptcha:Key"]"></script>
+    <script src="~/js/cloudinary.js"></script>
+    <script>
         function ClearAllInputs() {
             let inputs = document.querySelectorAll('input:not([type="submit"]):not([type="hidden"]')
             document.getElementById("Description").value = ''
@@ -83,5 +86,17 @@
                 inputs[i].value = "";
             }
         }
+    </script>
+
+    @*Recapcha token is valid only 2 minutes for this is important we to rewrite it with this js function before submit the form*@
+    <script>
+            function onClick() {
+               grecaptcha.ready(function () {
+                    grecaptcha.execute('@this.Configuration["GoogleReCaptcha:Key"]', { action: 'add_form' }).then(function (token) {
+                        document.getElementById("RecaptchaValue").value = token;
+                        document.getElementById('AddForm').submit();
+                    });
+                });
+            }
     </script>
 }

@@ -80,5 +80,12 @@
             this.courseRepository.Update(item);
             await this.courseRepository.SaveChangesAsync();
         }
+
+        public async Task DeleteAsync(int id)
+        {
+            var item = this.courseRepository.All().FirstOrDefault(x => x.Id == id);
+            this.courseRepository.Delete(item);
+            await this.courseRepository.SaveChangesAsync();
+        }
     }
 }

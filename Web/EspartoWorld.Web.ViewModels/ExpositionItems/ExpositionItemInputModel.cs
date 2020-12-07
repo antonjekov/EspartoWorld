@@ -4,6 +4,7 @@
 
     using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Mapping;
+    using EspartoWorld.Web.Infrastructure;
 
     public class ExpositionItemInputModel : IMapTo<ExpositionItem>
     {
@@ -36,5 +37,8 @@
         public string Description { get; set; }
 
         public string AuthorId { get; set; }
+
+        [GoogleReCaptchaValidation]
+        public string RecaptchaValue { get; set; }
     }
 }
