@@ -45,24 +45,7 @@
             return this.Redirect("/Exposition/ThankYou");
         }
 
-        public IActionResult All(Category itemCategory, int id = 1)
-        {
-            int itemsPerPage = 3;
-            var items = this.expositionItemService
-                .GetAllAccepted<ExpositionItemViewModel>(id, itemsPerPage, itemCategory);
-            var artworksCount = this.expositionItemService.GetCountAccepted(itemCategory: itemCategory);
-            var artworks = new ExpositionItemViewModelPagination()
-            {
-                PageNumber = id,
-                ExpositionItems = items,
-                ItemsCount = artworksCount,
-                ItemsPerPage = itemsPerPage,
-                ItemCategory = (int)itemCategory,
-            };
-            return this.View(artworks);
-        }
-
-        public IActionResult AllOfAuthor(string author, Category itemCategory, int id = 1)
+        public IActionResult All(string author, Category itemCategory, int id = 1)
         {
             int itemsPerPage = 3;
             var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>(id, itemsPerPage,  itemCategory, author: author);
