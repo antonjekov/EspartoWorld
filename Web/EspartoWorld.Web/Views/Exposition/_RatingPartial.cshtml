@@ -1,0 +1,36 @@
+﻿@model EspartoWorld.Web.ViewModels.ExposicionItems.ExpositionItemViewModel
+
+@if (!User.Identity.IsAuthenticated)
+{
+    <div>
+        <br />
+        <p><b><span id="votesCount">@Model.VotesCount</span> votes rating <span id="averageVoteValue">@Model.AverageVotes.ToString("0.0")</span>/5</b></p>
+        <p><a asp-area="Identity" asp-page="/Account/Login">Login</a>/<a asp-area="Identity" asp-page="/Account/Register">Register</a> to vote for this item</p>
+    </div>
+}
+else
+{
+    <div>
+        <form method="post"> </form>
+        <input asp-for="Id" type="hidden" />
+        <br />
+
+        <label>Vote for this item</label>
+        <div class="rating">
+            <i class="far fa-star fa-2x rating-star " id="rating-1" data-rating="1" tabindex="0" aria-label="Rate as one out of 5 stars" role="radio" area-hidden="true"></i>
+            <i class="far fa-star fa-2x rating-star" id="rating-2" data-rating="2" tabindex="0" aria-label="Rate as two out of 5 stars" role="radio" area-hidden="true"></i>
+            <i class="far fa-star fa-2x rating-star" id="rating-3" data-rating="3" tabindex="0" aria-label="Rate as three out of 5 stars" role="radio" area-hidden="true"></i>
+            <i class="far fa-star fa-2x rating-star" id="rating-4" data-rating="4" tabindex="0" aria-label="Rate as four out of 5 stars" role="radio" area-hidden="true"></i>
+            <i class="far fa-star fa-2x rating-star" id="rating-5" data-rating="5" tabindex="0" aria-label="Rate as five out of 5 stars" role="radio" area-hidden="true"></i>
+            <p><b><span id="votesCount">@Model.VotesCount</span> votes rating <span id="averageVoteValue">@Model.AverageVotes.ToString("0.0")</span>/5</b></p>
+        </div>
+    </div>
+}
+
+
+
+
+
+
+
+

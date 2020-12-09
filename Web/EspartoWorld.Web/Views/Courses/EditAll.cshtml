@@ -19,16 +19,39 @@
     <tbody>
         @foreach (var item in Model)
         {
+
             <tr>
                 <td><i class="far fa-calendar-alt"></i> @item.StartDateString - @item.EndDateString</td>
                 <td>@item.Title</td>
                 <td>
                     <form asp-action="Delete" asp-controller="Courses" asp-route-id="@item.Id" method="post">
                         <button asp-action="Edit" asp-controller="Courses" asp-route-id="@item.Id" class="fas btn btn-success"> @localizer["Edit"] &#xf04b</button>
-                        <input type="submit" value="@localizer["Delete"] &#xf2ed" class="fas btn btn-danger " />
+                        
+                        <button type="button" class="fas btn btn-danger" data-toggle="modal" data-target="#deleteModal">@localizer["Delete"] &#xf2ed</button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Delete item</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        If you are shure that you want to delete item click delete.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <input type="submit" value="@localizer["Delete"] &#xf2ed" class="fas btn btn-danger " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </form>
                 </td>
             </tr>
+
         }
     </tbody>
 </table>

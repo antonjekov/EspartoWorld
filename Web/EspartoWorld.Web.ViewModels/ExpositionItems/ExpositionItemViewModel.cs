@@ -22,5 +22,9 @@
         public string AuthorId { get; set; }
 
         public ApplicationUser Author { get; set; }
+
+        public double AverageVotes { get; set; }
+
+        public int VotesCount { get; set; }
     }
 }

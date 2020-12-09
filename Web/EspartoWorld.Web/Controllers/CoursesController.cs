@@ -125,9 +125,7 @@
         public async Task<IActionResult> DeleteAsync(int id)
         {
             await this.coursesService.DeleteAsync(id);
-            //var courses = this.coursesService.GetAll<CourseViewModel>();
             return this.RedirectToAction("EditAll");
-            //return this.View("EditAll", courses);
         }
     }
 }

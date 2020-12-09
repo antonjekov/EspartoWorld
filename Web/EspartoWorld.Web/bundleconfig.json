@@ -7,7 +7,8 @@
 		"inputFiles": [
 			"wwwroot/css/site.css",
 			"wwwroot/css/flipCards.css",
-			"wwwroot/css/popupCard.css"
+			"wwwroot/css/popupCard.css",
+			"wwwroot/css/ratingStars.css"
 		]
 		
 	},
@@ -15,7 +16,8 @@
 		"outputFileName": "wwwroot/js/site.min.js",
 		"inputFiles": [
 			"wwwroot/js/site.js",
-			"wwwroot/js/flipCards.js"
+			"wwwroot/js/flipCards.js",
+			"wwwroot/js/ratingStars.js"
 		],
 		// Optionally specify minification options
 		"minify": {

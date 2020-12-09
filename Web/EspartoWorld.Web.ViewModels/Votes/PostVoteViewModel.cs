@@ -7,5 +7,7 @@ namespace EspartoWorld.Web.ViewModels.Votes
     public class PostVoteViewModel
     {
         public double AverageVote { get; set; }
+
+        public int VotesCount { get; set; }
     }
 }

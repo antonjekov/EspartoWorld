@@ -14,11 +14,13 @@
 
     public class ExpositionController : BaseController
     {
+        private readonly IVotesService votesService;
         private readonly IExposicionItemService expositionItemService;
         private readonly UserManager<ApplicationUser> userManager;
 
-        public ExpositionController(IExposicionItemService exposicionItemService, UserManager<ApplicationUser> userManager)
+        public ExpositionController(IVotesService votesService, IExposicionItemService exposicionItemService, UserManager<ApplicationUser> userManager)
         {
+            this.votesService = votesService;
             this.expositionItemService = exposicionItemService;
             this.userManager = userManager;
         }
@@ -49,6 +51,12 @@
         {
             int itemsPerPage = 3;
             var items = this.expositionItemService.GetAllAccepted<ExpositionItemViewModel>(id, itemsPerPage,  itemCategory, author: author);
+            foreach (var item in items)
+            {
+                item.AverageVotes = this.votesService.GetAverageVotes(item.Id);
+                item.VotesCount = this.votesService.GetVotesCount(item.Id);
+            }
+
             var artworksCount = this.expositionItemService.GetCountAccepted(author, itemCategory);
             var artworks = new ExpositionItemViewModelPagination()
             {

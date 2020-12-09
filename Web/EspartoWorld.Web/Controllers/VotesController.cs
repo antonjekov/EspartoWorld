@@ -9,7 +9,7 @@
     using Microsoft.AspNetCore.Mvc;
 
     [ApiController]
-    [Route("/api/[controller]")]
+    [Route("api/[controller]")]
     public class VotesController : Controller
     {
         private readonly IVotesService votesService;
@@ -26,7 +26,8 @@
             var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             await this.votesService.SetVoteAsync(input.ItemId, userId, input.Value);
             var averageVote = this.votesService.GetAverageVotes(input.ItemId);
-            return new PostVoteViewModel() { AverageVote = averageVote };
+            var votesCount = this.votesService.GetVotesCount(input.ItemId);
+            return new PostVoteViewModel() { AverageVote = averageVote, VotesCount = votesCount };
         }
     }
 }

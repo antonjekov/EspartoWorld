@@ -17,7 +17,22 @@
 
         public double GetAverageVotes(int itemId)
         {
-            return this.repositoryVotes.All().Where(x => x.ExpositionItemId == itemId).Average(x => x.Value);
+            if (this.repositoryVotes.All().Any(x => x.ExpositionItemId == itemId))
+            {
+                return this.repositoryVotes.All().Where(x => x.ExpositionItemId == itemId).Average(x => x.Value);
+            }
+
+            return 0;
+        }
+
+        public int GetVotesCount(int itemId)
+        {
+            if (this.repositoryVotes.All().Any(x => x.ExpositionItemId == itemId))
+            {
+                return this.repositoryVotes.All().Where(x => x.ExpositionItemId == itemId).Count();
+            }
+
+            return 0;
         }
 
         public async Task SetVoteAsync(int itemId, string userId, byte value)
