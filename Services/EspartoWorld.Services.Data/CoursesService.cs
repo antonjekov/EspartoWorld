@@ -13,12 +13,10 @@
     public class CoursesService : ICoursesService
     {
         private readonly IDeletableEntityRepository<Course> courseRepository;
-        private readonly UserManager<ApplicationUser> userManager;
 
-        public CoursesService(IDeletableEntityRepository<Course> courseRepository, UserManager<ApplicationUser> userManager)
+        public CoursesService(IDeletableEntityRepository<Course> courseRepository)
         {
             this.courseRepository = courseRepository;
-            this.userManager = userManager;
         }
 
         public async Task<int> AddAsync<T>(T input)
@@ -63,12 +61,11 @@
             return this.courseRepository.All().Any(x => x.Id == courseId && x.Participants.Any(p => p.Id == userId));
         }
 
-        public async Task AddUserToCourseAsync(int courseId, string userId)
+        public async Task AddUserToCourseAsync(int courseId, ApplicationUser user)
         {
             var course = this.courseRepository.All().FirstOrDefault(x => x.Id == courseId);
             if (course != null)
             {
-                var user = await this.userManager.FindByIdAsync(userId);
                 course.Participants.Add(user);
                 await this.courseRepository.SaveChangesAsync();
             }

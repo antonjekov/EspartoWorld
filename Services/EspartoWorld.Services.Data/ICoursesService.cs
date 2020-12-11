@@ -1,5 +1,6 @@
 ﻿namespace EspartoWorld.Services.Data
 {
+    using EspartoWorld.Data.Models;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
@@ -19,7 +20,7 @@
 
         bool UserAlreadyParticipatedToCourse(int courseId, string userId);
 
-        Task AddUserToCourseAsync(int courseId, string userId);
+        Task AddUserToCourseAsync(int courseId, ApplicationUser user);
 
         Task EditAsync<T>(T input);
 

@@ -4,9 +4,11 @@
     using System.Threading.Tasks;
 
     using EspartoWorld.Common;
+    using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Web.ViewModels.Courses;
     using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Identity;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.Extensions.Localization;
 
@@ -14,11 +16,13 @@
     {
         private readonly ICoursesService coursesService;
         private readonly IStringLocalizer<CoursesController> localizer;
+        private readonly UserManager<ApplicationUser> userManager;
 
-        public CoursesController(ICoursesService coursesService, IStringLocalizer<CoursesController> localizer)
+        public CoursesController(ICoursesService coursesService, IStringLocalizer<CoursesController> localizer, UserManager<ApplicationUser> userManager)
         {
             this.coursesService = coursesService;
             this.localizer = localizer;
+            this.userManager = userManager;
         }
 
         [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
@@ -79,7 +83,8 @@
                 return this.RedirectToAction("Details", "Courses", new { id });
             }
 
-            await this.coursesService.AddUserToCourseAsync(id, userId);
+            var user = await this.userManager.GetUserAsync(this.User);
+            await this.coursesService.AddUserToCourseAsync(id, user);
             return this.RedirectToAction("SubscribedForCourse", "Courses");
         }
 
