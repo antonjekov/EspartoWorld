@@ -32,11 +32,6 @@
             await this.exposicionItems.SaveChangesAsync();
         }
 
-        public IEnumerable<T> GetAll<T>()
-        {
-            return this.exposicionItems.All().To<T>().ToList();
-        }
-
         public IEnumerable<T> GetAllAccepted<T>(int page, int itemsPerPage, Category itemCategory = 0, string author = null)
         {
             var result = this.exposicionItems.AllAsNoTracking().Where(x => x.Accepted == true);

@@ -1,5 +1,11 @@
 ﻿namespace EspartoWorld.Services.Data.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using System.Threading.Tasks;
+
     using EspartoWorld.Data;
     using EspartoWorld.Data.Common.Repositories;
     using EspartoWorld.Data.Models;
@@ -7,15 +13,8 @@
     using EspartoWorld.Services.Mapping;
     using EspartoWorld.Web.ViewModels;
     using EspartoWorld.Web.ViewModels.Courses;
-    using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Moq;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Reflection;
-    using System.Text;
-    using System.Threading.Tasks;
     using Xunit;
 
     public class CoursesServiceTests

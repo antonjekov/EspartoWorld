@@ -7,7 +7,7 @@
 
     public class ExpositionItemModerateModel : IMapTo<ExpositionItem>, IMapFrom<ExpositionItem>
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [Required]
         [MinLength(3)]

@@ -5,6 +5,7 @@
     using System.Linq;
     using System.Reflection;
     using System.Threading.Tasks;
+
     using EspartoWorld.Data;
     using EspartoWorld.Data.Common.Repositories;
     using EspartoWorld.Data.Models;
@@ -125,7 +126,7 @@
             using var repository = new EfDeletableEntityRepository<Video>(dbContext);
             var service = new VideosService(repository);
 
-            dbContext.Videos.Add(new Video() {Title = "Existing" });
+            dbContext.Videos.Add(new Video() { Title = "Existing" });
             await dbContext.SaveChangesAsync();
 
             var actual = await service.AddAsync(new VideoInputModel() { Title = "Second" });

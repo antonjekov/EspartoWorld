@@ -9,8 +9,6 @@
     {
         Task<int> AddAsync<T>(T input);
 
-        IEnumerable<T> GetAll<T>();
-
         T GetLastExpositionItem<T>();
 
         IEnumerable<T> GetAllForModerate<T>();

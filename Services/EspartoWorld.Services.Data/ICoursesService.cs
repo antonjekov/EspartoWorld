@@ -1,8 +1,9 @@
 ﻿namespace EspartoWorld.Services.Data
 {
-    using EspartoWorld.Data.Models;
     using System.Collections.Generic;
     using System.Threading.Tasks;
+
+    using EspartoWorld.Data.Models;
 
     public interface ICoursesService
     {
