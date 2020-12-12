@@ -88,7 +88,7 @@
 
         public T GetLastExpositionItem<T>()
         {
-            return this.exposicionItems.All().OrderByDescending(x => x.ModifiedOn).To<T>().FirstOrDefault();
+            return this.exposicionItems.All().Where(x => x.Accepted == true).OrderByDescending(x => x.ModifiedOn).To<T>().FirstOrDefault();
         }
     }
 }
