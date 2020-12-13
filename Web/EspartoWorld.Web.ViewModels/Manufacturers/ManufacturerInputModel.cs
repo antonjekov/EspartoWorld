@@ -19,7 +19,6 @@
         public string Id { get; set; }
 
         [Required(ErrorMessage = "Telephone is required")]
-        [Phone]
         [Display(Name = "Telephone number")]
         public int Telephone { get; set; }
 

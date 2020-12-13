@@ -1,13 +1,16 @@
-﻿namespace EspartoWorld.Web.Controllers
+﻿namespace EspartoWorld.Web.Areas.Administration.Controllers
 {
     using System.Threading.Tasks;
 
     using EspartoWorld.Common;
     using EspartoWorld.Services.Data;
+    using EspartoWorld.Web.Controllers;
     using EspartoWorld.Web.ViewModels.Manufacturers;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
 
+    [Area("Administration")]
+    [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
     public class ManufacturerController : BaseController
     {
         private readonly IManufacturersService manufacturersService;
@@ -17,13 +20,6 @@
             this.manufacturersService = manufacturersService;
         }
 
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        public IActionResult Add()
-        {
-            return this.View();
-        }
-
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
         [HttpPost]
         public async Task<IActionResult> AddAsync(ManufacturerInputModel input)
         {

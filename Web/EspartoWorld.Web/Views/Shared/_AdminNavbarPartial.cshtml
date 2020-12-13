@@ -12,22 +12,22 @@
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">@localizer["Add"]</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" asp-area="" asp-controller="Courses" asp-action="Add">@localizer["Course"]</a>
-                    <a class="dropdown-item" asp-area="" asp-controller="Videos" asp-action="Add">@localizer["Video"]</a>
-                    <a class="dropdown-item" asp-area="" asp-controller="Product" asp-action="Add">@localizer["Product"]</a>
+                    <a class="dropdown-item" asp-area="Administration" asp-controller="Courses" asp-action="Add">@localizer["Course"]</a>
+                    <a class="dropdown-item" asp-area="Administration" asp-controller="Videos" asp-action="Add">@localizer["Video"]</a>
+                    <a class="dropdown-item" asp-area="Administration" asp-controller="Product" asp-action="Add">@localizer["Product"]</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">@localizer["Edit"]</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" asp-area="" asp-controller="Courses" asp-action="EditAll">@localizer["Course"]</a>
-                    <a class="dropdown-item" asp-area="" asp-controller="Videos" asp-action="Edit">@localizer["Video"]</a>
+                    <a class="dropdown-item" asp-area="Administration" asp-controller="Courses" asp-action="EditAll">@localizer["Course"]</a>
+                    <a class="dropdown-item" asp-area="Administration" asp-controller="Videos" asp-action="Edit">@localizer["Video"]</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">@localizer["Check"]</a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" asp-area="" asp-controller="Exposition" asp-action="Moderate">@localizer["Artworks"]</a>
+                    <a class="dropdown-item" asp-area="Administration" asp-controller="Exposition" asp-action="Moderate">@localizer["Artworks"]</a>
                 </div>
             </li>
         </ul>

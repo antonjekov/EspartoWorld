@@ -70,56 +70,12 @@
             return this.View(artworks);
         }
 
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        public IActionResult Details(int id)
-        {
-            if (!this.expositionItemService.IdIsValid(id))
-            {
-                return this.Redirect("/Exposition/Moderate");
-            }
-
-            var item = this.expositionItemService.GetById<ExpositionItemModerateModel>(id);
-            return this.View(item);
-        }
-
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        [HttpPost]
-        public async Task<IActionResult> Details(ExpositionItemModerateModel input)
-        {
-            if (!this.ModelState.IsValid)
-            {
-                return this.View();
-            }
-
-            await this.expositionItemService.EditAsync<ExpositionItemModerateModel>(input);
-            return this.Redirect("/Exposition/Moderate");
-        }
-
         public IActionResult ThankYou()
         {
             return this.View();
         }
 
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        public IActionResult Moderate()
-        {
-            var items = this.expositionItemService.GetAllForModerate<ExpositionItemViewModel>();
-            return this.View(items);
-        }
-
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        [HttpPost]
-        public async Task<IActionResult> DeleteAsync(int id)
-        {
-            if (id == 0)
-            {
-                return this.Redirect("/Exposition/Moderate");
-            }
-
-            await this.expositionItemService.DeleteAsync(id);
-            return this.Redirect("/Exposition/Moderate");
-        }
-
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> DeleteOwnItemAsync(int itemId)
         {
