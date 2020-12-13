@@ -5,6 +5,7 @@
     using System.IO;
     using System.Threading.Tasks;
 
+    using CommandLine;
     using EspartoWorld.Data;
     using EspartoWorld.Data.Common;
     using EspartoWorld.Data.Common.Repositories;
@@ -13,9 +14,6 @@
     using EspartoWorld.Data.Seeding;
     using EspartoWorld.Services.Data;
     using EspartoWorld.Services.Messaging;
-
-    using CommandLine;
-
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;

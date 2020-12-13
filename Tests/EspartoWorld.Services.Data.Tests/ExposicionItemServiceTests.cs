@@ -18,6 +18,7 @@
     using Moq;
     using Xunit;
 
+    [Collection("Serial")]
     public class ExposicionItemServiceTests
     {
         private DbContextOptions<ApplicationDbContext> options;

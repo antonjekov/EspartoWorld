@@ -1,22 +1,22 @@
-﻿using EspartoWorld.Data;
-using EspartoWorld.Data.Common.Repositories;
-using EspartoWorld.Data.Models;
-using EspartoWorld.Data.Repositories;
-using EspartoWorld.Services.Mapping;
-using EspartoWorld.Web.ViewModels;
-using EspartoWorld.Web.ViewModels.Manufacturers;
-using Microsoft.EntityFrameworkCore;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
-
-namespace EspartoWorld.Services.Data.Tests
+﻿namespace EspartoWorld.Services.Data.Tests
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using System.Threading.Tasks;
+
+    using EspartoWorld.Data;
+    using EspartoWorld.Data.Common.Repositories;
+    using EspartoWorld.Data.Models;
+    using EspartoWorld.Data.Repositories;
+    using EspartoWorld.Services.Mapping;
+    using EspartoWorld.Web.ViewModels;
+    using EspartoWorld.Web.ViewModels.Manufacturers;
+    using Microsoft.EntityFrameworkCore;
+    using Moq;
+    using Xunit;
+
+    [Collection("Serial")]
     public class ManufacturersServiceTest
     {
         private DbContextOptions<ApplicationDbContext> options;
@@ -80,6 +80,5 @@ namespace EspartoWorld.Services.Data.Tests
             Assert.Equal(expected[0].Name, actual[0].Name);
             Assert.Equal(expected[1].Name, actual[1].Name);
         }
-
     }
 }

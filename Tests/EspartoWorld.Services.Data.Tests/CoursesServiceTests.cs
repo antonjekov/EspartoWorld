@@ -17,6 +17,7 @@
     using Moq;
     using Xunit;
 
+    [Collection("Serial")]
     public class CoursesServiceTests
     {
         [Fact]
