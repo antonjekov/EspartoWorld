@@ -1,31 +1,35 @@
 ﻿namespace EspartoWorld.Services.Data.Tests
 {
+    using System.Collections.Generic;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using EspartoWorld.Data;
+    using EspartoWorld.Data.Common.Repositories;
     using EspartoWorld.Data.Models;
     using EspartoWorld.Data.Repositories;
 
     using Microsoft.EntityFrameworkCore;
-
+    using Moq;
     using Xunit;
 
     public class SettingsServiceTests
     {
-        // [Fact]
-        // public void GetCountShouldReturnCorrectNumber()
-        // {
-        //    var repository = new Mock<IDeletableEntityRepository<Setting>>();
-        //    repository.Setup(r => r.All()).Returns(new List<Setting>
-        //                                                {
-        //                                                    new Setting(),
-        //                                                    new Setting(),
-        //                                                    new Setting(),
-        //                                                }.AsQueryable());
-        //    var service = new SettingsService(repository.Object);
-        //    Assert.Equal(3, service.GetCount());
-        //    repository.Verify(x => x.All(), Times.Once);
-        // }
+        [Fact]
+        public void GetCountShouldReturnCorrectNumber()
+        {
+            var repository = new Mock<IDeletableEntityRepository<Setting>>();
+            repository.Setup(r => r.AllAsNoTracking()).Returns(new List<Setting>
+                                                        {
+                                                            new Setting(),
+                                                            new Setting(),
+                                                            new Setting(),
+                                                        }.AsQueryable());
+            var service = new SettingsService(repository.Object);
+            Assert.Equal(3, service.GetCount());
+            repository.Verify(x => x.AllAsNoTracking(), Times.Once);
+        }
+
         [Fact]
         public async Task GetCountShouldReturnCorrectNumberUsingDbContext()
         {

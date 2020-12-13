@@ -1,10 +1,10 @@
 ﻿namespace EspartoWorld.Services.Data.Tests
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
     using System.Threading.Tasks;
+
     using EspartoWorld.Data;
     using EspartoWorld.Data.Common.Repositories;
     using EspartoWorld.Data.Models;
@@ -137,6 +137,9 @@
             Assert.Equal(3, dbContext.ShoppingCartItems.Count());
             var cart = dbContext.ShoppingCartItems.Find(3);
             Assert.Equal(100, cart.Quantity);
+            await service.UpdateQuantityAsync("user1", 2, 0);
+            cart = dbContext.ShoppingCartItems.Find(3);
+            Assert.Null(cart);
         }
     }
 }
