@@ -21,19 +21,19 @@
 
         public async Task SendEmailAsync(string from, string fromName, string to, string subject, string htmlContent, IEnumerable<EmailAttachment> attachments = null)
         {
-            // create message
-            var email = new MimeMessage();
-            email.From.Add(MailboxAddress.Parse(from));
-            email.To.Add(MailboxAddress.Parse(to));
-            email.Subject = subject;
-            email.Body = new TextPart(TextFormat.Html) { Text = htmlContent };
-
-            // send email
-            using var smtp = new SmtpClient();
-            await smtp.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
-            await smtp.AuthenticateAsync(this.gmailEmail, this.password);
-            await smtp.SendAsync(email);
-            await smtp.DisconnectAsync(true);
+            using (var smtp = new SmtpClient())
+            {
+                MimeMessage email = new MimeMessage();
+                email.From.Add(MailboxAddress.Parse(from));
+                email.To.Add(MailboxAddress.Parse(to));
+                email.Subject = subject;
+                email.Body = new TextPart(TextFormat.Html) { Text = htmlContent };
+                await smtp.ConnectAsync("smtp.gmail.com", 587, SecureSocketOptions.StartTls);
+                await smtp.AuthenticateAsync(this.gmailEmail, this.password);
+                await smtp.SendAsync(email);
+                await smtp.DisconnectAsync(true);
+            }
         }
     }
 }
+

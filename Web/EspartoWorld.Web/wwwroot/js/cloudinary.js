@@ -5,23 +5,12 @@
     sources: ['local', 'url', 'camera'],
     multiple: false,
     resourceType: 'image',
-    cropping: 'true',
+    cropping: 'false',
     maxImageFileSize: 500000,
     maxImageWidth: 1500,
     maxImageHeight: 800,
     croppingValidateDimensions: true,
     theme: 'minimal',
-    // TO DO WIDGET TRANSLATE
-    //language: 'es',
-    //text: {
-    //    'es': {
-    //        'back': 'volver',
-    //        "menu": {
-    //            "camera": "Camara",
-    //            "browse" : "Buscar"
-    //        },
-    //    },
-    //},
     singleUploadAutoClose: true
 }, (error, result) => {
     if (!error && result && result.event === "success") {

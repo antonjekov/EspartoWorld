@@ -6,7 +6,6 @@
     using EspartoWorld.Common;
     using EspartoWorld.Data.Models;
     using EspartoWorld.Services.Data;
-    using EspartoWorld.Web.ViewModels.Manufacturers;
     using EspartoWorld.Web.ViewModels.Product;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Identity;
@@ -15,47 +14,14 @@
     public class ProductController : BaseController
     {
         private readonly IProductsService productsService;
-        private readonly IManufacturersService manufacturersService;
         private readonly UserManager<ApplicationUser> userManager;
         private readonly IShoppingCartsService shoppingCartsService;
 
-        public ProductController(IProductsService productsService, IManufacturersService manufacturersService, UserManager<ApplicationUser> userManager, IShoppingCartsService shoppingCartsService)
+        public ProductController(IProductsService productsService, UserManager<ApplicationUser> userManager, IShoppingCartsService shoppingCartsService)
         {
             this.productsService = productsService;
-            this.manufacturersService = manufacturersService;
             this.userManager = userManager;
             this.shoppingCartsService = shoppingCartsService;
-        }
-
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        public IActionResult Add()
-        {
-            return this.View();
-        }
-
-        [Authorize(Roles = GlobalConstants.AdministratorRoleName)]
-        [HttpPost]
-        public async Task<IActionResult> AddAsync(ProductInputModel input)
-        {
-            if (this.manufacturersService.IdExists(input.ManufacturerInput.Id))
-            {
-                this.ModelState.AddModelError("ManufacturerInput.Id", "Manufacturer with this NIF already exists");
-                return this.View();
-            }
-
-            if (!this.ModelState.IsValid)
-            {
-                return this.View(input);
-            }
-
-            if (input.ManufacturerId == null)
-            {
-                var manufacturerId = await this.manufacturersService.AddAsync<ManufacturerInputModel>(input.ManufacturerInput);
-                input.ManufacturerId = manufacturerId;
-            }
-
-            await this.productsService.AddAsync<ProductInputModel>(input);
-            return this.Redirect("/");
         }
 
         public IActionResult All(int productSort)
