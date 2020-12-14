@@ -352,3 +352,7 @@ MigrationBackup/
 bin/ 	# ignore bin directory 
 *.obj 	# ignore any files with .obj postfix 
 
+*appsettings.json
+*appsettings.Production.json
+*appsettings.Development.json
+
