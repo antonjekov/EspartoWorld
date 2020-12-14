@@ -92,8 +92,8 @@
                 {
                     AllowedCountries = new List<string> { "ES" },
                 },
-                SuccessUrl = "https://localhost:44319/payments/success?session_id={CHECKOUT_SESSION_ID}",
-                CancelUrl = "https://localhost:44319/shoppingcart",
+                SuccessUrl = "https://espartoworld.azurewebsites.net/payments/success?session_id={CHECKOUT_SESSION_ID}",
+                CancelUrl = "https://espartoworld.azurewebsites.net/shoppingcart",
             };
 
             var service = new SessionService();
