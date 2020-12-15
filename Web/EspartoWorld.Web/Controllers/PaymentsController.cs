@@ -82,7 +82,6 @@
                 },
                 Quantity = 1,
             });
-
             var options = new SessionCreateOptions
             {
                 PaymentMethodTypes = new List<string> { "card", },
@@ -92,8 +91,9 @@
                 {
                     AllowedCountries = new List<string> { "ES" },
                 },
-                SuccessUrl = "https://espartoworld.azurewebsites.net/payments/success?session_id={CHECKOUT_SESSION_ID}",
-                CancelUrl = "https://espartoworld.azurewebsites.net/shoppingcart",
+
+                SuccessUrl = $"{this.Request.Scheme}://{this.Request.Host}" + "/payments/success?session_id={CHECKOUT_SESSION_ID}",
+                CancelUrl = $"{this.Request.Scheme}://{this.Request.Host}/shoppingcart",
             };
 
             var service = new SessionService();
