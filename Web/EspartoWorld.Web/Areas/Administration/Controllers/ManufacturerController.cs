@@ -36,5 +36,11 @@
             await this.manufacturersService.AddAsync(input);
             return this.RedirectToAction("Add", "Manufacturer");
         }
+
+        public IActionResult GetManufacturerInfo(string id)
+        {
+            var manufacturer = this.manufacturersService.GetById<ManufacturersViewModel>(id);
+            return this.Json(manufacturer);
+        }
     }
 }

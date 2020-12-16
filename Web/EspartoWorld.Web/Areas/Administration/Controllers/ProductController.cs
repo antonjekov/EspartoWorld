@@ -31,7 +31,8 @@
         [HttpPost]
         public async Task<IActionResult> AddAsync(ProductInputModel input)
         {
-            if (this.manufacturersService.IdExists(input.ManufacturerInput.Id))
+            // Case new Manufacturer with existing Id
+            if (this.manufacturersService.IdExists(input.ManufacturerInput.Id) && input.ManufacturerId == null)
             {
                 this.ModelState.AddModelError("ManufacturerInput.Id", "Manufacturer with this NIF already exists");
                 return this.View();
@@ -42,6 +43,7 @@
                 return this.View(input);
             }
 
+            // Case new Manufacturer
             if (input.ManufacturerId == null)
             {
                 var manufacturerId = await this.manufacturersService.AddAsync<ManufacturerInputModel>(input.ManufacturerInput);

@@ -34,5 +34,10 @@
         {
             return this.manufacturers.AllAsNoTracking().OrderBy(x => x.Name).To<T>().ToList();
         }
+
+        public T GetById<T>(string id)
+        {
+            return this.manufacturers.AllAsNoTracking().Where(x => x.Id == id).To<T>().FirstOrDefault();
+        }
     }
 }

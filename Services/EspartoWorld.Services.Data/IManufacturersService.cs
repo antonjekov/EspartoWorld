@@ -10,5 +10,7 @@
         bool IdExists(string id);
 
         IEnumerable<T> GetAll<T>();
+
+        T GetById<T>(string id);
     }
 }

@@ -35,8 +35,8 @@
         </div>
         <div class="col-md-4" >
             <div class="form-group">
-                <label asp-for="ManufacturerId" class="control-label"></label>
-                <select onchange="HideForm()" asp-for="ManufacturerId" asp-items="@(new SelectList(manufacturersService.GetAll<ManufacturersViewModel>(),"Id","Name"))" class="form-control"><option selected value="">-- @localizer["New manufacturer"] --</option></select>
+                <label asp-for="ManufacturerId" class="control-label">Choose Manufacturer</label>
+                <select onchange="FillForm()" asp-for="ManufacturerId" asp-items="@(new SelectList(manufacturersService.GetAll<ManufacturersViewModel>(),"Id","Name"))" class="form-control"><option selected value="">-- @localizer["New manufacturer"] --</option></select>
             </div>
             <div id="manufacturerForm">
                 <div class="form-group">
@@ -92,6 +92,39 @@
             } else {
                 formManufacturerElement.style.display = "none"
             }
+        }
+    </script>
+    <script>
+        function FillForm() {
+            let selectedManufacturerValue = document.getElementById("ManufacturerId").value;
+            let selectedManufacturerAddress = document.getElementById("ManufacturerInput_Address")
+            let selectedManufacturerTelephone = document.getElementById("ManufacturerInput_Telephone")
+            let selectedManufacturerName = document.getElementById("ManufacturerInput_Name")
+            let selectedManufacturerId = document.getElementById("ManufacturerInput_Id")
+            if (selectedManufacturerValue) {
+                fetch("/Administration/Manufacturer/GetManufacturerInfo/" + selectedManufacturerValue)
+                    .then(response => response.json())
+                    .then(data => {
+                        selectedManufacturerAddress.value = data.address
+                        selectedManufacturerAddress.readOnly = true
+                        selectedManufacturerTelephone.value = data.telephone
+                        selectedManufacturerTelephone.readOnly = true
+                        selectedManufacturerName.value = data.name
+                        selectedManufacturerName.readOnly = true
+                        selectedManufacturerId.value = data.id
+                        selectedManufacturerId.readOnly = true
+                    });
+            } else {
+                selectedManufacturerAddress.value = ""
+                selectedManufacturerAddress.readOnly = false
+                selectedManufacturerTelephone.value = ""
+                selectedManufacturerTelephone.readOnly = false
+                selectedManufacturerName.value = ""
+                selectedManufacturerName.readOnly = false
+                selectedManufacturerId.value = ""
+                selectedManufacturerId.readOnly = false
+            }
+            
         }
     </script>
 }
