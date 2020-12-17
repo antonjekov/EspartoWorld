@@ -108,8 +108,8 @@
 
             // Application services
             // services.AddTransient<IEmailSender, NullMessageSender>();
-            services.AddTransient<IEmailSender>(x => new SendGridEmailSender(this.configuration["SendGrid:ApiKey"]));
-            //services.AddTransient<IEmailSender>(x => new MailKitEmailSender(this.configuration["EmailSender:Email"], this.configuration["EmailSender:Password"]));
+            // services.AddTransient<IEmailSender>(x => new SendGridEmailSender(this.configuration["SendGrid:ApiKey"]));
+            services.AddTransient<IEmailSender>(x => new MailKitEmailSender(this.configuration["EmailSender:Email"], this.configuration["EmailSender:Password"]));
             services.AddTransient<ISettingsService, SettingsService>();
             services.AddTransient<ICoursesService, CoursesService>();
             services.AddTransient<IVideosService, VideosService>();

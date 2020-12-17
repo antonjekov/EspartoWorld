@@ -47,8 +47,12 @@
             }
 
             var course = this.coursesService.GetById<CourseViewModel>(id);
-            var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            course.SubscribedForCourse = this.coursesService.UserAlreadyParticipatedToCourse(course.Id, userId);
+            if (this.User.Identity.IsAuthenticated)
+            {
+                var userId = this.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+                course.SubscribedForCourse = this.coursesService.UserAlreadyParticipatedToCourse(course.Id, userId);
+            }
+
             return this.View(course);
         }
 

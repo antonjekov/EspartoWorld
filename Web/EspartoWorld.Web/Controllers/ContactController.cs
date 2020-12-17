@@ -38,7 +38,7 @@
             var appEmail = this.configuration.GetSection("EmailSender:Email").Value;
             var ip = this.HttpContext.Connection.RemoteIpAddress.ToString();
             await this.contactService.AddAsync(model, ip);
-            await this.emailSender.SendEmailAsync(model.Email, model.Name, appEmail, model.Title, model.Email + System.Environment.NewLine + model.Content);
+            await this.emailSender.SendEmailAsync(appEmail, model.Name, appEmail, model.Title, model.Email + System.Environment.NewLine + model.Content);
             await this.emailSender.SendEmailAsync(appEmail, GlobalConstants.SystemName, model.Email, "Your message is important for us", "Thank you for your message");
             this.TempData["Message"] = "Thank you for the message";
             return this.RedirectToAction("Index");
