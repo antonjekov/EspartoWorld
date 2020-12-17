@@ -29,22 +29,19 @@
 
         public IActionResult Index()
         {
-            VideoViewModel lastVideo;
-            CourseViewModel nextCourse;
-            ExpositionItemViewModel lastArtwork;
-            if (!this.memoryCache.TryGetValue("LastVideo", out lastVideo))
+            if (!this.memoryCache.TryGetValue("LastVideo", out VideoViewModel lastVideo))
             {
                 lastVideo = this.videosService.GetLastVideo<VideoViewModel>();
                 this.memoryCache.Set("LastVideo", lastVideo, TimeSpan.FromMinutes(30));
             }
 
-            if (!this.memoryCache.TryGetValue("NextCourse", out nextCourse))
+            if (!this.memoryCache.TryGetValue("NextCourse", out CourseViewModel nextCourse))
             {
                 nextCourse = this.coursesService.GetNextCourse<CourseViewModel>();
                 this.memoryCache.Set("NextCourse", nextCourse, TimeSpan.FromHours(6));
             }
 
-            if (!this.memoryCache.TryGetValue("LastArtwork", out lastArtwork))
+            if (!this.memoryCache.TryGetValue("LastArtwork", out ExpositionItemViewModel lastArtwork))
             {
                 lastArtwork = this.exposicionItemService.GetLastExpositionItem<ExpositionItemViewModel>();
                 this.memoryCache.Set("LastArtwork", nextCourse, TimeSpan.FromMinutes(5));
