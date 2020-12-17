@@ -40,3 +40,4 @@ C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\Esparto
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.csproj.CopyComplete
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.dll
 C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.pdb
+C:\gitHub\Software-University\C# .NET Core\FinalProject\EspartoWorld\Web\EspartoWorld.Web.ViewModels\obj\Debug\netstandard2.1\EspartoWorld.Web.ViewModels.Product.ProductInputModel.es.resources

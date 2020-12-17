@@ -15,13 +15,11 @@
     public class CoursesController : BaseController
     {
         private readonly ICoursesService coursesService;
-        private readonly IStringLocalizer<CoursesController> localizer;
         private readonly UserManager<ApplicationUser> userManager;
 
-        public CoursesController(ICoursesService coursesService, IStringLocalizer<CoursesController> localizer, UserManager<ApplicationUser> userManager)
+        public CoursesController(ICoursesService coursesService, UserManager<ApplicationUser> userManager)
         {
             this.coursesService = coursesService;
-            this.localizer = localizer;
             this.userManager = userManager;
         }
 

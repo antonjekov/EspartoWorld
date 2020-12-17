@@ -118,36 +118,36 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Address of manufacturer" xml:space="preserve">
-    <value />
+    <value>Dirección del fabricante</value>
   </data>
   <data name="Address of manufacturer is required" xml:space="preserve">
-    <value />
+    <value>Se requiere la dirección del fabricante</value>
   </data>
   <data name="Address should be minimum 20 characters long." xml:space="preserve">
-    <value />
+    <value>La dirección debe tener un mínimo de 20 caracteres.</value>
   </data>
   <data name="Manufacturer name" xml:space="preserve">
-    <value />
+    <value>Nombre del Fabricante</value>
   </data>
   <data name="Name of manufacturer is required" xml:space="preserve">
-    <value />
+    <value>Se requiere el nombre del fabricante</value>
   </data>
   <data name="Name should be maximum 150 characters long." xml:space="preserve">
-    <value />
+    <value>El nombre debe tener un máximo de 150 caracteres.</value>
   </data>
   <data name="Name should be minimum 3 characters long." xml:space="preserve">
-    <value />
+    <value>El nombre debe tener un mínimo de 3 caracteres.</value>
   </data>
   <data name="NIF" xml:space="preserve">
-    <value />
+    <value>NIF</value>
   </data>
   <data name="NIF should be 10 characters long." xml:space="preserve">
-    <value />
+    <value>NIF debe tener 10 caracteres.</value>
   </data>
   <data name="Telephone is required" xml:space="preserve">
-    <value />
+    <value>Se requiere teléfono</value>
   </data>
   <data name="Telephone number" xml:space="preserve">
-    <value />
+    <value>Número de teléfono</value>
   </data>
 </root>

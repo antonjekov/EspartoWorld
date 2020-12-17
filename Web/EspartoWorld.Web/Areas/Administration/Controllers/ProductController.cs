@@ -51,7 +51,7 @@
             }
 
             var id = await this.productsService.AddAsync<ProductInputModel>(input);
-            return this.RedirectToRoute(new { area = string.Empty, controller = "Product", action = "Details", id = id });
+            return this.RedirectToRoute(new { area = string.Empty, controller = "Product", action = "Details", id });
         }
     }
 }

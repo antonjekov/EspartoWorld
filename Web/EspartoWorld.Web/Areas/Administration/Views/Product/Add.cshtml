@@ -35,7 +35,7 @@
         </div>
         <div class="col-md-4" >
             <div class="form-group">
-                <label asp-for="ManufacturerId" class="control-label">Choose Manufacturer</label>
+                <label asp-for="ManufacturerId" class="control-label">@localizer["Choose Manufacturer"]</label>
                 <select onchange="FillForm()" asp-for="ManufacturerId" asp-items="@(new SelectList(manufacturersService.GetAll<ManufacturersViewModel>(),"Id","Name"))" class="form-control"><option selected value="">-- @localizer["New manufacturer"] --</option></select>
             </div>
             <div id="manufacturerForm">
@@ -76,24 +76,13 @@
         </div>
     </div>
     <div class="form-group">
-        <input type="submit" value="Add product" class="btn btn-success m-1" />
+        <input type="submit" value=@localizer["Add material"] class="btn btn-success m-1" />
     </div>
 </form>
 
 @section Scripts{
     <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
     <script src="~/js/cloudinary.js"></script>
-    <script>
-        function HideForm() {
-            let selectedManufacturerValue = document.getElementById("ManufacturerId").value;
-            let formManufacturerElement = document.getElementById("manufacturerForm");
-            if (selectedManufacturerValue == "") {
-                formManufacturerElement.style.display = "block"
-            } else {
-                formManufacturerElement.style.display = "none"
-            }
-        }
-    </script>
     <script>
         function FillForm() {
             let selectedManufacturerValue = document.getElementById("ManufacturerId").value;

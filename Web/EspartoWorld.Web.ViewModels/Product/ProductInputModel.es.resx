@@ -117,31 +117,49 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Add" xml:space="preserve">
-    <value>Añadir</value>
+  <data name="Description of product is required" xml:space="preserve">
+    <value>Se requiere una descripción del producto</value>
   </data>
-  <data name="Administrator" xml:space="preserve">
-    <value>Administrador</value>
+  <data name="Description should be maximum 500 characters long." xml:space="preserve">
+    <value>La descripción debe tener un máximo de 500 caracteres.</value>
   </data>
-  <data name="Article" xml:space="preserve">
-    <value>Artículo</value>
+  <data name="Description should be minimum 3 characters long." xml:space="preserve">
+    <value>La descripción debe tener un mínimo de 3 caracteres.</value>
   </data>
-  <data name="Artworks" xml:space="preserve">
-    <value>Obras de arte</value>
+  <data name="Name of product is required" xml:space="preserve">
+    <value>Se requiere el nombre del producto</value>
   </data>
-  <data name="Check" xml:space="preserve">
-    <value>Revisar</value>
+  <data name="Name should be maximum 150 characters long." xml:space="preserve">
+    <value>El nombre debe tener un máximo de 150 caracteres.</value>
   </data>
-  <data name="Course" xml:space="preserve">
-    <value>Curso</value>
+  <data name="Name should be minimum 3 characters long." xml:space="preserve">
+    <value>El nombre debe tener un mínimo de 3 caracteres.</value>
   </data>
-  <data name="Edit" xml:space="preserve">
-    <value>Editar</value>
+  <data name="Please fill valid URL" xml:space="preserve">
+    <value>Por favor complete una URL válida</value>
   </data>
-  <data name="Material" xml:space="preserve">
-    <value>Material</value>
+  <data name="Please upload image for this course" xml:space="preserve">
+    <value>Sube una imagen para este curso</value>
   </data>
-  <data name="Video" xml:space="preserve">
-    <value>Video</value>
+  <data name="Price" xml:space="preserve">
+    <value>Precio</value>
+  </data>
+  <data name="Price should be between {1} and {2} EUR" xml:space="preserve">
+    <value>El precio debe estar entre {1} y {2} EUR.</value>
+  </data>
+  <data name="Product description" xml:space="preserve">
+    <value>Descripción del producto</value>
+  </data>
+  <data name="Product name" xml:space="preserve">
+    <value>Nombre del producto</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Cantidad</value>
+  </data>
+  <data name="Quantity should be number between {1} and {2}" xml:space="preserve">
+    <value>La cantidad debe ser un número entre {1} y {2}</value>
+  </data>
+  <data name="URL of image" xml:space="preserve">
+    <value>URL de la imagen</value>
   </data>
 </root>

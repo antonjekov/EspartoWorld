@@ -120,6 +120,9 @@
   <data name="Add material" xml:space="preserve">
     <value>Agregar material</value>
   </data>
+  <data name="Choose Manufacturer" xml:space="preserve">
+    <value>Elija fabricante</value>
+  </data>
   <data name="New manufacturer" xml:space="preserve">
     <value>Nuevo fabricante</value>
   </data>

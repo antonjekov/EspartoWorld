@@ -21,9 +21,11 @@
         public string Description { get; set; }
 
         [Range(0, int.MaxValue, ErrorMessage = "Quantity should be number between {1} and {2}")]
+        [Display(Name = "Quantity")]
         public int Quantity { get; set; }
 
         [Range(0, 1000, ErrorMessage = "Price should be between {1} and {2} EUR")]
+        [Display(Name = "Price")]
         public decimal Price { get; set; }
 
         [Required(ErrorMessage = "Please upload image for this course")]
