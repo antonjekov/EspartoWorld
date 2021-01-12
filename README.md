@@ -14,7 +14,7 @@ You can view project code here: https://github.com/antonjekov/EspartoWorld
 
 .NET 5.0<br />
 MS SQL Database<br />
-Entyty Framework Core<br />  
+EntityFrameworkCore<br />  
 ASP.NET Core Template with MIT license provided by NikolayIT https://github.com/NikolayIT/ASP.NET-Core-Template<br />
 StyleCop<br />
 JQuery<br />
