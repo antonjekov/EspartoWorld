@@ -12,18 +12,24 @@ You can view project code here: https://github.com/antonjekov/EspartoWorld
 
 ## Used technologies and libraries:
 
-.NET 5.0<br />
-MS SQL Database<br />
-EntityFrameworkCore<br />  
-ASP.NET Core Template with MIT license provided by NikolayIT https://github.com/NikolayIT/ASP.NET-Core-Template<br />
-StyleCop<br />
-JQuery<br />
-Bootstrap 4<br />
-Font-awesome 5<br />
+- .NET 5.0
+- Entity Framework Core 
+- StyleCop
+- Automapper
+- JQuery
+- Bootstrap 4
+- Font-awesome 5
+- MailKit
+
+### For save data
+- MS SQL Database
+- Claudinary
 
 ### For unit tests
-Moq<br />
-XUnit<br />
+- Moq
+- XUnit
 
+### Template Author
+- ASP.NET Core Template with MIT license provided by NikolayIT https://github.com/NikolayIT/ASP.NET-Core-Template
 
 
