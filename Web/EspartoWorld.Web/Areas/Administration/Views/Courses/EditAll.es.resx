@@ -123,6 +123,9 @@
   <data name="Dates" xml:space="preserve">
     <value>Fechas</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Borrar</value>
+  </data>
   <data name="Edit" xml:space="preserve">
     <value>Editar</value>
   </data>

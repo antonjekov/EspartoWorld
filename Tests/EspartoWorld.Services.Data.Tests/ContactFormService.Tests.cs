@@ -1,20 +1,18 @@
-﻿using EspartoWorld.Data;
-using EspartoWorld.Data.Models;
-using EspartoWorld.Data.Repositories;
-using EspartoWorld.Services.Mapping;
-using EspartoWorld.Web.ViewModels;
-using EspartoWorld.Web.ViewModels.Contact;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
-
-namespace EspartoWorld.Services.Data.Tests
+﻿namespace EspartoWorld.Services.Data.Tests
 {
+    using System.Linq;
+    using System.Reflection;
+    using System.Threading.Tasks;
+
+    using EspartoWorld.Data;
+    using EspartoWorld.Data.Models;
+    using EspartoWorld.Data.Repositories;
+    using EspartoWorld.Services.Mapping;
+    using EspartoWorld.Web.ViewModels;
+    using EspartoWorld.Web.ViewModels.Contact;
+    using Microsoft.EntityFrameworkCore;
+    using Xunit;
+
     [Collection("Serial")]
     public class ContactFormService
     {

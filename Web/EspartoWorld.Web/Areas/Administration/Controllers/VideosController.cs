@@ -23,40 +23,38 @@
     {
         private readonly IVideosService videosService;
         private readonly IYouTubeDataService youTubeDataService;
-        private readonly IDistributedCache distributedCacheService;
         private readonly IMemoryCache memoryCache;
 
-        public VideosController(IVideosService videosService, IYouTubeDataService youTubeDataService, IDistributedCache distributedCacheService, IMemoryCache memoryCache)
+        public VideosController(IVideosService videosService, IYouTubeDataService youTubeDataService, IMemoryCache memoryCache)
         {
             this.videosService = videosService;
             this.youTubeDataService = youTubeDataService;
-            this.distributedCacheService = distributedCacheService;
             this.memoryCache = memoryCache;
         }
 
         public async Task<IActionResult> AddAsync()
         {
-            // This variant is if we want to wark with distributed cache
-            //var info = await this.distributedCacheService.GetStringAsync("YouTubeEspartoSearchCache");
-            //List<SearchResult> newVideos = new List<SearchResult>();
-            //if (info == null)
-            //{
-            //    newVideos.AddRange(await this.youTubeDataService.GetLastVideosAsync("esparto", 100));
-            //    await this.distributedCacheService.SetStringAsync(
-            //        "YouTubeEspartoSearchCache",
-            //        JsonConvert.SerializeObject(newVideos),
-            //        new DistributedCacheEntryOptions()
-            //        {
-            //            AbsoluteExpiration = DateTime.UtcNow.AddMinutes(30),
-            //        });
-            //}
-            //else
-            //{
-            //    newVideos.AddRange(JsonConvert.DeserializeObject<List<SearchResult>>(info));
-            //}
+            /* This variant is if we want to wark with distributed cache
+            var info = await this.distributedCacheService.GetStringAsync("YouTubeEspartoSearchCache");
+            List<SearchResult> newVideos = new List<SearchResult>();
+            if (info == null)
+            {
+                newVideos.AddRange(await this.youTubeDataService.GetLastVideosAsync("esparto", 100));
+                await this.distributedCacheService.SetStringAsync(
+                    "YouTubeEspartoSearchCache",
+                    JsonConvert.SerializeObject(newVideos),
+                    new DistributedCacheEntryOptions()
+                    {
+                        AbsoluteExpiration = DateTime.UtcNow.AddMinutes(30),
+                    });
+            }
+            else
+            {
+                newVideos.AddRange(JsonConvert.DeserializeObject<List<SearchResult>>(info));
+            }
+            */
 
-            List<SearchResult> newVideos;
-            if (!this.memoryCache.TryGetValue("YouTubeEspartoSearchCache", out newVideos))
+            if (!this.memoryCache.TryGetValue("YouTubeEspartoSearchCache", out List<SearchResult> newVideos))
             {
                 newVideos = await this.youTubeDataService.GetLastVideosAsync("esparto", 100);
                 this.memoryCache.Set("YouTubeEspartoSearchCache", newVideos, TimeSpan.FromMinutes(30));
